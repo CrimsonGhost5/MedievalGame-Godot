@@ -28,9 +28,11 @@ grow_horizontal = 0
 [node name="FoodText" type="Label" parent="CanvasLayer/Control" unique_id=1053702956]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -27.025002
-anchor_top = 11.475
-anchor_right = -21.1
-anchor_bottom = 15.425001
-offset_bottom = -6.1035156e-05
+anchor_left = -5.3250003
+anchor_top = 13.025001
+anchor_right = 1.575
+anchor_bottom = 15.450001
+offset_left = 1.5258789e-05
+offset_right = 7.0
+offset_bottom = -1.0
 theme_override_font_sizes/font_size = 64

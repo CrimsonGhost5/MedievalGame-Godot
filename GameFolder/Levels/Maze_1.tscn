@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://l6p6rxptvv4i"]
+[gd_scene format=3 uid="uid://cghtbilonom5u"]
 
 [ext_resource type="MeshLibrary" uid="uid://bfbly8odr5dlo" path="res://colors2.tres" id="1_2fs5b"]
 [ext_resource type="Script" uid="uid://byonfn43a74qi" path="res://Levels/LevelHandler/maze_levels.gd" id="1_k33jf"]
 [ext_resource type="MeshLibrary" uid="uid://b7kt6w5af4pmm" path="res://colors3.tres" id="2_5rch4"]
+[ext_resource type="PackedScene" uid="uid://dfbd6ubayf60a" path="res://Levels/world_environment.tscn" id="3_k33jf"]
 [ext_resource type="PackedScene" uid="uid://x1v3wsuuya02" path="res://Player/player.tscn" id="4_dcwl1"]
 [ext_resource type="PackedScene" uid="uid://dks7ptj0bnp4u" path="res://Enemy/enemy.tscn" id="5_hvdy1"]
 [ext_resource type="PackedScene" uid="uid://clysiwetdt610" path="res://Enemy/enemythehungry.tscn" id="6_eyav4"]
@@ -14,11 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cur5tucp5sp28" path="res://Interactables/next_level.tscn" id="11_q1yaw"]
 [ext_resource type="PackedScene" uid="uid://xeqfw356wo8k" path="res://Levels/stairs.tscn" id="12_vv3pg"]
 [ext_resource type="PackedScene" uid="uid://vxswb5r75j0w" path="res://Interactables/exit_level.tscn" id="13_oqkef"]
-[ext_resource type="ArrayMesh" uid="uid://dkxk8u5qsab7d" path="res://3D_assets/boneWall_godot.obj" id="15_swoll"]
-[ext_resource type="Texture2D" uid="uid://bq4qkiiugtoyj" path="res://3D_assets/textures/standardSurface1_BaseColor.1001.png" id="16_wlfnc"]
-[ext_resource type="Texture2D" uid="uid://bcga6xwf4e3tl" path="res://3D_assets/textures/standardSurface1_Metallic.1001.png" id="17_duog2"]
-[ext_resource type="Texture2D" uid="uid://cu17xkw6paexu" path="res://3D_assets/textures/standardSurface1_Normal.1001.png" id="18_ueaco"]
-[ext_resource type="Texture2D" uid="uid://dpb8n45iehbyd" path="res://3D_assets/textures/standardSurface1_Roughness.1001.png" id="19_q1yaw"]
+[ext_resource type="PackedScene" uid="uid://bfs550d8o24m2" path="res://Interactables/sign.tscn" id="16_dcwl1"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_r72c7"]
 vertices = PackedVector3Array(-34.5, 0.017499924, -4, -31.5, 0.017499924, -4, -31.25, 0.017499924, -6.5, -34.75, 0.017499924, -6.5, -27.5, 0.017499924, -17.5, -38.5, 0.017499924, -17.5, -27.5, 0.017499924, -6.5, -38.5, 0.017499924, -6.5, 7.25, 0.017499924, -6.5, 7.25, 0.017499924, -9.5, -2.5, 0.017499924, -9.5, -2.5, 0.017499924, -6.5, 9.5, 0.017499924, -6.25, 12.5, 0.017499924, -9.5, 9.5, 0.017499924, -1.75, 12.5, 0.017499924, -1.75, -31.25, 0.017499924, -1.5, -34.5, 0.017499924, 1.5, -22.75, 0.017499924, 1.5, -22.5, 0.017499924, 4, -19.5, 0.017499924, 4, -19.5, 0.017499924, -1.5, 9.5, 0.017499924, 5, 12.5, 0.017499924, 5, 12.75, 0.017499924, 3.5, 12.75, 0.017499924, 0.5, 19.25, 0.017499924, 3.5, 19.25, 0.017499924, 0.5, 21.25, 0.017499924, 3.5, 21.25, 0.017499924, 0.5, 21.5, 0.017499924, 5.5, 24.5, 0.017499924, 5.5, 24.5, 0.017499924, -1.5, 21.5, 0.017499924, -1.5, -18.5, 0.017499924, 12, -15.5, 0.017499924, 12, -15.5, 0.017499924, 9.75, -18.75, 0.017499924, 9.5, -22.5, 0.017499924, 6.25, -24.75, 0.017499924, 6.5, -24.75, 0.017499924, 9.5, -19.25, 0.017499924, 6.5, -13.25, 0.017499924, 9.5, -13.25, 0.017499924, 6.5, 9.25, 0.017499924, 6.5, 9.5, 0.017499924, 9.75, 12.5, 0.017499924, 14.25, 7.25, 0.017499924, 6.5, 7.25, 0.017499924, 9.5, 9.5, 0.017499924, 14.25, -51.5, 0.017499924, 9.75, -49.25, 0.017499924, 9.5, -49.25, 0.017499924, 6.5, -54.5, 0.017499924, 6.5, -54.5, 0.017499924, 20.25, -51.5, 0.017499924, 20.25, -18.5, 0.017499924, 20, -15.5, 0.017499924, 20, -15.5, 0.017499924, 17.75, -15.5, 0.017499924, 14.25, -13, 0.017499924, 17.5, -13, 0.017499924, 14.5, 9.25, 0.017499924, 19.5, 9.5, 0.017499924, 21, 12.5, 0.017499924, 21, 9.25, 0.017499924, 16.5, 7, 0.017499924, 16.5, 7, 0.017499924, 19.5, -42.5, 0.017499924, 19.75, -39.5, 0.017499924, 19.75, -39.25, 0.017499924, 17.5, -42.5, 0.017499924, 14.5, -32.75, 0.017499924, 17.5, -32.75, 0.017499924, 14.5, -30.5, 0.017499924, 17.75, -27.5, 0.017499924, 14.5, -30.5, 0.017499924, 22, -30, 0.017499924, 25.5, -27.25, 0.017499924, 22.5, -20.75, 0.017499924, 25.5, -20.75, 0.017499924, 22.5, -10.5, 0.017499924, 17.75, -7.5, 0.017499924, 14.5, -10.5, 0.017499924, 24.25, -7.5, 0.017499924, 24.25, 4.75, 0.017499924, 16.5, 4.75, 0.017499924, 19.5, 4.5, 0.017499924, 21.5, 4.5, 0.017499924, 14.5, -2.5, 0.017499924, 14.5, -2.5, 0.017499924, 21.5, -57, 0.017499924, 25.5, -57, 0.017499924, 22.5, -59.5, 0.017499924, 22.25, -62.5, 0.017499924, 25.5, -59.5, 0.017499924, 18.5, -62.5, 0.017499924, 18.5, -42.5, 0.017499924, 30.25, -49.25, 0.017499924, 30.5, -49.25, 0.017499924, 33.5, -39.5, 0.017499924, 33.5, -54.75, 0.017499924, 22.5, -54.75, 0.017499924, 25.5, -54.5, 0.017499924, 28, -51.5, 0.017499924, 28, -18.5, 0.017499924, 22.25, -18.5, 0.017499924, 25.75, -15.5, 0.017499924, 26.25, -13, 0.017499924, 29.5, -13, 0.017499924, 26.5, -18.5, 0.017499924, 29.5, 12.75, 0.017499924, 22.5, 12.5, 0.017499924, 25.75, 14.75, 0.017499924, 25.5, 14.75, 0.017499924, 22.5, 9.5, 0.017499924, 33.5, 12.5, 0.017499924, 30.25, 14.75, 0.017499924, 33.5, 14.75, 0.017499924, 30.5, -30.75, 0.017499924, 22.5, -31.5, 0.017499924, 25.75, -34.5, 0.017499924, 22.5, -34.5, 0.017499924, 40.25, -31.5, 0.017499924, 40.25, 29.25, 0.017499924, 25.5, 29.5, 0.017499924, 28, 32.5, 0.017499924, 28, 32.5, 0.017499924, 22.5, -10.75, 0.017499924, 29.5, -10.5, 0.017499924, 30, -7.5, 0.017499924, 30, -10.75, 0.017499924, 26.5, -54.5, 0.017499924, 35.75, -51.5, 0.017499924, 35.75, -51.5, 0.017499924, 33.75, -51.5, 0.017499924, 30.25, 36.75, 0.017499924, 33.5, 39, 0.017499924, 33.5, 39, 0.017499924, 30.5, 29.5, 0.017499924, 30.25, 32.75, 0.017499924, 30.5, 27.25, 0.017499924, 30.5, 27.25, 0.017499924, 33.5, 33.25, 0.017499924, 33.5, 33.5, 0.017499924, 35.75, 36.5, 0.017499924, 35.75, 41.25, 0.017499924, 33.5, 41.25, 0.017499924, 30.5, 41.5, 0.017499924, 35.5, 44.5, 0.017499924, 35.5, 44.5, 0.017499924, 28.5, 41.5, 0.017499924, 28.5, -7.25, 0.017499924, 30.5, -10.5, 0.017499924, 36, -7.5, 0.017499924, 33.75, -5.25, 0.017499924, 33.5, -5.25, 0.017499924, 30.5, -7.5, 0.017499924, 36, 1.25, 0.017499924, 33.5, 1.5, 0.017499924, 35.75, 4.5, 0.017499924, 35.75, 4.5, 0.017499924, 30.5, -49.25, 0.017499924, 45.5, -49.25, 0.017499924, 42.5, -51.5, 0.017499924, 42.25, -54.5, 0.017499924, 45.5, 1.5, 0.017499924, 48, 4.5, 0.017499924, 48, 4.5, 0.017499924, 45.75, 6.75, 0.017499924, 45.5, 6.75, 0.017499924, 42.5, 4.5, 0.017499924, 42.25, 33.5, 0.017499924, 48.25, 36.5, 0.017499924, 48.25, -7.25, 0.017499924, 38.5, -10.5, 0.017499924, 41.5, -3.5, 0.017499924, 41.5, -3.5, 0.017499924, 38.5, -34.75, 0.017499924, 42.5, -37, 0.017499924, 42.5, -37, 0.017499924, 45.5, -34.75, 0.017499924, 45.5, -34.5, 0.017499924, 48, -31.5, 0.017499924, 48, -39.25, 0.017499924, 45.5, -42.75, 0.017499924, 45.5, -42.5, 0.017499924, 47.75, -39.5, 0.017499924, 47.75, 24.5, 0.017499924, 45.5, 24.5, 0.017499924, 42.5, -37, 0.017499924, 57.5, -37, 0.017499924, 54.5, -39.5, 0.017499924, 54.25, -42.5, 0.017499924, 57.5, -31.5, 0.017499924, 53.75, -31, 0.017499924, 53.5, -31, 0.017499924, 50.5, -31.5, 0.017499924, 50.25, -34.5, 0.017499924, 54.25, -31.5, 0.017499924, 57.5, 1.25, 0.017499924, 50.5, 4.5, 0.017499924, 53.5, -5.25, 0.017499924, 53.5, -5.25, 0.017499924, 50.5, 33.25, 0.017499924, 50.5, 36.5, 0.017499924, 53.5, 26.75, 0.017499924, 50.5, 26.75, 0.017499924, 53.5, -19.25, 0.037499905, 53.75, -19.25, 0.037499905, 50.5, -23.65625, 0.017499924, 53.65625, -22.1875, 0.037499905, 53.6875, -22.1875, 0.037499905, 50.5, -23.65625, 0.017499924, 50.5, -7.5, 0.017499924, 53.75, -10.5, 0.017499924, 50.5, -10.5, 0.017499924, 60.25, -7.5, 0.017499924, 60.25, 16.5, 0.017499924, 53.75, 19, 0.017499924, 53.5, 19, 0.017499924, 50.5, 13.5, 0.017499924, 50.5, 13.5, 0.017499924, 57.5, 16.5, 0.017499924, 57.5, 21.5, 0.017499924, 55.75, 24.5, 0.017499924, 55.75, 24.5, 0.017499924, 53.75, 21.25, 0.017499924, 53.5, 21.5, 0.017499924, 62.25, 19, 0.017499924, 62.5, 19, 0.017499924, 65.5, 24.5, 0.017499924, 65.5, -7.25, 0.017499924, 65.5, -5, 0.017499924, 65.5, -5, 0.017499924, 62.5, -7.25, 0.017499924, 62.5, -10.5, 0.017499924, 67.75, -7.5, 0.017499924, 67.75, -2.5, 0.017499924, 65.75, 0.5, 0.017499924, 62.5, -2.5, 0.017499924, 72.25, 0.5, 0.017499924, 72.25, 8.5, 0.017499924, 65.75, 11, 0.017499924, 65.5, 11, 0.017499924, 62.5, 5.5, 0.017499924, 62.5, 5.5, 0.017499924, 69.5, 8.5, 0.017499924, 69.5, 16.75, 0.017499924, 65.5, 13.25, 0.017499924, 65.5, 13.5, 0.017499924, 67.75, 16.5, 0.017499924, 67.75, -5, 0.017499924, 77.5, -5, 0.017499924, 74.5, -7.5, 0.017499924, 74.25, -10.5, 0.017499924, 77.5, 13.5, 0.017499924, 74.25, 11.25, 0.017499924, 74.5, 11.25, 0.017499924, 77.5, 16.5, 0.017499924, 77.5, -2.75, 0.017499924, 74.5, 0.75, 0.017499924, 74.5)
@@ -30,16 +27,17 @@ cell_height = 0.01
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wjw84"]
 albedo_color = Color(0.5890956, 0.5890956, 0.5890956, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vv3pg"]
-albedo_texture = ExtResource("16_wlfnc")
-metallic = 1.0
-metallic_texture = ExtResource("17_duog2")
-roughness_texture = ExtResource("19_q1yaw")
-normal_enabled = true
-normal_texture = ExtResource("18_ueaco")
+[sub_resource type="ViewportTexture" id="ViewportTexture_dcwl1"]
+viewport_path = NodePath("SubViewport2")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oqkef"]
-data = PackedVector3Array(0, 200, 0, -200, 200, 0, 0, 400, 0, 0, 400, 0, -200, 200, 0, -200, 400, 0, 0, 200, 0, 0, 400, 0, 200, 200, 0, 200, 200, 0, 0, 400, 0, 200, 400, 0, 0, 0, 0, -200, 0, 0, 0, 200, 0, 0, 200, 0, -200, 0, 0, -200, 200, 0, 0, 200, 0, 200, 200, 0, 0, 0, 0, 0, 0, 0, 200, 200, 0, 200, 0, 0)
+[sub_resource type="ViewportTexture" id="ViewportTexture_hvdy1"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_eyav4"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_swoll"]
+viewport_path = NodePath("SubViewport")
 
 [node name="Maze1" type="Node3D" unique_id=829500125]
 script = ExtResource("1_k33jf")
@@ -63,8 +61,25 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 2, 0)
 
+[node name="WorldEnvironment" parent="." unique_id=2129621095 instance=ExtResource("3_k33jf")]
+
 [node name="Player" parent="." unique_id=683224540 instance=ExtResource("4_dcwl1")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 5.5447826, 1.0255165, -8.123683)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.156521, 1.0255165, -8.554888)
+
+[node name="Enemies" type="Node3D" parent="." unique_id=1281890190]
+
+[node name="Enemy" parent="Enemies" unique_id=1596931860 instance=ExtResource("5_hvdy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.07694, 1.0999596, 8.552364)
+player_path = NodePath("../../Player")
+food_path = NodePath("../../Food/ThrownFood")
+
+[node name="Enemy3" parent="Enemies" unique_id=833001095 instance=ExtResource("5_hvdy1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.239188, 1.0615008, 75.74473)
+player_path = NodePath("../../Player")
+food_path = NodePath("../../Food/ThrownFood")
+
+[node name="Enemy2" parent="Enemies" unique_id=1987723422 instance=ExtResource("6_eyav4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.755024, 1.5122902, 47.369057)
 
 [node name="NPCs" type="Node3D" parent="." unique_id=665630493]
 
@@ -87,7 +102,8 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.02
 [node name="ThrownFood" parent="Food" unique_id=101873407 instance=ExtResource("9_5rch4")]
 
 [node name="FoodItem2" parent="Food" unique_id=1484234212 instance=ExtResource("9_duog2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.06115, 0, -0.61230516)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.06115, 0.47188163, -0.61230516)
+prompt_message = "Pick up"
 
 [node name="FoodItem3" parent="Food" unique_id=1771649150 instance=ExtResource("9_duog2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.30683, 0, 22.38589)
@@ -430,21 +446,6 @@ use_collision = true
 mesh = SubResource("BoxMesh_w6sbl")
 material = SubResource("StandardMaterial3D_wjw84")
 
-[node name="Enemies" type="Node3D" parent="NavigationRegion3D" unique_id=1281890190]
-
-[node name="Enemy" parent="NavigationRegion3D/Enemies" unique_id=1596931860 instance=ExtResource("5_hvdy1")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -53.07694, 1.0999596, 8.552364)
-player_path = NodePath("../../../Player")
-food_path = NodePath("../../../Food/ThrownFood")
-
-[node name="Enemy3" parent="NavigationRegion3D/Enemies" unique_id=833001095 instance=ExtResource("5_hvdy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.239188, 1.2787049, 75.74473)
-player_path = NodePath("../../../Player")
-food_path = NodePath("../../../Food/ThrownFood")
-
-[node name="Enemy2" parent="NavigationRegion3D/Enemies" unique_id=1987723422 instance=ExtResource("6_eyav4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.755024, 1.5122902, 47.369057)
-
 [node name="Chests" type="Node3D" parent="." unique_id=724268529]
 
 [node name="Chest" parent="Chests" unique_id=2048806239 instance=ExtResource("10_ueaco")]
@@ -485,18 +486,40 @@ transform = Transform3D(-1.7484555e-07, 0, -1, 0, 1, 0, 4, 0, -4.371139e-08, -2.
 transform = Transform3D(-1.7703113e-07, 0, 1.11, 0, 2.535, 0, -4.05, 0, -4.851964e-08, 2.1031303, 1.2261543, -8.033291)
 prompt_message = "Exit Maze"
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1014897492]
-transform = Transform3D(1, 0, 0, 0, -0.065525025, -0.9978509, 0, 0.9978509, -0.065525025, 0, 0, 0)
-light_energy = 0.15
+[node name="Signs" type="Node3D" parent="." unique_id=2126893438]
 
-[node name="boneWall" type="MeshInstance3D" parent="." unique_id=1805372916]
-transform = Transform3D(-4.3711387e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711387e-10, 12, 0, -8)
-mesh = ExtResource("15_swoll")
-surface_material_override/0 = SubResource("StandardMaterial3D_vv3pg")
+[node name="Sign" parent="Signs" unique_id=1779779301 instance=ExtResource("16_dcwl1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.430064, 0, -7.7798953)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="boneWall" unique_id=296996120]
+[node name="Label" parent="Signs/Sign/SubViewport2" parent_id_path=PackedInt32Array(1779779301, 1988828590) index="0" unique_id=1109496230]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Remember to always watch
+ your hunger."
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="boneWall/StaticBody3D" unique_id=1899611644]
-shape = SubResource("ConcavePolygonShape3D_oqkef")
+[node name="Sprite3D2" parent="Signs/Sign" index="5" unique_id=62140585]
+texture = SubResource("ViewportTexture_dcwl1")
+
+[node name="Sprite3D" parent="Signs/Sign" index="7" unique_id=772846068]
+texture = SubResource("ViewportTexture_hvdy1")
+
+[node name="Sign2" parent="Signs" unique_id=796788113 instance=ExtResource("16_dcwl1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 23.476013, 0, 5.428658)
+
+[node name="Label" parent="Signs/Sign2/SubViewport2" parent_id_path=PackedInt32Array(796788113, 1988828590) index="0" unique_id=1109496230]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Collect food, save as much
+as you can. Return to the
+start."
+
+[node name="Sprite3D2" parent="Signs/Sign2" index="5" unique_id=62140585]
+texture = SubResource("ViewportTexture_eyav4")
+
+[node name="Sprite3D" parent="Signs/Sign2" index="7" unique_id=772846068]
+texture = SubResource("ViewportTexture_swoll")
 
 [connection signal="level_changed" from="." to="NextLevel" method="_on_level_layout_level_changed"]
+
+[editable path="Signs/Sign"]
+[editable path="Signs/Sign2"]

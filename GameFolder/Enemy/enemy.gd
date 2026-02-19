@@ -1,6 +1,9 @@
 extends CharacterBody3D
 class_name BaseEnemy
 
+#All of this may change for a better basic enemy script
+
+
 var player = null
 var food = null
 
@@ -13,6 +16,7 @@ const attack_range = 2.0
 
 @export var player_path : NodePath
 @export var food_path : NodePath
+#Change this too see how far the player can get knocked back
 @export var knockback_force: float
 
 
@@ -28,11 +32,13 @@ func _ready() -> void:
 	
 
 func _physics_process(delta: float) -> void:
+	#This is so the raycast is always looking at the player's position
 	raycast.look_at(player.global_position, Vector3.UP)
-	
+	#This is so the raycast is always looking at the food's position
+	raycast.look_at(food.global_position, Vector3.UP)
 	velocity = Vector3.ZERO
 	
-	
+	#Once the player gets close and collides with the raycast that's when everything happens
 	if raycast.is_colliding():
 		if raycast.get_collider() == player and see_food == false:
 			##Creates a list of points or corwds for the enemy to get to its destination

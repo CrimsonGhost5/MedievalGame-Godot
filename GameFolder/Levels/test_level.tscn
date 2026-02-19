@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bliwvb8npyt4b" path="res://Interactables/chest.tscn" id="9_cn5b1"]
 [ext_resource type="PackedScene" uid="uid://cur5tucp5sp28" path="res://Interactables/next_level.tscn" id="10_i45ex"]
 [ext_resource type="PackedScene" uid="uid://okeno01do3rm" path="res://npc.tscn" id="11_k8b6b"]
-[ext_resource type="PackedScene" uid="uid://dks7ptj0bnp4u" path="res://Enemy/enemy.tscn" id="11_lx7qo"]
+[ext_resource type="PackedScene" uid="uid://clysiwetdt610" path="res://Enemy/enemythehungry.tscn" id="11_lx7qo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gojnm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -63,12 +63,6 @@ shadow_enabled = true
 [node name="ThrownFood" parent="." unique_id=101873407 instance=ExtResource("3_lx7qo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.086899, 2.0149531, -12.9923)
 prompt_message = "Pick Up"
-
-[node name="Enemy" parent="." unique_id=1596931860 instance=ExtResource("11_lx7qo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.260128, 9.92975)
-player_path = NodePath("../Player")
-food_path = NodePath("../ThrownFood")
-knockback_force = 300.0
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1618555077]
 navigation_mesh = SubResource("NavigationMesh_lowby")
@@ -147,6 +141,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.999817, 0.49169618, 15.001
 [node name="NPC" parent="." unique_id=29989725 instance=ExtResource("11_k8b6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.700365, 1.8344307, -12.949276)
 prompt_message = "Talk"
+
+[node name="Enemy" parent="." unique_id=1596931860 instance=ExtResource("11_lx7qo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2310677, 9.585585)
 
 [connection signal="food_amount" from="NavigationRegion3D/FoodItem" to="Player" method="_add_food_amount"]
 [connection signal="food_amount" from="NavigationRegion3D/FoodItem2" to="Player" method="_add_food_amount"]

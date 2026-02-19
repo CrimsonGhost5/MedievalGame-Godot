@@ -13,6 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	#This is all for the stamina regen process so that if the player uses the stamina it will start regening
 	if can_regen == false && stamina.value != base_max or stamina.value == 0:
 		can_start_stimer = true
 		if can_start_stimer:
@@ -25,6 +26,7 @@ func _process(delta: float) -> void:
 	if stamina.value == base_max:
 		can_regen = false
 	
+	#The player begins regening the stamina and the process is shown
 	if can_regen == true:
 		stamina.value += 0.5
 		can_start_stimer = false

@@ -4,17 +4,29 @@ var health = 90
 var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-
+#For camera
 var sensitivity = 0.2
 var min_angle = -80
 var max_angle = 90
+var look_rot: Vector2
+
 var crouch_height = 0.5
 var stand_height = 2
+
+#This var gets reset after a certain ammount
 var eat_amount = 0
+#This is checked to see how much the player has sprinted
 var sprint_amount = 0
+#When an enemy hits the player they get pushed back a bit
 var push_back = 100
+var knockback: Vector3 = Vector3.ZERO
+var knockback_timer: float = 0.0
+var knockback_resistance = 10
+var y_speed := 0
+
+
 var currentvel := Vector3.ZERO
-var look_rot: Vector2
+
 
 
 var is_sprinting = false
@@ -23,10 +35,6 @@ var moving = true
 
 
 
-var knockback: Vector3 = Vector3.ZERO
-var knockback_timer: float = 0.0
-var knockback_resistance = 10
-var y_speed := 0
 
 @onready var game_over_ui = $CanvasLayer/GameOverScreen
 
@@ -88,7 +96,7 @@ func _physics_process(delta: float) -> void:
 	
 	throw()
 	eat()
-	
+	 #So the camera doesn't glitch out if the player looks a certain direction
 	head.rotation_degrees.x = look_rot.x
 	rotation_degrees.y = look_rot.y
 	
@@ -141,7 +149,6 @@ func eat():
 	
 	
 	if eat_amount >= 4:
-		
 		$UI/StaminaBar.base_max += 20
 		$UI/StaminaBar.stamina.value += 20
 		$UI/StaminaBar/TextureProgressBar.max_value += 20
@@ -155,6 +162,7 @@ func die():
 	moving = false
 	game_over_ui.show_gameover()
 
+#This will most likely be changed but for now this how the player takes damage to Enemies
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Enemy"):
 		health -= 50
