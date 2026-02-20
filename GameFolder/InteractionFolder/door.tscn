@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bvi1avywoj8wd" path="res://Interactables/door.gd" id="1_qkvdp"]
 [ext_resource type="PackedScene" uid="uid://dlypycvyhboy3" path="res://InteractionFolder/door_handle.tscn" id="2_wlm4t"]
+[ext_resource type="AudioStream" uid="uid://cyktxb6ocrfoq" path="res://Sounds/Door.wav" id="3_i516g"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jlhn5"]
 
@@ -109,5 +110,8 @@ libraries/ = SubResource("AnimationLibrary_i516g")
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=812957050]
 tree_root = SubResource("AnimationNodeStateMachine_ji2tt")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=224180028]
+stream = ExtResource("3_i516g")
 
 [connection signal="interacted" from="Hinge/DoorHandle" to="." method="toggle"]

@@ -10,6 +10,8 @@ func toggle(_body):
 	is_open = not is_open
 	
 	if is_open:
+		$AudioStreamPlayer3D.play
 		playback.travel("open")
 	else:
+		$AudioStreamPlayer3D.play
 		playback.travel("close")

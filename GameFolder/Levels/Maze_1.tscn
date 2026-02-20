@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://x1v3wsuuya02" path="res://Player/player.tscn" id="4_dcwl1"]
 [ext_resource type="PackedScene" uid="uid://dks7ptj0bnp4u" path="res://Enemy/enemy.tscn" id="5_hvdy1"]
 [ext_resource type="PackedScene" uid="uid://clysiwetdt610" path="res://Enemy/enemythehungry.tscn" id="6_eyav4"]
-[ext_resource type="PackedScene" uid="uid://okeno01do3rm" path="res://npc.tscn" id="7_swoll"]
+[ext_resource type="PackedScene" uid="uid://okeno01do3rm" path="res://npcdialogue.tscn" id="7_swoll"]
 [ext_resource type="PackedScene" uid="uid://dldj3j6wblwsj" path="res://InteractionFolder/door.tscn" id="8_wlfnc"]
 [ext_resource type="PackedScene" uid="uid://dpcq2xxky5mnf" path="res://Interactables/thrown_food.tscn" id="9_5rch4"]
 [ext_resource type="PackedScene" uid="uid://brka3ai73amxy" path="res://Interactables/food_item.tscn" id="9_duog2"]

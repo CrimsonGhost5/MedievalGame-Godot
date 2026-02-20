@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dldj3j6wblwsj" path="res://InteractionFolder/door.tscn" id="8_662sx"]
 [ext_resource type="PackedScene" uid="uid://bliwvb8npyt4b" path="res://Interactables/chest.tscn" id="9_cn5b1"]
 [ext_resource type="PackedScene" uid="uid://cur5tucp5sp28" path="res://Interactables/next_level.tscn" id="10_i45ex"]
-[ext_resource type="PackedScene" uid="uid://okeno01do3rm" path="res://npc.tscn" id="11_k8b6b"]
+[ext_resource type="PackedScene" uid="uid://okeno01do3rm" path="res://npcdialogue.tscn" id="11_k8b6b"]
 [ext_resource type="PackedScene" uid="uid://clysiwetdt610" path="res://Enemy/enemythehungry.tscn" id="11_lx7qo"]
 [ext_resource type="Script" uid="uid://cq6hk7f6e8q76" path="res://dialogue_export_resource.gd" id="12_dkv23"]
 [ext_resource type="Script" uid="uid://dge6cnp055o8x" path="res://dialogue_text_resource.gd" id="13_x458k"]
@@ -39,10 +39,10 @@ size = Vector3(30, 1, 30)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gojnm"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_k8b6b"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_x458k"]
 viewport_path = NodePath("SubViewport2")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_lx7qo"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_lrol0"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Resource" id="Resource_lrol0"]
@@ -125,10 +125,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11.
 text = "Hello"
 
 [node name="Sprite3D2" parent="Sign" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_k8b6b")
+texture = SubResource("ViewportTexture_x458k")
 
 [node name="Sprite3D" parent="Sign" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_lx7qo")
+texture = SubResource("ViewportTexture_lrol0")
 
 [node name="Door" parent="." unique_id=1191840203 instance=ExtResource("8_662sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104342, 2.521669, -11.620697)

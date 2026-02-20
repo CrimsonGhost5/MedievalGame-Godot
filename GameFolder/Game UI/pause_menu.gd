@@ -7,20 +7,22 @@ func _ready() -> void:
 	visible = false
 	get_tree().paused = false
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		if get_tree().paused:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			visible = false
 			get_tree().paused = false
 		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			visible = true
 			get_tree().paused = true
 
 
 func _on_resume_pressed() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	visible = false
 	get_tree().paused = false
 

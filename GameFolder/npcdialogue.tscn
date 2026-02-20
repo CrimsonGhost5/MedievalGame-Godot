@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://okeno01do3rm"]
+
+[ext_resource type="Script" uid="uid://8m0hnrh7i6f1" path="res://npc.gd" id="1_7p6ei"]
+[ext_resource type="Script" uid="uid://cq6hk7f6e8q76" path="res://dialogue_export_resource.gd" id="2_bycjn"]
+[ext_resource type="Script" uid="uid://dge6cnp055o8x" path="res://dialogue_text_resource.gd" id="3_qm0rm"]
+[ext_resource type="PackedScene" uid="uid://ig5cpa4xr82m" path="res://npc.tscn" id="4_2h5xs"]
+
+[sub_resource type="Resource" id="Resource_kh24r"]
+script = ExtResource("3_qm0rm")
+speaker_name = "Old Man"
+text = "Ah, another face has entered the catacomes."
+text_speed = 30.0
+metadata/_custom_type_script = "uid://dge6cnp055o8x"
+
+[sub_resource type="Resource" id="Resource_xxcha"]
+script = ExtResource("3_qm0rm")
+speaker_name = "Old Man"
+text = "Good luck out there."
+metadata/_custom_type_script = "uid://dge6cnp055o8x"
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xxcha"]
+
+[node name="NPCDialogue" type="Area3D" unique_id=1120903475]
+script = ExtResource("1_7p6ei")
+activate_instant = null
+only_activate_once = null
+override_diaiogie_position = null
+override_position = null
+dialogue = Array[ExtResource("2_bycjn")]([SubResource("Resource_kh24r"), SubResource("Resource_xxcha")])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=490412080]
+transform = Transform3D(2.97, 0, 0, 0, 2.97, 0, 0, 0, 2.97, 0, 0, 0)
+shape = SubResource("SphereShape3D_xxcha")
+
+[node name="NPC" parent="." unique_id=1679543906 instance=ExtResource("4_2h5xs")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
