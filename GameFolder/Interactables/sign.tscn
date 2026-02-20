@@ -51,17 +51,18 @@ size = Vector2i(256, 256)
 script = ExtResource("1_mbcot")
 
 [node name="Label" type="Label" parent="SubViewport2" unique_id=1109496230]
-offset_top = -15.0
+offset_top = -20.0
 offset_right = 256.0
-offset_bottom = 241.0
+offset_bottom = 236.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-text = "Maze 1"
+text = "odnmoqwndionddjkcmdkcmkc dvbndsivndivndmvkmdivndivndivndnudnvj"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Sprite3D2" type="Sprite3D" parent="." unique_id=62140585]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.167367, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6739867, 0)
 visible = false
 texture = SubResource("ViewportTexture_tbceu")
 
