@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://b8plrgwue4wge"]
+
+[ext_resource type="Texture2D" uid="uid://bq4qkiiugtoyj" path="res://3D_assets/textures/standardSurface1_BaseColor.1001.png" id="1_4g8fx"]
+[ext_resource type="Texture2D" uid="uid://bcga6xwf4e3tl" path="res://3D_assets/textures/standardSurface1_Metallic.1001.png" id="2_4jyq0"]
+[ext_resource type="Texture2D" uid="uid://cu17xkw6paexu" path="res://3D_assets/textures/standardSurface1_Normal.1001.png" id="3_sokli"]
+[ext_resource type="Texture2D" uid="uid://dpb8n45iehbyd" path="res://3D_assets/textures/standardSurface1_Roughness.1001.png" id="4_14ase"]
+[ext_resource type="ArrayMesh" uid="uid://dkxk8u5qsab7d" path="res://3D_assets/boneWall_godot.obj" id="5_imu0j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_woqiw"]
+albedo_texture = ExtResource("1_4g8fx")
+metallic = 1.0
+metallic_texture = ExtResource("2_4jyq0")
+roughness_texture = ExtResource("4_14ase")
+normal_enabled = true
+normal_texture = ExtResource("3_sokli")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tnspj"]
+data = PackedVector3Array(0, 200, 0, -200, 200, 0, 0, 400, 0, 0, 400, 0, -200, 200, 0, -200, 400, 0, 0, 200, 0, 0, 400, 0, 200, 200, 0, 200, 200, 0, 0, 400, 0, 200, 400, 0, 0, 0, 0, -200, 0, 0, 0, 200, 0, 0, 200, 0, -200, 0, 0, -200, 200, 0, 0, 200, 0, 200, 200, 0, 0, 0, 0, 0, 0, 0, 200, 200, 0, 200, 0, 0)
+
+[node name="boneWall" type="MeshInstance3D" unique_id=501439588]
+transform = Transform3D(-4.3711387e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711387e-10, 0, 0, 0)
+material_overlay = SubResource("StandardMaterial3D_woqiw")
+mesh = ExtResource("5_imu0j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1505653291]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=12377265]
+shape = SubResource("ConcavePolygonShape3D_tnspj")
