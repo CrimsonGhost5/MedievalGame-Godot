@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://xeqfw356wo8k" path="res://Levels/stairs.tscn" id="12_vv3pg"]
 [ext_resource type="PackedScene" uid="uid://vxswb5r75j0w" path="res://Interactables/exit_level.tscn" id="13_oqkef"]
 [ext_resource type="PackedScene" uid="uid://bfs550d8o24m2" path="res://Interactables/sign.tscn" id="16_dcwl1"]
+[ext_resource type="PackedScene" uid="uid://g7vf63c6mufw" path="res://Game UI/pause_menu.tscn" id="17_hvdy1"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_r72c7"]
 vertices = PackedVector3Array(-34.5, 0.017499924, -4, -31.5, 0.017499924, -4, -31.25, 0.017499924, -6.5, -34.75, 0.017499924, -6.5, -27.5, 0.017499924, -17.5, -38.5, 0.017499924, -17.5, -27.5, 0.017499924, -6.5, -38.5, 0.017499924, -6.5, 7.25, 0.017499924, -6.5, 7.25, 0.017499924, -9.5, -2.5, 0.017499924, -9.5, -2.5, 0.017499924, -6.5, 9.5, 0.017499924, -6.25, 12.5, 0.017499924, -9.5, 9.5, 0.017499924, -1.75, 12.5, 0.017499924, -1.75, -31.25, 0.017499924, -1.5, -34.5, 0.017499924, 1.5, -22.75, 0.017499924, 1.5, -22.5, 0.017499924, 4, -19.5, 0.017499924, 4, -19.5, 0.017499924, -1.5, 9.5, 0.017499924, 5, 12.5, 0.017499924, 5, 12.75, 0.017499924, 3.5, 12.75, 0.017499924, 0.5, 19.25, 0.017499924, 3.5, 19.25, 0.017499924, 0.5, 21.25, 0.017499924, 3.5, 21.25, 0.017499924, 0.5, 21.5, 0.017499924, 5.5, 24.5, 0.017499924, 5.5, 24.5, 0.017499924, -1.5, 21.5, 0.017499924, -1.5, -18.5, 0.017499924, 12, -15.5, 0.017499924, 12, -15.5, 0.017499924, 9.75, -18.75, 0.017499924, 9.5, -22.5, 0.017499924, 6.25, -24.75, 0.017499924, 6.5, -24.75, 0.017499924, 9.5, -19.25, 0.017499924, 6.5, -13.25, 0.017499924, 9.5, -13.25, 0.017499924, 6.5, 9.25, 0.017499924, 6.5, 9.5, 0.017499924, 9.75, 12.5, 0.017499924, 14.25, 7.25, 0.017499924, 6.5, 7.25, 0.017499924, 9.5, 9.5, 0.017499924, 14.25, -51.5, 0.017499924, 9.75, -49.25, 0.017499924, 9.5, -49.25, 0.017499924, 6.5, -54.5, 0.017499924, 6.5, -54.5, 0.017499924, 20.25, -51.5, 0.017499924, 20.25, -18.5, 0.017499924, 20, -15.5, 0.017499924, 20, -15.5, 0.017499924, 17.75, -15.5, 0.017499924, 14.25, -13, 0.017499924, 17.5, -13, 0.017499924, 14.5, 9.25, 0.017499924, 19.5, 9.5, 0.017499924, 21, 12.5, 0.017499924, 21, 9.25, 0.017499924, 16.5, 7, 0.017499924, 16.5, 7, 0.017499924, 19.5, -42.5, 0.017499924, 19.75, -39.5, 0.017499924, 19.75, -39.25, 0.017499924, 17.5, -42.5, 0.017499924, 14.5, -32.75, 0.017499924, 17.5, -32.75, 0.017499924, 14.5, -30.5, 0.017499924, 17.75, -27.5, 0.017499924, 14.5, -30.5, 0.017499924, 22, -30, 0.017499924, 25.5, -27.25, 0.017499924, 22.5, -20.75, 0.017499924, 25.5, -20.75, 0.017499924, 22.5, -10.5, 0.017499924, 17.75, -7.5, 0.017499924, 14.5, -10.5, 0.017499924, 24.25, -7.5, 0.017499924, 24.25, 4.75, 0.017499924, 16.5, 4.75, 0.017499924, 19.5, 4.5, 0.017499924, 21.5, 4.5, 0.017499924, 14.5, -2.5, 0.017499924, 14.5, -2.5, 0.017499924, 21.5, -57, 0.017499924, 25.5, -57, 0.017499924, 22.5, -59.5, 0.017499924, 22.25, -62.5, 0.017499924, 25.5, -59.5, 0.017499924, 18.5, -62.5, 0.017499924, 18.5, -42.5, 0.017499924, 30.25, -49.25, 0.017499924, 30.5, -49.25, 0.017499924, 33.5, -39.5, 0.017499924, 33.5, -54.75, 0.017499924, 22.5, -54.75, 0.017499924, 25.5, -54.5, 0.017499924, 28, -51.5, 0.017499924, 28, -18.5, 0.017499924, 22.25, -18.5, 0.017499924, 25.75, -15.5, 0.017499924, 26.25, -13, 0.017499924, 29.5, -13, 0.017499924, 26.5, -18.5, 0.017499924, 29.5, 12.75, 0.017499924, 22.5, 12.5, 0.017499924, 25.75, 14.75, 0.017499924, 25.5, 14.75, 0.017499924, 22.5, 9.5, 0.017499924, 33.5, 12.5, 0.017499924, 30.25, 14.75, 0.017499924, 33.5, 14.75, 0.017499924, 30.5, -30.75, 0.017499924, 22.5, -31.5, 0.017499924, 25.75, -34.5, 0.017499924, 22.5, -34.5, 0.017499924, 40.25, -31.5, 0.017499924, 40.25, 29.25, 0.017499924, 25.5, 29.5, 0.017499924, 28, 32.5, 0.017499924, 28, 32.5, 0.017499924, 22.5, -10.75, 0.017499924, 29.5, -10.5, 0.017499924, 30, -7.5, 0.017499924, 30, -10.75, 0.017499924, 26.5, -54.5, 0.017499924, 35.75, -51.5, 0.017499924, 35.75, -51.5, 0.017499924, 33.75, -51.5, 0.017499924, 30.25, 36.75, 0.017499924, 33.5, 39, 0.017499924, 33.5, 39, 0.017499924, 30.5, 29.5, 0.017499924, 30.25, 32.75, 0.017499924, 30.5, 27.25, 0.017499924, 30.5, 27.25, 0.017499924, 33.5, 33.25, 0.017499924, 33.5, 33.5, 0.017499924, 35.75, 36.5, 0.017499924, 35.75, 41.25, 0.017499924, 33.5, 41.25, 0.017499924, 30.5, 41.5, 0.017499924, 35.5, 44.5, 0.017499924, 35.5, 44.5, 0.017499924, 28.5, 41.5, 0.017499924, 28.5, -7.25, 0.017499924, 30.5, -10.5, 0.017499924, 36, -7.5, 0.017499924, 33.75, -5.25, 0.017499924, 33.5, -5.25, 0.017499924, 30.5, -7.5, 0.017499924, 36, 1.25, 0.017499924, 33.5, 1.5, 0.017499924, 35.75, 4.5, 0.017499924, 35.75, 4.5, 0.017499924, 30.5, -49.25, 0.017499924, 45.5, -49.25, 0.017499924, 42.5, -51.5, 0.017499924, 42.25, -54.5, 0.017499924, 45.5, 1.5, 0.017499924, 48, 4.5, 0.017499924, 48, 4.5, 0.017499924, 45.75, 6.75, 0.017499924, 45.5, 6.75, 0.017499924, 42.5, 4.5, 0.017499924, 42.25, 33.5, 0.017499924, 48.25, 36.5, 0.017499924, 48.25, -7.25, 0.017499924, 38.5, -10.5, 0.017499924, 41.5, -3.5, 0.017499924, 41.5, -3.5, 0.017499924, 38.5, -34.75, 0.017499924, 42.5, -37, 0.017499924, 42.5, -37, 0.017499924, 45.5, -34.75, 0.017499924, 45.5, -34.5, 0.017499924, 48, -31.5, 0.017499924, 48, -39.25, 0.017499924, 45.5, -42.75, 0.017499924, 45.5, -42.5, 0.017499924, 47.75, -39.5, 0.017499924, 47.75, 24.5, 0.017499924, 45.5, 24.5, 0.017499924, 42.5, -37, 0.017499924, 57.5, -37, 0.017499924, 54.5, -39.5, 0.017499924, 54.25, -42.5, 0.017499924, 57.5, -31.5, 0.017499924, 53.75, -31, 0.017499924, 53.5, -31, 0.017499924, 50.5, -31.5, 0.017499924, 50.25, -34.5, 0.017499924, 54.25, -31.5, 0.017499924, 57.5, 1.25, 0.017499924, 50.5, 4.5, 0.017499924, 53.5, -5.25, 0.017499924, 53.5, -5.25, 0.017499924, 50.5, 33.25, 0.017499924, 50.5, 36.5, 0.017499924, 53.5, 26.75, 0.017499924, 50.5, 26.75, 0.017499924, 53.5, -19.25, 0.037499905, 53.75, -19.25, 0.037499905, 50.5, -23.65625, 0.017499924, 53.65625, -22.1875, 0.037499905, 53.6875, -22.1875, 0.037499905, 50.5, -23.65625, 0.017499924, 50.5, -7.5, 0.017499924, 53.75, -10.5, 0.017499924, 50.5, -10.5, 0.017499924, 60.25, -7.5, 0.017499924, 60.25, 16.5, 0.017499924, 53.75, 19, 0.017499924, 53.5, 19, 0.017499924, 50.5, 13.5, 0.017499924, 50.5, 13.5, 0.017499924, 57.5, 16.5, 0.017499924, 57.5, 21.5, 0.017499924, 55.75, 24.5, 0.017499924, 55.75, 24.5, 0.017499924, 53.75, 21.25, 0.017499924, 53.5, 21.5, 0.017499924, 62.25, 19, 0.017499924, 62.5, 19, 0.017499924, 65.5, 24.5, 0.017499924, 65.5, -7.25, 0.017499924, 65.5, -5, 0.017499924, 65.5, -5, 0.017499924, 62.5, -7.25, 0.017499924, 62.5, -10.5, 0.017499924, 67.75, -7.5, 0.017499924, 67.75, -2.5, 0.017499924, 65.75, 0.5, 0.017499924, 62.5, -2.5, 0.017499924, 72.25, 0.5, 0.017499924, 72.25, 8.5, 0.017499924, 65.75, 11, 0.017499924, 65.5, 11, 0.017499924, 62.5, 5.5, 0.017499924, 62.5, 5.5, 0.017499924, 69.5, 8.5, 0.017499924, 69.5, 16.75, 0.017499924, 65.5, 13.25, 0.017499924, 65.5, 13.5, 0.017499924, 67.75, 16.5, 0.017499924, 67.75, -5, 0.017499924, 77.5, -5, 0.017499924, 74.5, -7.5, 0.017499924, 74.25, -10.5, 0.017499924, 77.5, 13.5, 0.017499924, 74.25, 11.25, 0.017499924, 74.5, 11.25, 0.017499924, 77.5, 16.5, 0.017499924, 77.5, -2.75, 0.017499924, 74.5, 0.75, 0.017499924, 74.5)
@@ -27,28 +28,28 @@ cell_height = 0.01
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wjw84"]
 albedo_color = Color(0.5890956, 0.5890956, 0.5890956, 1)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_dcwl1"]
-viewport_path = NodePath("SubViewport2")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_hvdy1"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_eyav4"]
-viewport_path = NodePath("SubViewport2")
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_swoll"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("SubViewport2")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_wlfnc"]
-viewport_path = NodePath("SubViewport2")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_duog2"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ueaco"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_duog2"]
 viewport_path = NodePath("SubViewport2")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_ueaco"]
+viewport_path = NodePath("SubViewport")
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_q1yaw"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vv3pg"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_oqkef"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vlrk1"]
 viewport_path = NodePath("SubViewport")
 
 [node name="Maze1" type="Node3D" unique_id=829500125]
@@ -95,8 +96,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.755024, 1.5122902, 47.369
 
 [node name="NPCs" type="Node3D" parent="." unique_id=665630493]
 
-[node name="NPC" parent="NPCs" unique_id=29989725 instance=ExtResource("7_swoll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.48844, 0.9171753, 31.934906)
+[node name="NPCArea" parent="NPCs" unique_id=1120903475 instance=ExtResource("7_swoll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.926514, 0.9071332, 32.085247)
 
 [node name="Doors" type="Node3D" parent="." unique_id=529918047]
 
@@ -510,10 +511,10 @@ text = "Remember to always watch
  your hunger."
 
 [node name="Sprite3D2" parent="Signs/Sign" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_dcwl1")
+texture = SubResource("ViewportTexture_swoll")
 
 [node name="Sprite3D" parent="Signs/Sign" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_hvdy1")
+texture = SubResource("ViewportTexture_wlfnc")
 
 [node name="Sign2" parent="Signs" unique_id=796788113 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 23.476013, 0, 5.428658)
@@ -526,10 +527,10 @@ as you can. Return to the
 start."
 
 [node name="Sprite3D2" parent="Signs/Sign2" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_eyav4")
+texture = SubResource("ViewportTexture_duog2")
 
 [node name="Sprite3D" parent="Signs/Sign2" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_swoll")
+texture = SubResource("ViewportTexture_ueaco")
 
 [node name="Sign3" parent="Signs" unique_id=995994448 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9436216, 0, 21.516214)
@@ -541,10 +542,10 @@ text = "Hold Shift to Sprint.
 Let go to regain Sprint."
 
 [node name="Sprite3D2" parent="Signs/Sign3" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_wlfnc")
+texture = SubResource("ViewportTexture_q1yaw")
 
 [node name="Sprite3D" parent="Signs/Sign3" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_duog2")
+texture = SubResource("ViewportTexture_vv3pg")
 
 [node name="Sign4" parent="Signs" unique_id=1030396464 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16480064, 0, 15.174915)
@@ -557,10 +558,12 @@ Open them to get food
 and other loot."
 
 [node name="Sprite3D2" parent="Signs/Sign4" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_ueaco")
+texture = SubResource("ViewportTexture_oqkef")
 
 [node name="Sprite3D" parent="Signs/Sign4" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_q1yaw")
+texture = SubResource("ViewportTexture_vlrk1")
+
+[node name="PauseMenu" parent="." unique_id=1020740941 instance=ExtResource("17_hvdy1")]
 
 [connection signal="level_changed" from="." to="NextLevel" method="_on_level_layout_level_changed"]
 

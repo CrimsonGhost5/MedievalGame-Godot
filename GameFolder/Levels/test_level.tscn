@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://clysiwetdt610" path="res://Enemy/enemythehungry.tscn" id="11_lx7qo"]
 [ext_resource type="Script" uid="uid://cq6hk7f6e8q76" path="res://dialogue_export_resource.gd" id="12_dkv23"]
 [ext_resource type="Script" uid="uid://dge6cnp055o8x" path="res://dialogue_text_resource.gd" id="13_x458k"]
+[ext_resource type="PackedScene" uid="uid://g7vf63c6mufw" path="res://Game UI/pause_menu.tscn" id="14_x458k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gojnm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -157,5 +158,7 @@ only_activate_once = false
 override_diaiogie_position = false
 override_position = Vector3(0, 0, 0)
 dialogue = Array[ExtResource("12_dkv23")]([SubResource("Resource_lrol0")])
+
+[node name="PauseMenu" parent="." unique_id=1020740941 instance=ExtResource("14_x458k")]
 
 [editable path="Sign"]
