@@ -24,6 +24,10 @@ config/icon="res://icon.svg"
 GameState="*uid://bhptguvg8gfs4"
 PlayerManager="*uid://cbku527iqu0q2"
 
+[display]
+
+window/size/mode=3
+
 [global_group]
 
 Player=""

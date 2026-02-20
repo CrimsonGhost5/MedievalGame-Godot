@@ -20,12 +20,11 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_lsn4k")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=214942816]
 anchors_preset = -1
-anchor_top = 0.83300006
-anchor_right = 0.99600005
-anchor_bottom = 1.0
-offset_top = 0.14294434
-offset_right = 4.60791
-offset_bottom = -1.072998
+anchor_top = 0.735
+anchor_right = 1.0
+anchor_bottom = 0.994
+offset_top = -0.23300171
+offset_bottom = 0.8880005
 
 [node name="Speaker" type="Control" parent="HBoxContainer" unique_id=2097969144]
 custom_minimum_size = Vector2(56, 0)
@@ -47,7 +46,6 @@ layout_mode = 2
 [node name="Text" type="RichTextLabel" parent="HBoxContainer/VBoxContainer" unique_id=123073561]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 100
 theme_override_font_sizes/bold_font_size = 100
