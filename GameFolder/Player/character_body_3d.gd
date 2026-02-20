@@ -47,12 +47,15 @@ func _ready() -> void:
 	$UI/Healthbar.health.value = GameState.get_value("health")
 	$UI/HungerBar.hunger.value = GameState.get_value("hunger")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	add_to_group("Player")
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
+	if !moving:
+		return
 	if moving:
 		crouch()
 	var input_dir := Input.get_vector("left", "right", "up", "down")

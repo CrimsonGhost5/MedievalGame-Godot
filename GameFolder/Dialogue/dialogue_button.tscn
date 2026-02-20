@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://oacuc1alk6vh"]
+
+[ext_resource type="Script" uid="uid://blkt3lyjdt5ry" path="res://Dialogue/dialogue_button.gd" id="1_y5l1o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ot0r6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y5l1o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ifxeo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iocd7"]
+
+[node name="DialogueButton" type="Button" unique_id=1089664637]
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 3
+theme_override_colors/font_focus_color = Color(0.7058824, 0.24313726, 0.21568628, 1)
+theme_override_colors/font_pressed_color = Color(0.6052935, 0, 0.020079043, 1)
+theme_override_colors/font_hover_color = Color(0.7073864, 0.24131304, 0.2139535, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ot0r6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_y5l1o")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ifxeo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iocd7")
+script = ExtResource("1_y5l1o")

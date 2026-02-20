@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://cur5tucp5sp28" path="res://Interactables/next_level.tscn" id="10_i45ex"]
 [ext_resource type="PackedScene" uid="uid://okeno01do3rm" path="res://npc.tscn" id="11_k8b6b"]
 [ext_resource type="PackedScene" uid="uid://clysiwetdt610" path="res://Enemy/enemythehungry.tscn" id="11_lx7qo"]
+[ext_resource type="Script" uid="uid://cq6hk7f6e8q76" path="res://dialogue_export_resource.gd" id="12_dkv23"]
+[ext_resource type="Script" uid="uid://dge6cnp055o8x" path="res://dialogue_text_resource.gd" id="13_x458k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gojnm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -41,6 +43,13 @@ viewport_path = NodePath("SubViewport2")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_lx7qo"]
 viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Resource" id="Resource_lrol0"]
+script = ExtResource("13_x458k")
+speaker_name = "Old Man"
+text = "Hello."
+text_speed = 30.0
+metadata/_custom_type_script = "uid://dge6cnp055o8x"
 
 [node name="TestLevel" type="Node3D" unique_id=971226196]
 script = ExtResource("1_tc6tp")
@@ -138,19 +147,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.999336, 0.49169618, -14.9
 [node name="Marker3D2" type="Marker3D" parent="." unique_id=1281017003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.999817, 0.49169618, 15.001087)
 
-[node name="NPC" parent="." unique_id=29989725 instance=ExtResource("11_k8b6b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.700365, 1.8344307, -12.949276)
-prompt_message = "Talk"
-
 [node name="Enemy" parent="." unique_id=1596931860 instance=ExtResource("11_lx7qo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2310677, 9.585585)
 
-[connection signal="food_amount" from="NavigationRegion3D/FoodItem" to="Player" method="_add_food_amount"]
-[connection signal="food_amount" from="NavigationRegion3D/FoodItem2" to="Player" method="_add_food_amount"]
-[connection signal="food_amount" from="NavigationRegion3D/FoodItem3" to="Player" method="_add_food_amount"]
-[connection signal="food_amount" from="NavigationRegion3D/FoodItem4" to="Player" method="_add_food_amount"]
-[connection signal="food_amount" from="NavigationRegion3D/FoodItem5" to="Player" method="_add_food_amount"]
-[connection signal="food_amount" from="NavigationRegion3D/FoodItem6" to="Player" method="_add_food_amount"]
-[connection signal="food_amount" from="NavigationRegion3D/FoodItem7" to="Player" method="_add_food_amount"]
+[node name="NPCArea" parent="." unique_id=1120903475 instance=ExtResource("11_k8b6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.099043, 1.5794933, -11.886038)
+activate_instant = false
+only_activate_once = false
+override_diaiogie_position = false
+override_position = Vector3(0, 0, 0)
+dialogue = Array[ExtResource("12_dkv23")]([SubResource("Resource_lrol0")])
 
 [editable path="Sign"]

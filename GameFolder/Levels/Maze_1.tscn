@@ -39,6 +39,18 @@ viewport_path = NodePath("SubViewport2")
 [sub_resource type="ViewportTexture" id="ViewportTexture_swoll"]
 viewport_path = NodePath("SubViewport")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_wlfnc"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_duog2"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ueaco"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_q1yaw"]
+viewport_path = NodePath("SubViewport")
+
 [node name="Maze1" type="Node3D" unique_id=829500125]
 script = ExtResource("1_k33jf")
 level_name = "Maze1"
@@ -449,25 +461,25 @@ material = SubResource("StandardMaterial3D_wjw84")
 [node name="Chests" type="Node3D" parent="." unique_id=724268529]
 
 [node name="Chest" parent="Chests" unique_id=2048806239 instance=ExtResource("10_ueaco")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2546499, 0.07871455, 15.359758)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.2546499, 0.07871455, 15.359758)
 itemID = "Food"
 item_amount = 2
 prompt_input = "interact"
 
 [node name="Chest4" parent="Chests" unique_id=1697968125 instance=ExtResource("10_ueaco")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.214484, 0.07871455, 15.328001)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.214484, 0.07871455, 15.328001)
 itemID = "Food"
 item_amount = 1
 prompt_input = "interact"
 
 [node name="Chest2" parent="Chests" unique_id=2092161180 instance=ExtResource("10_ueaco")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8210764, 0.07871455, 68.89827)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.8210764, 0.07871455, 68.89827)
 itemID = "Food"
 item_amount = 1
 prompt_input = "interact"
 
 [node name="Chest3" parent="Chests" unique_id=902216705 instance=ExtResource("10_ueaco")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.130177, 0.07871455, 18.78016)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -62.130177, 0.07871455, 18.78016)
 itemID = "Food"
 item_amount = 3
 prompt_input = "interact"
@@ -519,7 +531,40 @@ texture = SubResource("ViewportTexture_eyav4")
 [node name="Sprite3D" parent="Signs/Sign2" index="7" unique_id=772846068]
 texture = SubResource("ViewportTexture_swoll")
 
+[node name="Sign3" parent="Signs" unique_id=995994448 instance=ExtResource("16_dcwl1")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9436216, 0, 21.516214)
+
+[node name="Label" parent="Signs/Sign3/SubViewport2" parent_id_path=PackedInt32Array(995994448, 1988828590) index="0" unique_id=1109496230]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "Hold Shift to Sprint. 
+Let go to regain Sprint."
+
+[node name="Sprite3D2" parent="Signs/Sign3" index="5" unique_id=62140585]
+texture = SubResource("ViewportTexture_wlfnc")
+
+[node name="Sprite3D" parent="Signs/Sign3" index="7" unique_id=772846068]
+texture = SubResource("ViewportTexture_duog2")
+
+[node name="Sign4" parent="Signs" unique_id=1030396464 instance=ExtResource("16_dcwl1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16480064, 0, 15.174915)
+
+[node name="Label" parent="Signs/Sign4/SubViewport2" parent_id_path=PackedInt32Array(1030396464, 1988828590) index="0" unique_id=1109496230]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "This is a chest. 
+Open them to get food 
+and other loot."
+
+[node name="Sprite3D2" parent="Signs/Sign4" index="5" unique_id=62140585]
+texture = SubResource("ViewportTexture_ueaco")
+
+[node name="Sprite3D" parent="Signs/Sign4" index="7" unique_id=772846068]
+texture = SubResource("ViewportTexture_q1yaw")
+
 [connection signal="level_changed" from="." to="NextLevel" method="_on_level_layout_level_changed"]
 
 [editable path="Signs/Sign"]
 [editable path="Signs/Sign2"]
+[editable path="Signs/Sign3"]
+[editable path="Signs/Sign4"]
