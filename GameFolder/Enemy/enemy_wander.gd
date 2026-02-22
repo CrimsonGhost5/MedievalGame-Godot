@@ -1,26 +1,39 @@
 extends State
 class_name EnemyWander
 
-var wander_direction: Vector3
+#var wander_direction: Vector3
 var wander_time: float = 0.0
 var target: Node3D
 
 @onready var enemy: CharacterBody3D = get_parent().get_parent()
 @onready var nav_agent: NavigationAgent3D = $"../../NavigationAgent3D"
 
+@onready var random_pos = Vector3(randf_range(-2.0, 2.0), enemy.position.y, randf_range(-5.0, 5.0))
+
 func _ready() -> void:
 	target = PlayerManager.player
 
 #The Enemy will randomly choose a spot to go to and walk towards the spot
 func randomize_variables():
-	wander_direction = Vector3(randf_range(-1.0, 1.0), 0.0, randf_range(-1.0, 1.0))
-	wander_time = randf_range(1.5, 10)
+	nav_agent.target_position = random_pos
+	if (abs(random_pos.x - enemy.global_position.x) <= 5 and abs(random_pos.z - enemy.global_position.z) <= 5) or wander_time <= 0:
+		random_pos = Vector3(randf_range(target.global_position.x - 40, target.global_position.x + 40), enemy.position.y, randf_range(target.global_position.z - 40, target.global_position.z + 40))
+		clamp(random_pos.x, -2.0, 2.0)
+		clamp(random_pos.y, -5.0, 5.0)
+		wander_time = 60
+	
+	#wander_direction.x = randf_range(-2.0, 2.0)
+	#wander_direction.z = randf_range(-2.0, 2.0)
+	#nav_agent.set_target_position(wander_direction)
+	#wander_time = randf_range(1.5, 3)
+	pass
 
 #Enters in the random variable
 func enter():
 	randomize_variables()
 
 func process(_delta: float):
+	enemy.look_at(enemy.global_transform.origin + enemy.velocity)
 	if wander_time < 0.0:
 		randomize_variables()
 	
@@ -32,7 +45,7 @@ func process(_delta: float):
 
 func physics_process(_delta: float):
 	#Allows the enemy to move
-	enemy.velocity = wander_direction * enemy.WalkSpeed
+	#enemy.velocity = wander_direction * enemy.WalkSpeed
 	
 	if not enemy.is_on_floor():
 		enemy.velocity += enemy.get_gravity()

@@ -30,6 +30,7 @@ func _on_restart_pressed() -> void:
 	GameState.set_value("health", 100)
 	GameState.set_value("hunger", 100)
 	GameState.set_value("food", 0)
+	PlayerManager.starting_hunger_timer = 180
 	get_tree().reload_current_scene()
 
 func _on_quit_pressed() -> void:

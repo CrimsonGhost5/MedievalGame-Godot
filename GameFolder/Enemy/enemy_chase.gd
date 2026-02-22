@@ -19,6 +19,7 @@ func process(_delta: float):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func physics_process(_delta: float) -> void:
+	enemy.look_at(target.position)
 	#if nav_agent.is_navigation_finished():
 		#return
 	#
