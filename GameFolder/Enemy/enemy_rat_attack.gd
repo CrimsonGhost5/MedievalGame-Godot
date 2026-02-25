@@ -27,3 +27,6 @@ func physics_process(_delta: float):
 	var offset = target_position + enemy_origin
 	
 	enemy.velocity = enemy.global_position.direction_to(offset) * enemy.WalkSpeed
+	
+	if not enemy.is_on_floor():
+		enemy.velocity += enemy.get_gravity()
