@@ -22,11 +22,11 @@ func randomize_variables():
 		clamp(random_pos.y, -5.0, 5.0)
 		wander_time = 60
 	
-	#wander_direction.x = randf_range(-2.0, 2.0)
-	#wander_direction.z = randf_range(-2.0, 2.0)
-	#nav_agent.set_target_position(wander_direction)
+	#enemy.wander_direction.x = randf_range(-2.0, 2.0)
+	#enemy.wander_direction.z = randf_range(-2.0, 2.0)
+	#nav_agent.set_target_position(enemy.wander_direction)
 	#wander_time = randf_range(1.5, 3)
-	pass
+	
 
 #Enters in the random variable
 func enter():
@@ -45,7 +45,7 @@ func process(_delta: float):
 
 func physics_process(_delta: float):
 	#Allows the enemy to move
-	#enemy.velocity = wander_direction * enemy.WalkSpeed
-	
+	enemy.velocity = enemy.wander_direction * enemy.WalkSpeed
+	print("Is active!")
 	if not enemy.is_on_floor():
 		enemy.velocity += enemy.get_gravity()

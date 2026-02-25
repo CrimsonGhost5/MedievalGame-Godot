@@ -18,7 +18,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	starting_hunger_timer -= 1 * delta
-	print(starting_hunger_timer)
 	if starting_hunger_timer <= 0:
 		starting_hunger_timer == 0.0
 		starting_hunger_timer_end = true

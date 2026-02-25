@@ -47,6 +47,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.84060633, -0.28525484)
 mesh = SubResource("BoxMesh_7xaro")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=965732701]
+path_desired_distance = 0.5
 path_height_offset = 0.1
 path_max_distance = 10.01
 avoidance_enabled = true

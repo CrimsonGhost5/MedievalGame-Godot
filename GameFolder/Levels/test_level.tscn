@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bhptguvg8gfs4" path="res://GameState/game_state.gd" id="1_tc6tp"]
 [ext_resource type="PackedScene" uid="uid://x1v3wsuuya02" path="res://Player/player.tscn" id="2_k8b6b"]
 [ext_resource type="PackedScene" uid="uid://dpcq2xxky5mnf" path="res://Interactables/thrown_food.tscn" id="3_lx7qo"]
+[ext_resource type="PackedScene" uid="uid://b1xepx7vjhgq1" path="res://Enemy/enemytherat.tscn" id="5_ouwm7"]
 [ext_resource type="PackedScene" uid="uid://brka3ai73amxy" path="res://Interactables/food_item.tscn" id="5_x458k"]
 [ext_resource type="PackedScene" uid="uid://vxswb5r75j0w" path="res://Interactables/exit_level.tscn" id="6_lrol0"]
 [ext_resource type="PackedScene" uid="uid://bfs550d8o24m2" path="res://Interactables/sign.tscn" id="7_ouwm7"]
@@ -10,11 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://bliwvb8npyt4b" path="res://Interactables/chest.tscn" id="9_cn5b1"]
 [ext_resource type="PackedScene" uid="uid://cur5tucp5sp28" path="res://Interactables/next_level.tscn" id="10_i45ex"]
 [ext_resource type="PackedScene" uid="uid://okeno01do3rm" path="res://npcdialogue.tscn" id="11_k8b6b"]
-[ext_resource type="PackedScene" uid="uid://clysiwetdt610" path="res://Enemy/enemythehungry.tscn" id="11_lx7qo"]
 [ext_resource type="Script" uid="uid://cq6hk7f6e8q76" path="res://dialogue_export_resource.gd" id="12_dkv23"]
 [ext_resource type="Script" uid="uid://dge6cnp055o8x" path="res://dialogue_text_resource.gd" id="13_x458k"]
 [ext_resource type="PackedScene" uid="uid://g7vf63c6mufw" path="res://Game UI/pause_menu.tscn" id="14_x458k"]
-[ext_resource type="PackedScene" uid="uid://dks7ptj0bnp4u" path="res://Enemy/enemy.tscn" id="15_lrol0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gojnm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -29,21 +28,20 @@ sky = SubResource("Sky_1c2mv")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_lowby"]
-vertices = PackedVector3Array(-14.25, 0.6700001, -6, -8.25, 0.6700001, -6, -8, 0.6700001, -6.75, -8.25, 0.6700001, -14.25, -14.25, 0.6700001, -14.25, 5.75, 0.6700001, -7, 6.25, 0.6700001, -6, 6.5, 0.6700001, -6, 7, 0.6700001, -7, 8, 0.6700001, -7, 14.25, 0.6700001, -14.25, 3.25, 0.6700001, -7, 3.75, 0.6700001, -6, 4.25, 0.6700001, -6, 4.75, 0.6700001, -7, -0.5, 0.6700001, -7, 0.5, 0.6700001, -7, 1, 0.6700001, -6, 1.75, 0.6700001, -6, 2.25, 0.6700001, -7, 8.25, 0.6700001, -6.5, 9.75, 0.6700001, -7, -3, 0.6700001, -7, -2.5, 0.6700001, -6, -1, 0.6700001, -6, -6.75, 0.6700001, -7, -6.25, 0.6700001, -6, -4.5, 0.6700001, -6, -4, 0.6700001, -7, 10.25, 0.6700001, -6, 14.25, 0.6700001, -6, 7, 0.6700001, -5, 5.75, 0.6700001, -5, 14.25, 0.6700001, 14.25, -6.75, 0.6700001, -5, -7.75, 0.6700001, -5, -14.25, 0.6700001, 14.25, 4.75, 0.6700001, -5, 3.25, 0.6700001, -5, 8, 0.6700001, -5, 2.25, 0.6700001, -5, 9.75, 0.6700001, -5, 8.25, 0.6700001, -5.5, 0.5, 0.6700001, -5, -0.5, 0.6700001, -5, -3, 0.6700001, -5, -4, 0.6700001, -5)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(10, 9, 8), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 14), PackedInt32Array(16, 15, 3), PackedInt32Array(18, 17, 16), PackedInt32Array(18, 16, 19), PackedInt32Array(19, 16, 3), PackedInt32Array(20, 9, 21), PackedInt32Array(21, 9, 10), PackedInt32Array(24, 23, 22), PackedInt32Array(26, 25, 27), PackedInt32Array(27, 25, 28), PackedInt32Array(28, 25, 3), PackedInt32Array(24, 22, 15), PackedInt32Array(15, 22, 3), PackedInt32Array(10, 5, 14), PackedInt32Array(29, 21, 30), PackedInt32Array(30, 21, 10), PackedInt32Array(25, 2, 3), PackedInt32Array(10, 14, 11), PackedInt32Array(19, 3, 11), PackedInt32Array(11, 3, 10), PackedInt32Array(22, 28, 3), PackedInt32Array(10, 8, 5), PackedInt32Array(7, 31, 6), PackedInt32Array(6, 31, 32), PackedInt32Array(32, 31, 33), PackedInt32Array(36, 35, 34), PackedInt32Array(13, 37, 12), PackedInt32Array(12, 37, 38), PackedInt32Array(38, 37, 33), PackedInt32Array(31, 39, 33), PackedInt32Array(17, 18, 40), PackedInt32Array(42, 41, 39), PackedInt32Array(39, 41, 33), PackedInt32Array(17, 40, 43), PackedInt32Array(43, 40, 33), PackedInt32Array(24, 44, 23), PackedInt32Array(23, 44, 45), PackedInt32Array(27, 46, 26), PackedInt32Array(26, 46, 34), PackedInt32Array(34, 46, 36), PackedInt32Array(36, 46, 45), PackedInt32Array(40, 38, 33), PackedInt32Array(29, 30, 41), PackedInt32Array(41, 30, 33), PackedInt32Array(1, 35, 0), PackedInt32Array(0, 35, 36), PackedInt32Array(36, 45, 44), PackedInt32Array(37, 32, 33), PackedInt32Array(43, 33, 44), PackedInt32Array(44, 33, 36)]
-cell_height = 2.0
-agent_radius = 0.6
+[sub_resource type="NavigationMesh" id="NavigationMesh_lrol0"]
+vertices = PackedVector3Array(-14.5, 1, -6, -8, 1, -6, -8, 1, -6.5, -8.25, 1, -14.5, -14.5, 1, -14.5, 8, 1, -6.75, 8.25, 1, -6, 8.75, 1, -6, 9, 1, -6.75, 7, 1, -6.75, 14.5, 1, -14.5, 5.75, 1, -6.75, 6, 1, -6, 6.75, 1, -6, 4.75, 1, -6.75, 3.25, 1, -6.75, 3.5, 1, -6, 4.5, 1, -6, 0.5, 1, -6.75, 0.75, 1, -6, 2, 1, -6, 2.25, 1, -6.75, -3, 1, -6.75, -2.75, 1, -6, -0.75, 1, -6, -0.5, 1, -6.75, -6.75, 1, -6.75, -6.5, 1, -6, -4.25, 1, -6, -4, 1, -6.75, 9.75, 1, -6.75, 10, 1, -6, 14.5, 1, -6, 9, 1, -5.25, 8, 1, -5.25, 14.5, 1, 14.5, 5.75, 1, -5.25, 4.75, 1, -5.25, 7, 1, -5.25, -4, 1, -5.25, -6.75, 1, -5.25, -14.5, 1, 14.5, 3.25, 1, -5.25, 2.25, 1, -5.25, 0.5, 1, -5.25, -0.5, 1, -5.25, -3, 1, -5.25, 9.75, 1, -5.25, -7.75, 1, -5.25)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(10, 5, 9), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 9), PackedInt32Array(10, 11, 14), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 14), PackedInt32Array(10, 9, 11), PackedInt32Array(20, 19, 18), PackedInt32Array(20, 18, 21), PackedInt32Array(21, 18, 3), PackedInt32Array(24, 23, 22), PackedInt32Array(24, 22, 25), PackedInt32Array(25, 22, 3), PackedInt32Array(27, 26, 28), PackedInt32Array(28, 26, 29), PackedInt32Array(29, 26, 3), PackedInt32Array(18, 25, 3), PackedInt32Array(31, 30, 32), PackedInt32Array(32, 30, 10), PackedInt32Array(26, 2, 3), PackedInt32Array(10, 14, 15), PackedInt32Array(21, 3, 15), PackedInt32Array(15, 3, 10), PackedInt32Array(22, 29, 3), PackedInt32Array(10, 30, 8), PackedInt32Array(10, 8, 5), PackedInt32Array(7, 33, 6), PackedInt32Array(6, 33, 34), PackedInt32Array(34, 33, 35), PackedInt32Array(37, 36, 35), PackedInt32Array(13, 38, 12), PackedInt32Array(12, 38, 36), PackedInt32Array(41, 40, 39), PackedInt32Array(16, 17, 37), PackedInt32Array(16, 37, 42), PackedInt32Array(42, 37, 35), PackedInt32Array(19, 20, 43), PackedInt32Array(19, 43, 44), PackedInt32Array(44, 43, 35), PackedInt32Array(24, 45, 23), PackedInt32Array(23, 45, 46), PackedInt32Array(43, 42, 35), PackedInt32Array(28, 39, 27), PackedInt32Array(27, 39, 40), PackedInt32Array(41, 46, 45), PackedInt32Array(31, 32, 47), PackedInt32Array(47, 32, 35), PackedInt32Array(1, 48, 0), PackedInt32Array(0, 48, 41), PackedInt32Array(41, 39, 46), PackedInt32Array(33, 47, 35), PackedInt32Array(36, 38, 35), PackedInt32Array(44, 35, 45), PackedInt32Array(45, 35, 41), PackedInt32Array(38, 34, 35), PackedInt32Array(41, 48, 40)]
+agent_radius = 0.3
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hsoxx"]
 size = Vector3(30, 1, 30)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gojnm"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_lrol0"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_x458k"]
 viewport_path = NodePath("SubViewport2")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ouwm7"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_lrol0"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Resource" id="Resource_x458k"]
@@ -76,7 +74,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.086899, 2.0149531, -12.992
 prompt_message = "Pick Up"
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1618555077]
-navigation_mesh = SubResource("NavigationMesh_lowby")
+navigation_mesh = SubResource("NavigationMesh_lrol0")
 
 [node name="Floor" type="StaticBody3D" parent="NavigationRegion3D" unique_id=2013160074]
 
@@ -115,6 +113,9 @@ prompt_message = "Pick Up"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.361545, 1.1783996, -5.9917827)
 prompt_message = "Pick Up"
 
+[node name="EnemyTheRat" parent="." unique_id=1184139553 instance=ExtResource("5_ouwm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.527, 1.3079484, 0)
+
 [node name="ExitLevel" parent="." unique_id=1160335140 instance=ExtResource("6_lrol0")]
 transform = Transform3D(1.725, 0, 0, 0, 2.535, 0, 0, 0, 1.11, 12.411239, 1.809669, 12.134663)
 prompt_message = "Leave"
@@ -126,10 +127,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11.
 text = "Hello"
 
 [node name="Sprite3D2" parent="Sign" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_lrol0")
+texture = SubResource("ViewportTexture_x458k")
 
 [node name="Sprite3D" parent="Sign" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_ouwm7")
+texture = SubResource("ViewportTexture_lrol0")
 
 [node name="Door" parent="." unique_id=1191840203 instance=ExtResource("8_662sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104342, 2.521669, -11.620697)
@@ -149,9 +150,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.999336, 0.49169618, -14.9
 [node name="Marker3D2" type="Marker3D" parent="." unique_id=1281017003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.999817, 0.49169618, 15.001087)
 
-[node name="Enemy" parent="." unique_id=1596931860 instance=ExtResource("11_lx7qo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2310677, 9.585585)
-
 [node name="NPCArea" parent="." unique_id=1120903475 instance=ExtResource("11_k8b6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.099043, 1.5794933, -11.886038)
 activate_instant = false
@@ -161,10 +159,5 @@ override_position = Vector3(0, 0, 0)
 dialogue = Array[ExtResource("12_dkv23")]([SubResource("Resource_x458k")])
 
 [node name="PauseMenu" parent="." unique_id=1020740941 instance=ExtResource("14_x458k")]
-
-[node name="Enemy2" parent="." unique_id=37318729 instance=ExtResource("15_lrol0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.358735, 2.0849004, 3.3499374)
-player_path = NodePath("../Player")
-food_path = NodePath("../ThrownFood")
 
 [editable path="Sign"]

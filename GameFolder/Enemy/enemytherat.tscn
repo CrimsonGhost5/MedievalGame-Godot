@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b1xepx7vjhgq1"]
+
+[ext_resource type="Script" uid="uid://fparl1n1umu6" path="res://Enemy/enemytherat.gd" id="1_eqdyp"]
+[ext_resource type="Script" uid="uid://c4c4uyxih0slf" path="res://Enemy/EnemyStateMachine/enemy_state_machine.gd" id="2_ogwpc"]
+[ext_resource type="Script" uid="uid://dfdsms23l0q6w" path="res://Enemy/enemy_rat_wander.gd" id="3_ogwpc"]
+[ext_resource type="Script" uid="uid://dopv3h5qdy4g5" path="res://Enemy/enemy_rat_run_away.gd" id="4_kffe0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7wguf"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tn6j5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_omnql"]
+
+[node name="EnemyTheRat" type="CharacterBody3D" unique_id=1184139553]
+script = ExtResource("1_eqdyp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1845410530]
+transform = Transform3D(0.55693746, 0, 0, 0, 0.4971968, 0, 0, 0, 0.8896975, 0, 0.08688462, 0.00517416)
+shape = SubResource("BoxShape3D_7wguf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=28348423]
+transform = Transform3D(0.5, 0, 0, 0, 0.36, 0, 0, 0, 0.9, 0, 0, 0)
+mesh = SubResource("BoxMesh_tn6j5")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1945534378]
+transform = Transform3D(0.099999964, 0, 0, 0, 0.099999964, 0, 0, 0, 0.74952257, 0, -0.067417204, 0.6391142)
+mesh = SubResource("BoxMesh_omnql")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1512949948]
+avoidance_enabled = true
+debug_enabled = true
+
+[node name="StateMachine" type="Node" parent="." unique_id=845782608 node_paths=PackedStringArray("InitialState")]
+script = ExtResource("2_ogwpc")
+InitialState = NodePath("EnemyRatWander")
+metadata/_custom_type_script = "uid://c4c4uyxih0slf"
+
+[node name="EnemyRatWander" type="Node" parent="StateMachine" unique_id=1985080410]
+script = ExtResource("3_ogwpc")
+metadata/_custom_type_script = "uid://dfdsms23l0q6w"
+
+[node name="EnemyRatRunAway" type="Node" parent="StateMachine" unique_id=1505048948]
+script = ExtResource("4_kffe0")
+metadata/_custom_type_script = "uid://dopv3h5qdy4g5"
