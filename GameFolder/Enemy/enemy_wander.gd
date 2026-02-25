@@ -46,6 +46,6 @@ func process(_delta: float):
 func physics_process(_delta: float):
 	#Allows the enemy to move
 	enemy.velocity = wander_direction * enemy.WalkSpeed
-	print("Is active!")
+	# print("Is active!")
 	if not enemy.is_on_floor():
 		enemy.velocity += enemy.get_gravity()

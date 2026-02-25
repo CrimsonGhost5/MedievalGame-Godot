@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://clysiwetdt610"]
 
 [ext_resource type="Script" uid="uid://hmf6qd1y6txd" path="res://Enemy/newenemythehungry.gd" id="1_8tsdj"]
+[ext_resource type="Material" uid="uid://j37oa4nogleq" path="res://Materals/HungryEnemyMaterial.tres" id="2_3fiuf"]
 [ext_resource type="Script" uid="uid://c4c4uyxih0slf" path="res://Enemy/EnemyStateMachine/enemy_state_machine.gd" id="2_hhxnq"]
 [ext_resource type="Script" uid="uid://iyocwyrufwnd" path="res://Enemy/enemy_wander.gd" id="3_ea31h"]
 [ext_resource type="Script" uid="uid://dsqea3chtdgle" path="res://Enemy/enemy_chase.gd" id="4_ea31h"]
@@ -8,19 +9,17 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_7xaro"]
 radius = 1.1601702
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7xaro"]
+[sub_resource type="QuadMesh" id="QuadMesh_m5ek1"]
+material = ExtResource("2_3fiuf")
+flip_faces = true
+size = Vector2(1, 2.456)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_4gyqm"]
-material = SubResource("StandardMaterial3D_7xaro")
+[sub_resource type="QuadMesh" id="QuadMesh_gpp7j"]
+material = ExtResource("2_3fiuf")
+size = Vector2(1, 2.456)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ea31h"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4cmwx"]
-albedo_color = Color(0.37630078, 0.6123609, 0.9824868, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_7xaro"]
-material = SubResource("StandardMaterial3D_4cmwx")
-size = Vector3(0.5, 0.2, 0.5)
+height = 3.301953
 
 [node name="Enemy" type="CharacterBody3D" unique_id=1596931860 groups=["Enemy"]]
 script = ExtResource("1_8tsdj")
@@ -33,18 +32,18 @@ transform = Transform3D(0.92460495, 0, 0, 0, 1.3699598, 0, 0, 0, 0.82671654, 0, 
 shape = SubResource("SphereShape3D_7xaro")
 
 [node name="Body" type="MeshInstance3D" parent="." unique_id=79932378]
-transform = Transform3D(1, 0, 0, 0, 1.4, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("CapsuleMesh_4gyqm")
+transform = Transform3D(1, 0, 0, 0, 1.4, 0, 0, 0, 1, 0, 0.25, 0)
+mesh = SubResource("QuadMesh_m5ek1")
+
+[node name="BodyBack" type="MeshInstance3D" parent="." unique_id=2037551556]
+transform = Transform3D(1, 0, 0, 0, 1.4, 0, 0, 0, 1, 0, 0.25, 0)
+mesh = SubResource("QuadMesh_gpp7j")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=714567271]
-transform = Transform3D(1, 0, 0, 0, 1.4, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22597659, 0)
 shape = SubResource("CapsuleShape3D_ea31h")
 
 [node name="Timer" type="Timer" parent="." unique_id=612238075]
-
-[node name="Face" type="MeshInstance3D" parent="." unique_id=1374361806]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.84060633, -0.28525484)
-mesh = SubResource("BoxMesh_7xaro")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=965732701]
 path_desired_distance = 0.5
