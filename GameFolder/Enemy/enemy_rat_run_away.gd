@@ -19,11 +19,15 @@ func _process(delta: float) -> void:
 func physics_process(_delta: float) -> void:
 	var target_origin = target.get_global_transform().origin
 	
-	var enemy_origin = enemy.get_global_transform().origin
+	var target_position = target.position
 	
-	var offset = target_origin + enemy_origin
+	var direction: Vector3 = enemy.position.direction_to(target_position)
 	
-	enemy.velocity = enemy.global_position.direction_to(offset) * enemy.RunSpeed
+	var enemy_origin = enemy.position.normalized()
+	
+	var offset = target_position + enemy_origin
+	
+	enemy.velocity = -enemy.global_position.direction_to(offset) * enemy.RunSpeed
 	
 	if not enemy.is_on_floor():
 		enemy.velocity += enemy.get_gravity()

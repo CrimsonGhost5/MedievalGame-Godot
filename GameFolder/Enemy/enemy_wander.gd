@@ -1,7 +1,7 @@
 extends State
 class_name EnemyWander
 
-#var wander_direction: Vector3
+var wander_direction: Vector3
 var wander_time: float = 0.0
 var target: Node3D
 
@@ -45,7 +45,7 @@ func process(_delta: float):
 
 func physics_process(_delta: float):
 	#Allows the enemy to move
-	enemy.velocity = enemy.wander_direction * enemy.WalkSpeed
+	enemy.velocity = wander_direction * enemy.WalkSpeed
 	print("Is active!")
 	if not enemy.is_on_floor():
 		enemy.velocity += enemy.get_gravity()
