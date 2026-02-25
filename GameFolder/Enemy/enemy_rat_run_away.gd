@@ -15,6 +15,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if enemy.global_position.distance_to(target.global_position) > enemy.ChaseDistance:
 		emit_signal("Transitioned", self, "EnemyRatWander")
+	if enemy.global_position.distance_to(target.global_position) < enemy.AttackRange && enemy.global_position.distance_to(target.global_position) < enemy.ChaseDistance:
+		emit_signal("Transitioned", self, "EnemyRatAttack")
+		
 
 func physics_process(_delta: float) -> void:
 	var target_origin = target.get_global_transform().origin

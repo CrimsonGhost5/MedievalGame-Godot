@@ -34,6 +34,7 @@ func process(_delta: float):
 	
 	if enemy.global_position.distance_to(target.global_position) < enemy.ChaseDistance:
 		emit_signal("Transitioned", self, "EnemyRatRunAway")
+	
 
 func physics_process(_delta: float):
 	#Allows the enemy to move

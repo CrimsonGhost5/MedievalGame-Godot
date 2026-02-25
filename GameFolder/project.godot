@@ -29,6 +29,7 @@ PlayerManager="*uid://cbku527iqu0q2"
 Player=""
 Enemy=""
 "thrown food"=""
+EnemyRat=""
 
 [input]
 

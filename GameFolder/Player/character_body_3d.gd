@@ -172,6 +172,10 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		health -= 50
 		GameState.set_value("health", $UI/Healthbar.health.value)
 		$UI/Healthbar.health.value -= 50
+	
+	if body.is_in_group("EnemyRat"):
+		print("Is in body")
+		$UI/HungerBar.hunger.value -= 5
 
 func _add_food_amount(value: Variant) -> void:
 	GameState.set_value("food", GameState.get_value("food") + 1)

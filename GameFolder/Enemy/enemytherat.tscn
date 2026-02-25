@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c4c4uyxih0slf" path="res://Enemy/EnemyStateMachine/enemy_state_machine.gd" id="2_ogwpc"]
 [ext_resource type="Script" uid="uid://dfdsms23l0q6w" path="res://Enemy/enemy_rat_wander.gd" id="3_ogwpc"]
 [ext_resource type="Script" uid="uid://dopv3h5qdy4g5" path="res://Enemy/enemy_rat_run_away.gd" id="4_kffe0"]
+[ext_resource type="Script" uid="uid://t702kdmqh7wm" path="res://Enemy/enemy_rat_attack.gd" id="5_10jul"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7wguf"]
 
@@ -11,7 +12,9 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_omnql"]
 
-[node name="EnemyTheRat" type="CharacterBody3D" unique_id=1184139553]
+[sub_resource type="SphereShape3D" id="SphereShape3D_kffe0"]
+
+[node name="EnemyTheRat" type="CharacterBody3D" unique_id=1184139553 groups=["EnemyRat"]]
 script = ExtResource("1_eqdyp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1845410530]
@@ -42,3 +45,13 @@ metadata/_custom_type_script = "uid://dfdsms23l0q6w"
 [node name="EnemyRatRunAway" type="Node" parent="StateMachine" unique_id=1505048948]
 script = ExtResource("4_kffe0")
 metadata/_custom_type_script = "uid://dopv3h5qdy4g5"
+
+[node name="EnemyRatAttack" type="Node" parent="StateMachine" unique_id=1881104326]
+script = ExtResource("5_10jul")
+metadata/_custom_type_script = "uid://t702kdmqh7wm"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=726488809]
+transform = Transform3D(2.78, 0, 0, 0, 2.78, 0, 0, 0, 2.78, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=377304916]
+shape = SubResource("SphereShape3D_kffe0")
