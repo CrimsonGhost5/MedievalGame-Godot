@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://okeno01do3rm"]
 
-[ext_resource type="Script" uid="uid://8m0hnrh7i6f1" path="res://npc.gd" id="1_7p6ei"]
-[ext_resource type="Script" uid="uid://cq6hk7f6e8q76" path="res://dialogue_export_resource.gd" id="2_bycjn"]
-[ext_resource type="Script" uid="uid://dge6cnp055o8x" path="res://dialogue_text_resource.gd" id="3_qm0rm"]
-[ext_resource type="PackedScene" uid="uid://ig5cpa4xr82m" path="res://npc.tscn" id="4_2h5xs"]
+[ext_resource type="Script" uid="uid://8m0hnrh7i6f1" path="res://NPCs/npc.gd" id="1_7p6ei"]
+[ext_resource type="Script" uid="uid://cq6hk7f6e8q76" path="res://Dialogue/dialogue_export_resource.gd" id="2_bycjn"]
+[ext_resource type="Script" uid="uid://dge6cnp055o8x" path="res://Dialogue/dialogue_text_resource.gd" id="3_qm0rm"]
+[ext_resource type="PackedScene" uid="uid://ig5cpa4xr82m" path="res://NPCs/npc.tscn" id="4_2h5xs"]
 
 [sub_resource type="Resource" id="Resource_kh24r"]
 script = ExtResource("3_qm0rm")

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c507cpev8qmv6"
-path="res://.godot/imported/loafBread.fbx-92e805f1a2ca8a0ec85b8cc1847c6b58.scn"
+path="res://.godot/imported/loafBread.fbx-797fcbf7e01e1d28188c166bed4e7335.scn"
 
 [deps]
 
-source_file="res://loafBread.fbx"
-dest_files=["res://.godot/imported/loafBread.fbx-92e805f1a2ca8a0ec85b8cc1847c6b58.scn"]
+source_file="res://Objects/loafBread.fbx"
+dest_files=["res://.godot/imported/loafBread.fbx-797fcbf7e01e1d28188c166bed4e7335.scn"]
 
 [params]
 

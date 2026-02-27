@@ -11,7 +11,8 @@ var max_angle = 90
 var look_rot: Vector2
 
 var crouch_height = 0.5
-var stand_height = 2
+var stand_height: float
+var crouch_transition = 8.0
 
 #This var gets reset after a certain ammount
 var eat_amount = 0
@@ -27,7 +28,7 @@ var y_speed := 0
 
 var currentvel := Vector3.ZERO
 
-
+var input_dir = Vector3.ZERO
 
 var is_sprinting = false
 var is_crouching = false
@@ -42,6 +43,7 @@ var moving = true
 var throwable_food = load("res://Interactables/thrown_food.tscn")
 @onready var pos = $Head/Hand
 @onready var head = $Head
+@onready var collision_shape: CollisionShape3D = $CollisionShape3D
 
 func _ready() -> void:
 	PlayerManager.player = self
@@ -49,6 +51,7 @@ func _ready() -> void:
 	$UI/HungerBar.hunger.value = GameState.get_value("hunger")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	add_to_group("Player")
+	stand_height = collision_shape.shape.height
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -58,8 +61,11 @@ func _physics_process(delta: float) -> void:
 	if !moving:
 		return
 	if moving:
-		crouch()
-	var input_dir := Input.get_vector("left", "right", "up", "down")
+		if Input.is_action_just_pressed("crouch"):
+			crouch()
+		else:
+			crouch()
+	var input_dir = Input.get_vector("left", "right", "up", "down").normalized()
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction and moving:
 		velocity.x = direction.x * SPEED
@@ -106,16 +112,25 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
+func move(speed: float, acceleration: float, delta: float) -> void:
+	velocity = lerp(velocity, input_dir * speed, acceleration * delta)
+
 func crouch():
 	if Input.is_action_just_pressed("crouch"):
 		is_crouching = !is_crouching
 		if is_crouching:
-			$CollisionShape3D.shape.height = crouch_height
+			$CollisionShape3D.shape.height = crouch_height 
 			SPEED = 3
 			is_sprinting = false
 		else:
 			$CollisionShape3D.shape.height = stand_height
 			SPEED = 5
+	
+	#var target_height: float = crouch_height if not reverse else stand_height
+	#
+	#collision_shape.shape.height = lerp(collision_shape.shape.height, target_height, crouch_transition * delta)
+	#collision_shape.position.y = lerp(collision_shape.position.y, target_height * 0.8, crouch_transition * delta)
+	#head.position.y = lerp(head.position.y, target_height - 1, crouch_transition * delta)
  
 
 

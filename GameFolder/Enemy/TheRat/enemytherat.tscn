@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://b1xepx7vjhgq1"]
 
-[ext_resource type="Script" uid="uid://fparl1n1umu6" path="res://Enemy/enemytherat.gd" id="1_eqdyp"]
-[ext_resource type="Script" uid="uid://c4c4uyxih0slf" path="res://Enemy/EnemyStateMachine/enemy_state_machine.gd" id="2_ogwpc"]
-[ext_resource type="Script" uid="uid://dfdsms23l0q6w" path="res://Enemy/enemy_rat_wander.gd" id="3_ogwpc"]
-[ext_resource type="Script" uid="uid://dopv3h5qdy4g5" path="res://Enemy/enemy_rat_run_away.gd" id="4_kffe0"]
-[ext_resource type="Script" uid="uid://t702kdmqh7wm" path="res://Enemy/enemy_rat_attack.gd" id="5_10jul"]
+[ext_resource type="Script" uid="uid://fparl1n1umu6" path="res://Enemy/TheRat/enemytherat.gd" id="1_eqdyp"]
+[ext_resource type="Script" uid="uid://c4c4uyxih0slf" path="res://StateMachine/state_machine.gd" id="2_ogwpc"]
+[ext_resource type="Script" uid="uid://dfdsms23l0q6w" path="res://Enemy/TheRat/enemy_rat_wander.gd" id="3_ogwpc"]
+[ext_resource type="Script" uid="uid://dopv3h5qdy4g5" path="res://Enemy/TheRat/enemy_rat_run_away.gd" id="4_kffe0"]
+[ext_resource type="Script" uid="uid://t702kdmqh7wm" path="res://Enemy/TheRat/enemy_rat_attack.gd" id="5_10jul"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7wguf"]
 

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bliwvb8npyt4b"]
 
 [ext_resource type="Script" uid="uid://buv43mqvw16il" path="res://Interactables/chest.gd" id="1_twpm2"]
+[ext_resource type="AudioStream" uid="uid://bnpkt83vtdwe3" path="res://Sounds/ChestOpen.wav" id="2_enxnb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0e0a3"]
 
@@ -141,5 +142,8 @@ anim_player = NodePath("../AnimationPlayer")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1918843342]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42141712, 0)
 shape = SubResource("BoxShape3D_bp1or")
+
+[node name="ChestOpeningSFX" type="AudioStreamPlayer3D" parent="." unique_id=75721907]
+stream = ExtResource("2_enxnb")
 
 [connection signal="interacted" from="." to="." method="_on_interacted"]
