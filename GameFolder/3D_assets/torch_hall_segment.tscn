@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d5s6vkej8hu1"]
+
+[ext_resource type="PackedScene" uid="uid://bb5lrxjymyom8" path="res://3D_assets/ceiling.tscn" id="2_e81kr"]
+[ext_resource type="PackedScene" uid="uid://cg6gntongoiam" path="res://3D_assets/torch_wall.tscn" id="3_2fvlo"]
+
+[node name="torchHallSegment" type="Node3D" unique_id=1877728121]
+
+[node name="ceiling" parent="." unique_id=639545133 instance=ExtResource("2_e81kr")]
+skeleton = NodePath("../..")
+
+[node name="torchWall" parent="." unique_id=2035192510 instance=ExtResource("3_2fvlo")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0, 0)
+
+[node name="torchWall2" parent="." unique_id=1585391347 instance=ExtResource("3_2fvlo")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, 0, 0)

@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://cur5tucp5sp28" path="res://Interactables/next_level.tscn" id="7_1hhqv"]
 [ext_resource type="PackedScene" uid="uid://bliwvb8npyt4b" path="res://Interactables/chest.tscn" id="8_2cnfy"]
 [ext_resource type="PackedScene" uid="uid://dldj3j6wblwsj" path="res://InteractionFolder/door.tscn" id="9_4q2fa"]
+[ext_resource type="PackedScene" uid="uid://colxn6ub2yp7a" path="res://3D_assets/hall_segment.tscn" id="11_b2hjb"]
+[ext_resource type="PackedScene" uid="uid://d5s6vkej8hu1" path="res://3D_assets/torch_hall_segment.tscn" id="12_ewjeb"]
+[ext_resource type="PackedScene" uid="uid://d4qnc3h1g225" path="res://3D_assets/corner_piece.tscn" id="13_ltrpw"]
+[ext_resource type="PackedScene" uid="uid://vakj3gpvud2e" path="res://3D_assets/one_hall_piece.tscn" id="14_ewjeb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fe1fq"]
 
@@ -36,6 +40,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="blockoutWalls" type="GridMap" parent="." unique_id=667474094]
+visible = false
 mesh_library = ExtResource("3_6rv3n")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -430,3 +435,116 @@ transform = Transform3D(-4.3711378e-08, 0, 0.99999976, 0, 1, 0, -0.99999976, 0, 
 
 [node name="Door7" parent="doors" unique_id=1455519016 instance=ExtResource("9_4q2fa")]
 transform = Transform3D(-4.3711378e-08, 0, 0.99999976, 0, 1, 0, -0.99999976, 0, -4.3711378e-08, -54.23998, 1, 75.997055)
+
+[node name="maze2Build" type="Node3D" parent="." unique_id=1747181546]
+
+[node name="hallSegment" parent="maze2Build" unique_id=1879853954 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 64)
+
+[node name="torchHallSegment" parent="maze2Build" unique_id=1877728121 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 60)
+
+[node name="hallSegment2" parent="maze2Build" unique_id=1514043365 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 56)
+
+[node name="hallSegment3" parent="maze2Build" unique_id=809572112 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 48)
+
+[node name="torchHallSegment2" parent="maze2Build" unique_id=2059298557 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 44)
+
+[node name="torchHallSegment3" parent="maze2Build" unique_id=1308114612 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23, 0, 44)
+
+[node name="hallSegment4" parent="maze2Build" unique_id=1638175385 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19, 0, 44)
+
+[node name="hallSegment5" parent="maze2Build" unique_id=1169688289 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 0, 44)
+
+[node name="torchHallSegment5" parent="maze2Build" unique_id=1906918644 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0, 44)
+
+[node name="torchHallSegment6" parent="maze2Build" unique_id=1267742820 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, 44)
+
+[node name="hallSegment6" parent="maze2Build" unique_id=2115009521 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 44)
+
+[node name="hallSegment7" parent="maze2Build" unique_id=2029717583 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 44)
+
+[node name="torchHallSegment7" parent="maze2Build" unique_id=936195997 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 52)
+
+[node name="hallSegment8" parent="maze2Build" unique_id=1480521988 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 11, 0, 52)
+
+[node name="torchHallSegment8" parent="maze2Build" unique_id=914680108 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0, 52)
+
+[node name="torchHallSegment9" parent="maze2Build" unique_id=605820749 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, 52)
+
+[node name="torchHallSegment10" parent="maze2Build" unique_id=1544666471 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 68)
+
+[node name="torchHallSegment12" parent="maze2Build" unique_id=548985870 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23, 0, 68)
+
+[node name="hallSegment11" parent="maze2Build" unique_id=1176658069 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 72)
+
+[node name="hallSegment12" parent="maze2Build" unique_id=2012380331 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19, 0, 68)
+
+[node name="torchHallSegment15" parent="maze2Build" unique_id=114182753 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0, 76)
+
+[node name="hallSegment14" parent="maze2Build" unique_id=1768479025 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 76)
+
+[node name="hallSegment15" parent="maze2Build" unique_id=497484564 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 76)
+
+[node name="hallSegment13" parent="maze2Build" unique_id=1968438091 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19, 0, 76)
+
+[node name="torchHallSegment11" parent="maze2Build" unique_id=610575366 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, 68)
+
+[node name="hallSegment9" parent="maze2Build" unique_id=488531178 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3, 0, 52)
+
+[node name="hallSegment10" parent="maze2Build" unique_id=151104513 instance=ExtResource("11_b2hjb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 0, 52)
+
+[node name="torchHallSegment4" parent="maze2Build" unique_id=916417975 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 52)
+
+[node name="cornerPiece" parent="maze2Build" unique_id=1646581345 instance=ExtResource("13_ltrpw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 44)
+
+[node name="cornerPiece3" parent="maze2Build" unique_id=1177531681 instance=ExtResource("13_ltrpw")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9, 0, 44)
+
+[node name="cornerPiece2" parent="maze2Build" unique_id=2071611046 instance=ExtResource("13_ltrpw")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 27, 0, 68)
+
+[node name="cornerPiece4" parent="maze2Build" unique_id=709383664 instance=ExtResource("13_ltrpw")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, 3, 0, 68)
+
+[node name="torchHallSegment13" parent="maze2Build" unique_id=90230425 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7, 0, 76)
+
+[node name="torchHallSegment14" parent="maze2Build" unique_id=864397424 instance=ExtResource("12_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 0, 76)
+
+[node name="cornerPiece5" parent="maze2Build" unique_id=1934875306 instance=ExtResource("13_ltrpw")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -9, 0, 76)
+
+[node name="oneHallPiece" parent="." unique_id=374670505 instance=ExtResource("14_ewjeb")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13, 0, 74)
+
+[node name="oneHallPiece2" parent="." unique_id=1369887230 instance=ExtResource("14_ewjeb")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9, 0, 70)

@@ -3202,6 +3202,10 @@ transform = Transform3D(-1, 0, 3.7949343e-07, 0, 1, 0, -3.7949343e-07, 0, -1, -1
 transform = Transform3D(-0.01, 0, 8.742278e-10, 0, 0.01, 0, -8.742278e-10, 0, -0.01, -25, 0, 10)
 skeleton = NodePath("../..")
 
+[node name="boneWall162" parent="walls" unique_id=689032209 instance=ExtResource("26_woqiw")]
+transform = Transform3D(-0.01, 0, 8.742278e-10, 0, 0.01, 0, -8.742278e-10, 0, -0.01, -21, 0, 10)
+skeleton = NodePath("../..")
+
 [node name="torchWall59" parent="walls" unique_id=668973481 instance=ExtResource("27_tnspj")]
 transform = Transform3D(-1, 0, 3.7949343e-07, 0, 1, 0, -3.7949343e-07, 0, -1, -29, 0, 10)
 

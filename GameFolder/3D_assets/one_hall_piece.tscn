@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://vakj3gpvud2e"]
+
+[ext_resource type="PackedScene" uid="uid://b8plrgwue4wge" path="res://3D_assets/bone_wall.tscn" id="1_3qlct"]
+[ext_resource type="PackedScene" uid="uid://bb5lrxjymyom8" path="res://3D_assets/ceiling.tscn" id="2_51u0q"]
+
+[node name="oneHallPiece" type="Node3D" unique_id=374670505]
+
+[node name="boneWall" parent="." unique_id=501439588 instance=ExtResource("1_3qlct")]
+transform = Transform3D(-4.3711387e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711387e-10, 4, 0, 2)
+skeleton = NodePath("../..")
+
+[node name="ceiling" parent="." unique_id=639545133 instance=ExtResource("2_51u0q")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 2, 0, 2)
+skeleton = NodePath("../..")
