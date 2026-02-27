@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://nyxhgpq828au"]
+
+[ext_resource type="Texture2D" uid="uid://c3448pqjssd7o" path="res://3D_assets/textures/useThese/medievalTrim_BaseColor.1001.png" id="1_6r7v4"]
+[ext_resource type="Texture2D" uid="uid://v3jaaunaqkxg" path="res://3D_assets/textures/useThese/medievalTrim_Metallic.1001.png" id="2_p31e3"]
+[ext_resource type="Texture2D" uid="uid://g1awjqddqwuj" path="res://3D_assets/textures/useThese/medievalTrim_Normal.1001.png" id="3_d5yiw"]
+[ext_resource type="Texture2D" uid="uid://co5eh3ywnmhd6" path="res://3D_assets/textures/useThese/medievalTrim_Roughness.1001.png" id="4_3p61i"]
+[ext_resource type="ArrayMesh" uid="uid://bn3fe2808dypk" path="res://3D_assets/halfBrickWall_godot.obj" id="5_f1u5x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7d36f"]
+albedo_texture = ExtResource("1_6r7v4")
+metallic = 1.0
+metallic_texture = ExtResource("2_p31e3")
+roughness_texture = ExtResource("4_3p61i")
+normal_enabled = true
+normal_texture = ExtResource("3_d5yiw")
+
+[node name="halfBrickWall" type="MeshInstance3D" unique_id=333362465]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+material_overlay = SubResource("StandardMaterial3D_7d36f")
+mesh = ExtResource("5_f1u5x")
