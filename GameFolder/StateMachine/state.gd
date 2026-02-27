@@ -2,6 +2,8 @@ extends Node
 class_name State
 signal Transitioned(state: State, new_state_name: String)
 
+var object
+
 func enter():
 	pass
 

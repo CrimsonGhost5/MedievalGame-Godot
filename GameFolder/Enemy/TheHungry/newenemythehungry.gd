@@ -10,9 +10,9 @@ extends CharacterBody3D
 
 # animation stuff
 @onready var material = $Body.get_active_material(0)
-@onready var standSprite = load("res://Enemy/HungryEnemy1.png")
-@onready var walkSprite1 = load("res://Enemy/HungryEnemy2.png")
-@onready var walkSprite2 = load("res://Enemy/HungryEnemy3.png")
+@onready var standSprite = load("res://Enemy/TheHungry/HungryEnemy1.png")
+@onready var walkSprite1 = load("res://Enemy/TheHungry/HungryEnemy2.png")
+@onready var walkSprite2 = load("res://Enemy/TheHungry/HungryEnemy3.png")
 var animating = false
 
 var target: Node3D

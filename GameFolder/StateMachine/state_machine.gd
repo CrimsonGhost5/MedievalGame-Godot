@@ -34,6 +34,7 @@ func on_child_transitioned(state, new_state_name):
 	
 	var new_state = states[new_state_name.to_lower()]
 	
+	assert(new_state, "State not found: " + new_state_name)
 	#Will exit the current state
 	if current_state:
 		current_state.exit()
