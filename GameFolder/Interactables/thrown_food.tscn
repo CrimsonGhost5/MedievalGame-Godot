@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dpcq2xxky5mnf"]
 
 [ext_resource type="Script" uid="uid://cft78g3f15mdg" path="res://Interactables/thrown_food.gd" id="1_fyf5m"]
-[ext_resource type="PackedScene" uid="uid://donnq44vo7rv2" path="res://sliceBread.fbx" id="2_0sc3s"]
+[ext_resource type="PackedScene" uid="uid://donnq44vo7rv2" path="res://Objects/sliceBread.fbx" id="2_0sc3s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8cbe5"]
 

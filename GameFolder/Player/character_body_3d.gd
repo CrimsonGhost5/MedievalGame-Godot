@@ -27,7 +27,7 @@ var y_speed := 0
 
 var currentvel := Vector3.ZERO
 
-
+var input_dir = Vector3.ZERO
 
 var is_sprinting = false
 var is_crouching = false
@@ -59,7 +59,7 @@ func _physics_process(delta: float) -> void:
 		return
 	if moving:
 		crouch()
-	var input_dir := Input.get_vector("left", "right", "up", "down")
+	var input_dir = Input.get_vector("left", "right", "up", "down").normalized()
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction and moving:
 		velocity.x = direction.x * SPEED
@@ -105,6 +105,9 @@ func _physics_process(delta: float) -> void:
 	rotation_degrees.y = look_rot.y
 	
 	move_and_slide()
+
+func move(speed: float, acceleration: float, delta: float) -> void:
+	velocity = lerp(velocity, input_dir * speed, acceleration * delta)
 
 func crouch():
 	if Input.is_action_just_pressed("crouch"):

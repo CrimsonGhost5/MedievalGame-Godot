@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://donnq44vo7rv2"
-path="res://.godot/imported/sliceBread.fbx-916f5785eb28794921cc2c525436c9a6.scn"
+path="res://.godot/imported/sliceBread.fbx-ba7a86aafaa450a190a1a952e2b96c72.scn"
 
 [deps]
 
-source_file="res://sliceBread.fbx"
-dest_files=["res://.godot/imported/sliceBread.fbx-916f5785eb28794921cc2c525436c9a6.scn"]
+source_file="res://Objects/sliceBread.fbx"
+dest_files=["res://.godot/imported/sliceBread.fbx-ba7a86aafaa450a190a1a952e2b96c72.scn"]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ox5cxviineqa"]
 
 [ext_resource type="PackedScene" uid="uid://dfbd6ubayf60a" path="res://Levels/world_environment.tscn" id="1_k3lds"]
-[ext_resource type="MeshLibrary" uid="uid://bfbly8odr5dlo" path="res://colors2.tres" id="2_0pwdu"]
+[ext_resource type="MeshLibrary" uid="uid://bfbly8odr5dlo" path="res://Other/colors2.tres" id="2_0pwdu"]
 [ext_resource type="AudioStream" uid="uid://nc8p0he6d6u3" path="res://Sounds/Catacombs Game Ambience.mp3" id="2_4q2fa"]
-[ext_resource type="MeshLibrary" uid="uid://b7kt6w5af4pmm" path="res://colors3.tres" id="3_6rv3n"]
+[ext_resource type="MeshLibrary" uid="uid://b7kt6w5af4pmm" path="res://Other/colors3.tres" id="3_6rv3n"]
 [ext_resource type="PackedScene" uid="uid://x1v3wsuuya02" path="res://Player/player.tscn" id="4_1hhqv"]
 [ext_resource type="PackedScene" uid="uid://xeqfw356wo8k" path="res://Levels/stairs.tscn" id="5_6rv3n"]
 [ext_resource type="PackedScene" uid="uid://by1g13fvc5t3b" path="res://Interactables/previous_level.tscn" id="6_1hhqv"]

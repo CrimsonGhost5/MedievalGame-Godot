@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://clysiwetdt610"]
 
-[ext_resource type="Script" uid="uid://hmf6qd1y6txd" path="res://Enemy/newenemythehungry.gd" id="1_8tsdj"]
+[ext_resource type="Script" uid="uid://hmf6qd1y6txd" path="res://Enemy/TheHungry/newenemythehungry.gd" id="1_8tsdj"]
 [ext_resource type="Material" uid="uid://j37oa4nogleq" path="res://Materals/HungryEnemyMaterial.tres" id="2_3fiuf"]
-[ext_resource type="Script" uid="uid://c4c4uyxih0slf" path="res://Enemy/EnemyStateMachine/enemy_state_machine.gd" id="2_hhxnq"]
-[ext_resource type="Script" uid="uid://iyocwyrufwnd" path="res://Enemy/enemy_wander.gd" id="3_ea31h"]
-[ext_resource type="Script" uid="uid://dsqea3chtdgle" path="res://Enemy/enemy_chase.gd" id="4_ea31h"]
+[ext_resource type="Script" uid="uid://c4c4uyxih0slf" path="res://StateMachine/state_machine.gd" id="2_hhxnq"]
+[ext_resource type="Script" uid="uid://iyocwyrufwnd" path="res://Enemy/TheHungry/enemy_wander.gd" id="3_ea31h"]
+[ext_resource type="Script" uid="uid://dsqea3chtdgle" path="res://Enemy/TheHungry/enemy_chase.gd" id="4_ea31h"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7xaro"]
 radius = 1.1601702
@@ -23,6 +23,7 @@ height = 3.301953
 
 [node name="Enemy" type="CharacterBody3D" unique_id=1596931860 groups=["Enemy"]]
 script = ExtResource("1_8tsdj")
+WalkSpeed = 2.0
 knockback_force = 15.0
 
 [node name="Area3D" type="Area3D" parent="." unique_id=640064718]
@@ -56,7 +57,7 @@ debug_path_custom_color = Color(0.55810523, 0, 0.099593244, 1)
 
 [node name="StateMachine" type="Node" parent="." unique_id=1084616023 node_paths=PackedStringArray("InitialState")]
 script = ExtResource("2_hhxnq")
-InitialState = NodePath("EnemyChase")
+InitialState = NodePath("EnemyWander")
 metadata/_custom_type_script = "uid://c4c4uyxih0slf"
 
 [node name="EnemyWander" type="Node" parent="StateMachine" unique_id=356089130]

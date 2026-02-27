@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://j37oa4nogleq"]
 
-[ext_resource type="Texture2D" uid="uid://du6ip866oxssb" path="res://Enemy/HungryEnemy1.png" id="1_w2uni"]
+[ext_resource type="Texture2D" uid="uid://du6ip866oxssb" path="res://Enemy/TheHungry/HungryEnemy1.png" id="1_w2uni"]
 
 [resource]
 transparency = 2

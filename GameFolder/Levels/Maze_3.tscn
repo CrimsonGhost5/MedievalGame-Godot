@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bm5847ure3bxu"]
 
 [ext_resource type="AudioStream" uid="uid://nc8p0he6d6u3" path="res://Sounds/Catacombs Game Ambience.mp3" id="1_t516e"]
-[ext_resource type="MeshLibrary" uid="uid://b7kt6w5af4pmm" path="res://colors3.tres" id="2_t516e"]
+[ext_resource type="MeshLibrary" uid="uid://b7kt6w5af4pmm" path="res://Other/colors3.tres" id="2_t516e"]
 [ext_resource type="PackedScene" uid="uid://x1v3wsuuya02" path="res://Player/player.tscn" id="3_vdimr"]
 [ext_resource type="PackedScene" uid="uid://dldj3j6wblwsj" path="res://InteractionFolder/door.tscn" id="4_15g84"]
 [ext_resource type="PackedScene" uid="uid://dfbd6ubayf60a" path="res://Levels/world_environment.tscn" id="4_spx1r"]
