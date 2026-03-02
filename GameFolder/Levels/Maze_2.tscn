@@ -543,8 +543,8 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 15, 
 [node name="cornerPiece5" parent="maze2Build" unique_id=1934875306 instance=ExtResource("13_ltrpw")]
 transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -9, 0, 76)
 
-[node name="oneHallPiece" parent="." unique_id=374670505 instance=ExtResource("14_ewjeb")]
+[node name="oneHallPiece" parent="maze2Build" unique_id=374670505 instance=ExtResource("14_ewjeb")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13, 0, 74)
 
-[node name="oneHallPiece2" parent="." unique_id=1369887230 instance=ExtResource("14_ewjeb")]
+[node name="oneHallPiece2" parent="maze2Build" unique_id=1369887230 instance=ExtResource("14_ewjeb")]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 9, 0, 70)
