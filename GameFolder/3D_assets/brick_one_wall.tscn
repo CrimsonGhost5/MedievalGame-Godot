@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://s755q1gda5k7"]
+
+[ext_resource type="PackedScene" uid="uid://b5gcbb2ixodgb" path="res://3D_assets/brick_wall.tscn" id="1_js81a"]
+[ext_resource type="PackedScene" uid="uid://bb5lrxjymyom8" path="res://3D_assets/ceiling.tscn" id="2_6dftr"]
+
+[node name="brickOneWall" type="Node3D" unique_id=267933533]
+
+[node name="brickWall37" parent="." unique_id=1312008732 instance=ExtResource("1_js81a")]
+transform = Transform3D(-4.3711396e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711396e-10, 0, 0, -2)
+skeleton = NodePath("../..")
+
+[node name="ceiling16" parent="." unique_id=639545133 instance=ExtResource("2_6dftr")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 2, 0, -2)
+skeleton = NodePath("../..")
