@@ -447,30 +447,6 @@ transform = Transform3D(-4.3711378e-08, 0, 0.99999976, 0, 1, 0, -0.99999976, 0, 
 [node name="Door7" parent="doors" unique_id=1455519016 instance=ExtResource("9_4q2fa")]
 transform = Transform3D(-4.3711378e-08, 0, 0.99999976, 0, 1, 0, -0.99999976, 0, -4.3711378e-08, -54.23998, 1, 75.997055)
 
-[node name="oneHallPiece" parent="doors" unique_id=374670505 instance=ExtResource("14_ewjeb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 62)
-
-[node name="oneHallPiece2" parent="doors" unique_id=1504943360 instance=ExtResource("14_ewjeb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -23, 0, 38)
-
-[node name="oneHallPiece4" parent="doors" unique_id=1757702130 instance=ExtResource("14_ewjeb")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -27, 0, 26)
-
-[node name="oneHallPiece5" parent="doors" unique_id=856125630 instance=ExtResource("14_ewjeb")]
-transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, -39, 0, 30)
-
-[node name="oneHallPiece6" parent="doors" unique_id=1826711152 instance=ExtResource("14_ewjeb")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -43, 0, 26)
-
-[node name="oneHallPiece8" parent="doors" unique_id=1912556703 instance=ExtResource("14_ewjeb")]
-transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, -55, 0, 14)
-
-[node name="oneHallPiece7" parent="doors" unique_id=97695333 instance=ExtResource("14_ewjeb")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -43, 0, 26)
-
-[node name="oneHallPiece3" parent="doors" unique_id=858602906 instance=ExtResource("14_ewjeb")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11, 0, 34)
-
 [node name="maze2Build" type="Node3D" parent="." unique_id=1747181546]
 
 [node name="hallSegment" parent="maze2Build" unique_id=1879853954 instance=ExtResource("11_b2hjb")]
@@ -1058,6 +1034,30 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 0
 [node name="brick_torchSegment16" parent="maze2Build" unique_id=970485492 instance=ExtResource("21_643yo")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, 0, 26)
 
+[node name="oneHallPiece4" parent="maze2Build" unique_id=374670505 instance=ExtResource("14_ewjeb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 62)
+
+[node name="oneHallPiece5" parent="maze2Build" unique_id=1504943360 instance=ExtResource("14_ewjeb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -23, 0, 38)
+
+[node name="oneHallPiece6" parent="maze2Build" unique_id=1757702130 instance=ExtResource("14_ewjeb")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -27, 0, 26)
+
+[node name="oneHallPiece7" parent="maze2Build" unique_id=856125630 instance=ExtResource("14_ewjeb")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, -39, 0, 30)
+
+[node name="oneHallPiece8" parent="maze2Build" unique_id=1826711152 instance=ExtResource("14_ewjeb")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -43, 0, 26)
+
+[node name="oneHallPiece9" parent="maze2Build" unique_id=1912556703 instance=ExtResource("14_ewjeb")]
+transform = Transform3D(-2.1855693e-07, 0, 1, 0, 1, 0, -1, 0, -2.1855693e-07, -55, 0, 14)
+
+[node name="oneHallPiece10" parent="maze2Build" unique_id=97695333 instance=ExtResource("14_ewjeb")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -43, 0, 26)
+
+[node name="oneHallPiece11" parent="maze2Build" unique_id=858602906 instance=ExtResource("14_ewjeb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11, 0, 34)
+
 [node name="mazeFloors" type="Node3D" parent="." unique_id=2045420858]
 
 [node name="floor" parent="mazeFloors" unique_id=1184286252 instance=ExtResource("24_3cjhb")]
@@ -1070,6 +1070,10 @@ skeleton = NodePath("../..")
 
 [node name="floor3" parent="mazeFloors" unique_id=1830322545 instance=ExtResource("24_3cjhb")]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 11, 0, 76)
+skeleton = NodePath("../..")
+
+[node name="floor181" parent="mazeFloors" unique_id=1190749932 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 11, 0, 72)
 skeleton = NodePath("../..")
 
 [node name="floor4" parent="mazeFloors" unique_id=1841517924 instance=ExtResource("24_3cjhb")]
@@ -1092,4 +1096,698 @@ skeleton = NodePath("../..")
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9, 0, 76)
 skeleton = NodePath("../..")
 
+[node name="floor17" parent="mazeFloors" unique_id=1590177049 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 19, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor24" parent="mazeFloors" unique_id=214961142 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 23, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor18" parent="mazeFloors" unique_id=298301204 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 15, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor19" parent="mazeFloors" unique_id=741856608 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 11, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor20" parent="mazeFloors" unique_id=242286474 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 7, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor21" parent="mazeFloors" unique_id=1354172925 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 3, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor32" parent="mazeFloors" unique_id=795716857 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 19, 0, 68)
+skeleton = NodePath("../..")
+
+[node name="floor33" parent="mazeFloors" unique_id=1405348113 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 23, 0, 68)
+skeleton = NodePath("../..")
+
+[node name="floor34" parent="mazeFloors" unique_id=35802707 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 15, 0, 68)
+skeleton = NodePath("../..")
+
+[node name="floor35" parent="mazeFloors" unique_id=444119239 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 11, 0, 68)
+skeleton = NodePath("../..")
+
+[node name="floor36" parent="mazeFloors" unique_id=1634731896 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 7, 0, 68)
+skeleton = NodePath("../..")
+
+[node name="floor37" parent="mazeFloors" unique_id=635328118 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 3, 0, 68)
+skeleton = NodePath("../..")
+
+[node name="floor41" parent="mazeFloors" unique_id=581898063 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 11, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor42" parent="mazeFloors" unique_id=1697896633 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 15, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor43" parent="mazeFloors" unique_id=1866505535 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 7, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor44" parent="mazeFloors" unique_id=212388612 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 3, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor45" parent="mazeFloors" unique_id=448494671 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor46" parent="mazeFloors" unique_id=1148624185 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -5, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor22" parent="mazeFloors" unique_id=745501816 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor23" parent="mazeFloors" unique_id=1466541952 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -5, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor9" parent="mazeFloors" unique_id=2050037861 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9, 0, 72)
+skeleton = NodePath("../..")
+
+[node name="floor10" parent="mazeFloors" unique_id=1647880374 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9, 0, 68)
+skeleton = NodePath("../..")
+
+[node name="floor11" parent="mazeFloors" unique_id=606840709 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9, 0, 64)
+skeleton = NodePath("../..")
+
+[node name="floor57" parent="mazeFloors" unique_id=437264930 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 72)
+skeleton = NodePath("../..")
+
+[node name="floor62" parent="mazeFloors" unique_id=728011387 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -29, 0, 72)
+skeleton = NodePath("../..")
+
+[node name="floor58" parent="mazeFloors" unique_id=1298750640 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 68)
+skeleton = NodePath("../..")
+
+[node name="floor12" parent="mazeFloors" unique_id=985756077 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9, 0, 60)
+skeleton = NodePath("../..")
+
+[node name="floor13" parent="mazeFloors" unique_id=1546859779 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9, 0, 56)
+skeleton = NodePath("../..")
+
+[node name="floor38" parent="mazeFloors" unique_id=85410892 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 3, 0, 64)
+skeleton = NodePath("../..")
+
+[node name="floor39" parent="mazeFloors" unique_id=491321071 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 3, 0, 60)
+skeleton = NodePath("../..")
+
+[node name="floor40" parent="mazeFloors" unique_id=256068292 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 3, 0, 56)
+skeleton = NodePath("../..")
+
+[node name="floor14" parent="mazeFloors" unique_id=1975477385 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor49" parent="mazeFloors" unique_id=1434833222 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -13, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor50" parent="mazeFloors" unique_id=1798584220 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -17, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor51" parent="mazeFloors" unique_id=1758431052 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -21, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor93" parent="mazeFloors" unique_id=1563528828 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -13, 0, 36)
+skeleton = NodePath("../..")
+
+[node name="floor94" parent="mazeFloors" unique_id=93731410 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -17, 0, 36)
+skeleton = NodePath("../..")
+
+[node name="floor95" parent="mazeFloors" unique_id=384598767 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -21, 0, 36)
+skeleton = NodePath("../..")
+
+[node name="floor52" parent="mazeFloors" unique_id=2137732103 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor53" parent="mazeFloors" unique_id=1994190590 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -13, 0, 64)
+skeleton = NodePath("../..")
+
+[node name="floor54" parent="mazeFloors" unique_id=1828955057 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -17, 0, 64)
+skeleton = NodePath("../..")
+
+[node name="floor55" parent="mazeFloors" unique_id=455916705 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -21, 0, 64)
+skeleton = NodePath("../..")
+
+[node name="floor56" parent="mazeFloors" unique_id=364174328 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 64)
+skeleton = NodePath("../..")
+
+[node name="floor63" parent="mazeFloors" unique_id=345980798 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -33, 0, 76)
+skeleton = NodePath("../..")
+
+[node name="floor64" parent="mazeFloors" unique_id=208571262 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -37, 0, 76)
+skeleton = NodePath("../..")
+
+[node name="floor65" parent="mazeFloors" unique_id=1422133149 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -41, 0, 76)
+skeleton = NodePath("../..")
+
+[node name="floor66" parent="mazeFloors" unique_id=583621243 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -45, 0, 76)
+skeleton = NodePath("../..")
+
+[node name="floor67" parent="mazeFloors" unique_id=243205023 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -49, 0, 76)
+skeleton = NodePath("../..")
+
+[node name="floor68" parent="mazeFloors" unique_id=1590735019 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 76)
+skeleton = NodePath("../..")
+
+[node name="floor143" parent="mazeFloors" unique_id=1935087002 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -41, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor144" parent="mazeFloors" unique_id=636404478 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -45, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor145" parent="mazeFloors" unique_id=727039629 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -49, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor146" parent="mazeFloors" unique_id=790301113 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor150" parent="mazeFloors" unique_id=1776389066 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -41, 0, 40)
+skeleton = NodePath("../..")
+
+[node name="floor154" parent="mazeFloors" unique_id=1490385732 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -37, 0, 40)
+skeleton = NodePath("../..")
+
+[node name="floor151" parent="mazeFloors" unique_id=1813680459 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -45, 0, 40)
+skeleton = NodePath("../..")
+
+[node name="floor152" parent="mazeFloors" unique_id=457885914 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -49, 0, 40)
+skeleton = NodePath("../..")
+
+[node name="floor153" parent="mazeFloors" unique_id=1715371054 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 40)
+skeleton = NodePath("../..")
+
+[node name="floor155" parent="mazeFloors" unique_id=80693458 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -41, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor156" parent="mazeFloors" unique_id=325640623 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -37, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor160" parent="mazeFloors" unique_id=488285996 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -33, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor157" parent="mazeFloors" unique_id=46045140 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -45, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor158" parent="mazeFloors" unique_id=1572726236 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -49, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor159" parent="mazeFloors" unique_id=175854206 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor174" parent="mazeFloors" unique_id=522206796 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 12)
+skeleton = NodePath("../..")
+
+[node name="floor175" parent="mazeFloors" unique_id=170048213 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -49, 0, 12)
+skeleton = NodePath("../..")
+
+[node name="floor176" parent="mazeFloors" unique_id=525494283 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -57, 0, 12)
+skeleton = NodePath("../..")
+
+[node name="floor177" parent="mazeFloors" unique_id=1670285777 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 12)
+skeleton = NodePath("../..")
+
+[node name="floor178" parent="mazeFloors" unique_id=2109484515 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -65, 0, 12)
+skeleton = NodePath("../..")
+
+[node name="floor179" parent="mazeFloors" unique_id=2139482813 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -59, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="floor180" parent="mazeFloors" unique_id=735593865 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -63, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="floor147" parent="mazeFloors" unique_id=2088076810 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -57, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor59" parent="mazeFloors" unique_id=130451567 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -33, 0, 72)
+skeleton = NodePath("../..")
+
+[node name="floor69" parent="mazeFloors" unique_id=1970551486 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -37, 0, 64)
+skeleton = NodePath("../..")
+
+[node name="floor70" parent="mazeFloors" unique_id=908556196 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -41, 0, 64)
+skeleton = NodePath("../..")
+
+[node name="floor71" parent="mazeFloors" unique_id=1306008681 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -45, 0, 64)
+skeleton = NodePath("../..")
+
+[node name="floor60" parent="mazeFloors" unique_id=1839674594 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -33, 0, 68)
+skeleton = NodePath("../..")
+
+[node name="floor72" parent="mazeFloors" unique_id=558283470 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -45, 0, 72)
+skeleton = NodePath("../..")
+
+[node name="floor73" parent="mazeFloors" unique_id=545786521 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -45, 0, 68)
+skeleton = NodePath("../..")
+
+[node name="floor74" parent="mazeFloors" unique_id=1501468785 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -57, 0, 80)
+skeleton = NodePath("../..")
+
+[node name="floor75" parent="mazeFloors" unique_id=2064294058 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -57, 0, 76)
+skeleton = NodePath("../..")
+
+[node name="floor76" parent="mazeFloors" unique_id=1206149698 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 80)
+skeleton = NodePath("../..")
+
+[node name="floor77" parent="mazeFloors" unique_id=2099815277 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 76)
+skeleton = NodePath("../..")
+
+[node name="floor126" parent="mazeFloors" unique_id=807283457 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -77, 0, 60)
+skeleton = NodePath("../..")
+
+[node name="floor127" parent="mazeFloors" unique_id=373935075 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -77, 0, 56)
+skeleton = NodePath("../..")
+
+[node name="floor128" parent="mazeFloors" unique_id=715573795 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -77, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor129" parent="mazeFloors" unique_id=1334519753 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -77, 0, 40)
+skeleton = NodePath("../..")
+
+[node name="floor61" parent="mazeFloors" unique_id=139793798 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -33, 0, 64)
+skeleton = NodePath("../..")
+
+[node name="floor130" parent="mazeFloors" unique_id=1346632783 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 60)
+skeleton = NodePath("../..")
+
+[node name="floor131" parent="mazeFloors" unique_id=1841963571 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -65, 0, 60)
+skeleton = NodePath("../..")
+
+[node name="floor132" parent="mazeFloors" unique_id=1958734428 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -69, 0, 60)
+skeleton = NodePath("../..")
+
+[node name="floor139" parent="mazeFloors" unique_id=1670250750 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -65, 0, 40)
+skeleton = NodePath("../..")
+
+[node name="floor140" parent="mazeFloors" unique_id=1696124098 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -69, 0, 40)
+skeleton = NodePath("../..")
+
+[node name="floor141" parent="mazeFloors" unique_id=181457874 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -73, 0, 40)
+skeleton = NodePath("../..")
+
+[node name="floor134" parent="mazeFloors" unique_id=545858790 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -73, 0, 56)
+skeleton = NodePath("../..")
+
+[node name="floor133" parent="mazeFloors" unique_id=1808191932 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -57, 0, 60)
+skeleton = NodePath("../..")
+
+[node name="floor142" parent="mazeFloors" unique_id=874122231 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -57, 0, 56)
+skeleton = NodePath("../..")
+
+[node name="floor15" parent="mazeFloors" unique_id=47199211 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9, 0, 48)
+skeleton = NodePath("../..")
+
+[node name="floor16" parent="mazeFloors" unique_id=1434682542 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor96" parent="mazeFloors" unique_id=145265976 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 7, 0, 32)
+skeleton = NodePath("../..")
+
+[node name="floor97" parent="mazeFloors" unique_id=1814654287 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 3, 0, 32)
+skeleton = NodePath("../..")
+
+[node name="floor98" parent="mazeFloors" unique_id=1394616720 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1, 0, 32)
+skeleton = NodePath("../..")
+
+[node name="floor99" parent="mazeFloors" unique_id=1371217701 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -5, 0, 32)
+skeleton = NodePath("../..")
+
+[node name="floor100" parent="mazeFloors" unique_id=998178412 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9, 0, 32)
+skeleton = NodePath("../..")
+
+[node name="floor101" parent="mazeFloors" unique_id=1316989427 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 7, 0, 24)
+skeleton = NodePath("../..")
+
+[node name="floor102" parent="mazeFloors" unique_id=2027029425 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 3, 0, 24)
+skeleton = NodePath("../..")
+
+[node name="floor103" parent="mazeFloors" unique_id=114509016 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1, 0, 24)
+skeleton = NodePath("../..")
+
+[node name="floor106" parent="mazeFloors" unique_id=467367400 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 7, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor107" parent="mazeFloors" unique_id=1071356173 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor108" parent="mazeFloors" unique_id=671445835 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1, 0, 20)
+skeleton = NodePath("../..")
+
+[node name="floor120" parent="mazeFloors" unique_id=1527668088 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -21, 0, 16)
+skeleton = NodePath("../..")
+
+[node name="floor104" parent="mazeFloors" unique_id=844555483 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -5, 0, 24)
+skeleton = NodePath("../..")
+
+[node name="floor112" parent="mazeFloors" unique_id=1956876734 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1, 0, 12)
+skeleton = NodePath("../..")
+
+[node name="floor113" parent="mazeFloors" unique_id=1095499551 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -5, 0, 12)
+skeleton = NodePath("../..")
+
+[node name="floor114" parent="mazeFloors" unique_id=173632801 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1, 0, 16)
+skeleton = NodePath("../..")
+
+[node name="floor115" parent="mazeFloors" unique_id=1340992224 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -5, 0, 16)
+skeleton = NodePath("../..")
+
+[node name="floor116" parent="mazeFloors" unique_id=667900920 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -21, 0, 8)
+skeleton = NodePath("../..")
+
+[node name="floor117" parent="mazeFloors" unique_id=1316193661 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 8)
+skeleton = NodePath("../..")
+
+[node name="floor118" parent="mazeFloors" unique_id=2003927262 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -21, 0, 12)
+skeleton = NodePath("../..")
+
+[node name="floor119" parent="mazeFloors" unique_id=1185969622 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 12)
+skeleton = NodePath("../..")
+
+[node name="floor105" parent="mazeFloors" unique_id=985707472 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -9, 0, 24)
+skeleton = NodePath("../..")
+
+[node name="floor84" parent="mazeFloors" unique_id=1386299746 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor85" parent="mazeFloors" unique_id=567651831 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 48)
+skeleton = NodePath("../..")
+
+[node name="floor86" parent="mazeFloors" unique_id=1890775791 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor148" parent="mazeFloors" unique_id=13470423 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -41, 0, 48)
+skeleton = NodePath("../..")
+
+[node name="floor149" parent="mazeFloors" unique_id=1035573770 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -41, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor87" parent="mazeFloors" unique_id=14650144 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 40)
+skeleton = NodePath("../..")
+
+[node name="floor135" parent="mazeFloors" unique_id=1555147415 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -69, 0, 56)
+skeleton = NodePath("../..")
+
+[node name="floor136" parent="mazeFloors" unique_id=152687826 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -69, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor137" parent="mazeFloors" unique_id=1351109420 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -69, 0, 48)
+skeleton = NodePath("../..")
+
+[node name="floor138" parent="mazeFloors" unique_id=197925163 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -69, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor88" parent="mazeFloors" unique_id=1726199164 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 36)
+skeleton = NodePath("../..")
+
+[node name="floor89" parent="mazeFloors" unique_id=1269881735 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 32)
+skeleton = NodePath("../..")
+
+[node name="floor161" parent="mazeFloors" unique_id=1978903098 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 36)
+skeleton = NodePath("../..")
+
+[node name="floor162" parent="mazeFloors" unique_id=1028310197 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 32)
+skeleton = NodePath("../..")
+
+[node name="floor163" parent="mazeFloors" unique_id=1412387225 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -37, 0, 36)
+skeleton = NodePath("../..")
+
+[node name="floor164" parent="mazeFloors" unique_id=615366521 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -37, 0, 32)
+skeleton = NodePath("../..")
+
+[node name="floor165" parent="mazeFloors" unique_id=180549858 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 22)
+skeleton = NodePath("../..")
+
+[node name="floor167" parent="mazeFloors" unique_id=1449115759 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -57, 0, 20)
+skeleton = NodePath("../..")
+
+[node name="floor166" parent="mazeFloors" unique_id=2132048245 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 18)
+skeleton = NodePath("../..")
+
+[node name="floor90" parent="mazeFloors" unique_id=1890232232 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor91" parent="mazeFloors" unique_id=1663240409 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 24)
+skeleton = NodePath("../..")
+
+[node name="floor92" parent="mazeFloors" unique_id=1440260951 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 20)
+skeleton = NodePath("../..")
+
+[node name="floor168" parent="mazeFloors" unique_id=1529486797 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -45, 0, 24)
+skeleton = NodePath("../..")
+
+[node name="floor169" parent="mazeFloors" unique_id=1344103538 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -45, 0, 20)
+skeleton = NodePath("../..")
+
+[node name="floor170" parent="mazeFloors" unique_id=108925282 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -45, 0, 16)
+skeleton = NodePath("../..")
+
+[node name="floor171" parent="mazeFloors" unique_id=1758422298 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -45, 0, 12)
+skeleton = NodePath("../..")
+
+[node name="floor172" parent="mazeFloors" unique_id=1150212908 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 8)
+skeleton = NodePath("../..")
+
+[node name="floor173" parent="mazeFloors" unique_id=448015213 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -61, 0, 4)
+skeleton = NodePath("../..")
+
+[node name="floor78" parent="mazeFloors" unique_id=1339951075 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 48)
+skeleton = NodePath("../..")
+
+[node name="floor79" parent="mazeFloors" unique_id=1179409319 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 44)
+skeleton = NodePath("../..")
+
+[node name="floor80" parent="mazeFloors" unique_id=1241362666 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 40)
+skeleton = NodePath("../..")
+
+[node name="floor81" parent="mazeFloors" unique_id=308497193 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 36)
+skeleton = NodePath("../..")
+
+[node name="floor82" parent="mazeFloors" unique_id=1725857285 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 32)
+skeleton = NodePath("../..")
+
+[node name="floor83" parent="mazeFloors" unique_id=136542230 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor124" parent="mazeFloors" unique_id=440993018 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -29, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor125" parent="mazeFloors" unique_id=1112957556 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -29, 0, 24)
+skeleton = NodePath("../..")
+
+[node name="floor109" parent="mazeFloors" unique_id=304671040 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -13, 0, 32)
+skeleton = NodePath("../..")
+
+[node name="floor110" parent="mazeFloors" unique_id=1078350638 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -13, 0, 28)
+skeleton = NodePath("../..")
+
+[node name="floor111" parent="mazeFloors" unique_id=2067934965 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -13, 0, 24)
+skeleton = NodePath("../..")
+
+[node name="floor121" parent="mazeFloors" unique_id=1003904878 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -21, 0, 20)
+skeleton = NodePath("../..")
+
+[node name="floor122" parent="mazeFloors" unique_id=470236190 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -25, 0, 20)
+skeleton = NodePath("../..")
+
+[node name="floor123" parent="mazeFloors" unique_id=1782601054 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -29, 0, 20)
+skeleton = NodePath("../..")
+
+[node name="floor25" parent="mazeFloors" unique_id=522115736 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 27, 0, 68)
+skeleton = NodePath("../..")
+
+[node name="floor26" parent="mazeFloors" unique_id=170311957 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 27, 0, 64)
+skeleton = NodePath("../..")
+
+[node name="floor27" parent="mazeFloors" unique_id=1441606711 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 27, 0, 60)
+skeleton = NodePath("../..")
+
+[node name="floor28" parent="mazeFloors" unique_id=1233058465 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 27, 0, 56)
+skeleton = NodePath("../..")
+
+[node name="floor29" parent="mazeFloors" unique_id=1145814328 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 27, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor47" parent="mazeFloors" unique_id=1796432873 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 19, 0, 56)
+skeleton = NodePath("../..")
+
+[node name="floor48" parent="mazeFloors" unique_id=1111528378 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 19, 0, 52)
+skeleton = NodePath("../..")
+
+[node name="floor30" parent="mazeFloors" unique_id=1566414982 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 27, 0, 48)
+skeleton = NodePath("../..")
+
+[node name="floor31" parent="mazeFloors" unique_id=1082500283 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 27, 0, 44)
+skeleton = NodePath("../..")
+
 [node name="fallThroughFloor" parent="." unique_id=587065009 instance=ExtResource("25_h810o")]
+
+[node name="stairs" parent="." unique_id=1685043935 instance=ExtResource("19_j3wth")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -55, -4, 0)
+
+[node name="stairs2" parent="." unique_id=1522227729 instance=ExtResource("19_j3wth")]
+transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711387e-10, 19, 0, 80)
