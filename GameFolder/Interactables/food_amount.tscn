@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c0cqbh13qi5yp"]
 
 [ext_resource type="Script" uid="uid://c520sluek1cwa" path="res://Interactables/food_amount.gd" id="1_5jb4y"]
+[ext_resource type="Texture2D" uid="uid://1tjs487km4xj" path="res://Player/Player UI/medieval UI food.png" id="2_jp3g3"]
 
 [node name="FoodAmount" type="Control" unique_id=468157705]
 layout_mode = 3
@@ -36,3 +37,9 @@ offset_left = 1.5258789e-05
 offset_right = 7.0
 offset_bottom = -1.0
 theme_override_font_sizes/font_size = 64
+
+[node name="MedievalUiFood" type="Sprite2D" parent="CanvasLayer" unique_id=254410665]
+z_index = -5
+position = Vector2(1082, 589)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_jp3g3")

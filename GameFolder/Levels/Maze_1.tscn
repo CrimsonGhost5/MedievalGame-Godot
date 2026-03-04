@@ -112,34 +112,34 @@ normal_texture = ExtResource("22_vlrk1")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s4y0y"]
 data = PackedVector3Array(99.9985, 0, -200, 200, 0, -200, 99.9985, 0, -100.0046, 99.9985, 0, -100.0046, 200, 0, -200, 200, 0, -100.0046, -0.0030999999, 0, -100.0046, 99.9985, 0, -200, 99.9985, 0, -100.0046, -0.0030999999, 0, -200, 99.9985, 0, -200, -0.0030999999, 0, -100.0046, 99.9985, 0, -100.0046, 200, 0, -100.0046, 99.9985, 0, -0.0030999999, 99.9985, 0, -0.0030999999, 200, 0, -100.0046, 200, 0, -0.0030999999, -0.0030999999, 0, -100.0046, 99.9985, 0, -100.0046, -0.0030999999, 0, -0.0030999999, -0.0030999999, 0, -0.0030999999, 99.9985, 0, -100.0046, 99.9985, 0, -0.0030999999, -100.0046, 0, -100.0046, -0.0030999999, 0, -200, -0.0030999999, 0, -100.0046, -100.0046, 0, -200, -0.0030999999, 0, -200, -100.0046, 0, -100.0046, -200, 0, -100.0046, -100.0046, 0, -200, -100.0046, 0, -100.0046, -200, 0, -200, -100.0046, 0, -200, -200, 0, -100.0046, -200, 0, -100.0046, -100.0046, 0, -100.0046, -200, 0, -0.0030999999, -100.0046, 0, -100.0046, -0.0030999999, 0, -100.0046, -100.0046, 0, -0.0030999999, -200, 0, -0.0030999999, -100.0046, 0, -100.0046, -100.0046, 0, -0.0030999999, -100.0046, 0, -0.0030999999, -0.0030999999, 0, -100.0046, -0.0030999999, 0, -0.0030999999, -200, 0, -0.0030999999, -100.0046, 0, -0.0030999999, -200, 0, 99.9985, -200, 0, 99.9985, -100.0046, 0, -0.0030999999, -100.0046, 0, 99.9985, -100.0046, 0, -0.0030999999, -0.0030999999, 0, -0.0030999999, -100.0046, 0, 99.9985, -200, 0, 99.9985, -100.0046, 0, 99.9985, -200, 0, 200, -200, 0, 200, -100.0046, 0, 99.9985, -100.0046, 0, 200, -100.0046, 0, 99.9985, -0.0030999999, 0, -0.0030999999, -0.0030999999, 0, 99.9985, -100.0046, 0, 99.9985, -0.0030999999, 0, 99.9985, -100.0046, 0, 200, -0.0030999999, 0, -0.0030999999, 99.9985, 0, -0.0030999999, -0.0030999999, 0, 99.9985, -100.0046, 0, 200, -0.0030999999, 0, 99.9985, -0.0030999999, 0, 200, -0.0030999999, 0, 99.9985, 99.9985, 0, -0.0030999999, 99.9985, 0, 99.9985, -0.0030999999, 0, 99.9985, 99.9985, 0, 99.9985, -0.0030999999, 0, 200, 99.9985, 0, -0.0030999999, 200, 0, -0.0030999999, 99.9985, 0, 99.9985, -0.0030999999, 0, 200, 99.9985, 0, 99.9985, 99.9985, 0, 200, 99.9985, 0, 99.9985, 200, 0, -0.0030999999, 200, 0, 99.9985, 99.9985, 0, 99.9985, 200, 0, 99.9985, 99.9985, 0, 200, 99.9985, 0, 200, 200, 0, 99.9985, 200, 0, 200)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_s4y0y"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_1uilv"]
 viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_s4y0y"]
+viewport_path = NodePath("SubViewport")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_03i6n"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("SubViewport2")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_imq4i"]
-viewport_path = NodePath("SubViewport2")
+viewport_path = NodePath("SubViewport")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_nskln"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("SubViewport2")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_xim85"]
-viewport_path = NodePath("SubViewport2")
+viewport_path = NodePath("SubViewport")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_gcg4u"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("SubViewport2")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_snoaj"]
-viewport_path = NodePath("SubViewport2")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_i3cp3"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_65dei"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_i3cp3"]
 viewport_path = NodePath("SubViewport2")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_d500m"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_65dei"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkkxk"]
@@ -247,7 +247,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.808426, 0.6315417, 55.716
 [node name="NPCs" type="Node3D" parent="." unique_id=665630493]
 
 [node name="NPCArea" parent="NPCs" unique_id=1120903475 instance=ExtResource("7_swoll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.926514, 0.9071332, 32.085247)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 42.926514, 0.9071332, 32.085247)
 dialogue = Array[ExtResource("9_wlfnc")]([SubResource("Resource_ueaco"), SubResource("Resource_q1yaw"), SubResource("Resource_vv3pg"), SubResource("Resource_swoll"), SubResource("Resource_oqkef"), SubResource("Resource_wlfnc"), SubResource("Resource_vlrk1")])
 
 [node name="Doors" type="Node3D" parent="." unique_id=529918047]
@@ -2741,10 +2741,10 @@ text = "Remember to always watch
  your hunger."
 
 [node name="Sprite3D2" parent="Signs/Sign" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_s4y0y")
+texture = SubResource("ViewportTexture_1uilv")
 
 [node name="Sprite3D" parent="Signs/Sign" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_03i6n")
+texture = SubResource("ViewportTexture_s4y0y")
 
 [node name="Sign2" parent="Signs" unique_id=796788113 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 23.476013, 0, 5.428658)
@@ -2757,13 +2757,13 @@ as you can. Return to the
 start."
 
 [node name="Sprite3D2" parent="Signs/Sign2" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_imq4i")
+texture = SubResource("ViewportTexture_03i6n")
 
 [node name="Label" parent="Signs/Sign2/SubViewport" parent_id_path=PackedInt32Array(796788113, 415910616) index="0" unique_id=757353305]
 autowrap_mode = 3
 
 [node name="Sprite3D" parent="Signs/Sign2" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_nskln")
+texture = SubResource("ViewportTexture_imq4i")
 
 [node name="Sign3" parent="Signs" unique_id=995994448 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9436216, 0, 21.516214)
@@ -2775,10 +2775,10 @@ text = "Hold Shift to Sprint.
 Let go to regain Sprint."
 
 [node name="Sprite3D2" parent="Signs/Sign3" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_xim85")
+texture = SubResource("ViewportTexture_nskln")
 
 [node name="Sprite3D" parent="Signs/Sign3" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_gcg4u")
+texture = SubResource("ViewportTexture_xim85")
 
 [node name="Sign5" parent="Signs" unique_id=974028831 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 42.5851, 0, 35.27738)
@@ -2790,10 +2790,10 @@ text = "Press CTRL to crouch
 Press CTRL again to stand up"
 
 [node name="Sprite3D2" parent="Signs/Sign5" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_snoaj")
+texture = SubResource("ViewportTexture_gcg4u")
 
 [node name="Sprite3D" parent="Signs/Sign5" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_i3cp3")
+texture = SubResource("ViewportTexture_snoaj")
 
 [node name="Sign4" parent="Signs" unique_id=1030396464 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16480064, 0, 15.174915)
@@ -2806,10 +2806,10 @@ Open them to get food
 and other loot."
 
 [node name="Sprite3D2" parent="Signs/Sign4" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_65dei")
+texture = SubResource("ViewportTexture_i3cp3")
 
 [node name="Sprite3D" parent="Signs/Sign4" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_d500m")
+texture = SubResource("ViewportTexture_65dei")
 
 [node name="PauseMenu" parent="." unique_id=1020740941 instance=ExtResource("17_hvdy1")]
 

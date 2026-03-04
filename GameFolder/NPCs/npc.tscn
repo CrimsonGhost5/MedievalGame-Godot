@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://ig5cpa4xr82m"]
 
+[ext_resource type="Texture2D" uid="uid://bcyxvitj0yat0" path="res://NPCs/MunchyNPC.png" id="1_0ikh5"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_xxcha"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_kh24r"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vxakg"]
+transparency = 1
+albedo_texture = ExtResource("1_0ikh5")
+
+[sub_resource type="QuadMesh" id="QuadMesh_k7mck"]
+material = SubResource("StandardMaterial3D_vxakg")
+size = Vector2(1.5, 2.25)
 
 [node name="NPC" type="StaticBody3D" unique_id=1679543906]
 
@@ -10,4 +18,5 @@
 shape = SubResource("CapsuleShape3D_xxcha")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1427497863]
-mesh = SubResource("CapsuleMesh_kh24r")
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.18655917, 0)
+mesh = SubResource("QuadMesh_k7mck")

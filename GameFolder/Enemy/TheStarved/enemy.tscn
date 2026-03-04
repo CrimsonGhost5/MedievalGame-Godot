@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://dks7ptj0bnp4u"]
 
 [ext_resource type="Script" uid="uid://pe0s172cxg23" path="res://Enemy/TheStarved/enemy.gd" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://mcj6vxdpdsm5" path="res://Enemy/TheStarved/MunchyEnemy1.png" id="2_qg55d"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7k104"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7xaro"]
-albedo_color = Color(0.013527003, 0.3283343, 0.65256506, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pp63t"]
+transparency = 1
+albedo_texture = ExtResource("2_qg55d")
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_4gyqm"]
-material = SubResource("StandardMaterial3D_7xaro")
+[sub_resource type="QuadMesh" id="QuadMesh_1mcli"]
+material = SubResource("StandardMaterial3D_pp63t")
+size = Vector2(1.5, 2.25)
 
 [sub_resource type="BoxMesh" id="BoxMesh_7xaro"]
 size = Vector3(0.5, 0.2, 0.5)
@@ -26,8 +29,13 @@ knockback_force = 15.0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1390369557]
 shape = SubResource("CapsuleShape3D_7k104")
 
-[node name="Body" type="MeshInstance3D" parent="." unique_id=79932378]
-mesh = SubResource("CapsuleMesh_4gyqm")
+[node name="Body" type="MeshInstance3D" parent="." unique_id=1095757795]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.1375069, 0)
+mesh = SubResource("QuadMesh_1mcli")
+
+[node name="BodyBack" type="MeshInstance3D" parent="." unique_id=79932378]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1375069, 0)
+mesh = SubResource("QuadMesh_1mcli")
 
 [node name="Timer" type="Timer" parent="." unique_id=612238075]
 wait_time = 0.5

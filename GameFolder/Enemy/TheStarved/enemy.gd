@@ -25,6 +25,12 @@ const attack_range = 2.0
 @onready var foodraycast = $FoodRayCast
 @onready var timer = $Timer
 
+# animation stuff
+@onready var material = $Body.get_active_material(0)
+@onready var standSprite = load("res://Enemy/TheStarved/MunchyEnemy1.png")
+@onready var walkSprite1 = load("res://Enemy/TheStarved/MunchyEnemy2.png")
+var animating = false
+
 
 func _ready() -> void:
 	player = get_node(player_path)
@@ -58,9 +64,23 @@ func _physics_process(delta: float) -> void:
 			look_at(Vector3(next_food_nav_point.x, global_position.y, next_food_nav_point.z), Vector3.UP)
 			move_and_slide()
 	
-	
+	# animate if velocity is moving
+	if(self.velocity != Vector3(0, 0, 0) && animating == false):
+		# animation
+		animating = true
+		animate(delta)
+	# unanimate if standing still
+	else: if(self.velocity == Vector3(0, 0, 0) && material.albedo_texture != standSprite):
+		material.albedo_texture = standSprite
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body == player:
 		var knockback_direction = (body.global_position - global_position).normalized()
 		body.apply_knockback(knockback_direction, 5.0, 0.12)
+
+func animate(delta: float) -> void:
+	material.albedo_texture = walkSprite1
+	await get_tree().create_timer(20 * delta).timeout
+	material.albedo_texture = standSprite
+	await get_tree().create_timer(20 * delta).timeout
+	animating = false

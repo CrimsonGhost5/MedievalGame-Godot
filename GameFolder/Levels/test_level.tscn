@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://cq6hk7f6e8q76" path="res://Dialogue/dialogue_export_resource.gd" id="12_dkv23"]
 [ext_resource type="Script" uid="uid://dge6cnp055o8x" path="res://Dialogue/dialogue_text_resource.gd" id="13_x458k"]
 [ext_resource type="PackedScene" uid="uid://g7vf63c6mufw" path="res://Game UI/pause_menu.tscn" id="14_x458k"]
+[ext_resource type="PackedScene" uid="uid://dks7ptj0bnp4u" path="res://Enemy/TheStarved/enemy.tscn" id="15_lrol0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gojnm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -38,10 +39,10 @@ size = Vector3(30, 1, 30)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gojnm"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_x458k"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ouwm7"]
 viewport_path = NodePath("SubViewport2")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_lrol0"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_662sx"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Resource" id="Resource_x458k"]
@@ -131,10 +132,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11.
 text = "Hello"
 
 [node name="Sprite3D2" parent="Sign" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_x458k")
+texture = SubResource("ViewportTexture_ouwm7")
 
 [node name="Sprite3D" parent="Sign" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_lrol0")
+texture = SubResource("ViewportTexture_662sx")
 
 [node name="Door" parent="." unique_id=1191840203 instance=ExtResource("8_662sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104342, 2.521669, -11.620697)
@@ -199,5 +200,9 @@ shape = SubResource("BoxShape3D_ouwm7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4" unique_id=1153348717]
 mesh = SubResource("BoxMesh_662sx")
+
+[node name="Enemy" parent="." unique_id=1596931860 instance=ExtResource("15_lrol0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5543792, 6.7461085)
+player_path = NodePath("../Player")
 
 [editable path="Sign"]
