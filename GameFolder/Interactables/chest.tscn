@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://buv43mqvw16il" path="res://Interactables/chest.gd" id="1_twpm2"]
 [ext_resource type="AudioStream" uid="uid://bnpkt83vtdwe3" path="res://Sounds/ChestOpen.wav" id="2_enxnb"]
+[ext_resource type="ArrayMesh" uid="uid://c6y111l00fimx" path="res://3D_assets/chest_godot.obj" id="3_odjdj"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_0e0a3"]
 
@@ -85,7 +86,6 @@ transitions = ["Start", "ChestClose", SubResource("AnimationNodeStateMachineTran
 [node name="Chest" type="Area3D" unique_id=2048806239]
 script = ExtResource("1_twpm2")
 prompt_message = "Open"
-prompt_input = null
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1053307941]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5361483, 0.47625703, 0)
@@ -145,5 +145,10 @@ shape = SubResource("BoxShape3D_bp1or")
 
 [node name="ChestOpeningSFX" type="AudioStreamPlayer3D" parent="." unique_id=75721907]
 stream = ExtResource("2_enxnb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=597842117]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0, 0, 0)
+visible = false
+mesh = ExtResource("3_odjdj")
 
 [connection signal="interacted" from="." to="." method="_on_interacted"]

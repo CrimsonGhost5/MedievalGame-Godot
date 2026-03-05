@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bhptguvg8gfs4" path="res://GameState/game_state.gd" id="1_tc6tp"]
 [ext_resource type="PackedScene" uid="uid://x1v3wsuuya02" path="res://Player/player.tscn" id="2_k8b6b"]
-[ext_resource type="PackedScene" uid="uid://dpcq2xxky5mnf" path="res://Interactables/thrown_food.tscn" id="3_lx7qo"]
 [ext_resource type="PackedScene" uid="uid://b1xepx7vjhgq1" path="res://Enemy/TheRat/enemytherat.tscn" id="5_ouwm7"]
 [ext_resource type="PackedScene" uid="uid://brka3ai73amxy" path="res://Interactables/food_item.tscn" id="5_x458k"]
 [ext_resource type="PackedScene" uid="uid://vxswb5r75j0w" path="res://Interactables/exit_level.tscn" id="6_lrol0"]
@@ -13,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://okeno01do3rm" path="res://Dialogue/npcdialogue.tscn" id="11_k8b6b"]
 [ext_resource type="Script" uid="uid://cq6hk7f6e8q76" path="res://Dialogue/dialogue_export_resource.gd" id="12_dkv23"]
 [ext_resource type="Script" uid="uid://dge6cnp055o8x" path="res://Dialogue/dialogue_text_resource.gd" id="13_x458k"]
+[ext_resource type="PackedScene" uid="uid://cc1mip8u41of1" path="res://Interactables/thrownfood_item.tscn" id="14_lrol0"]
 [ext_resource type="PackedScene" uid="uid://g7vf63c6mufw" path="res://Game UI/pause_menu.tscn" id="14_x458k"]
-[ext_resource type="PackedScene" uid="uid://dks7ptj0bnp4u" path="res://Enemy/TheStarved/enemy.tscn" id="15_lrol0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gojnm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -39,10 +38,10 @@ size = Vector3(30, 1, 30)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gojnm"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ouwm7"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_x458k"]
 viewport_path = NodePath("SubViewport2")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_662sx"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_lrol0"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Resource" id="Resource_x458k"]
@@ -73,10 +72,6 @@ shadow_enabled = true
 [node name="Node" type="Node" parent="." unique_id=779327769]
 
 [node name="Node2" type="Node" parent="." unique_id=1585079462]
-
-[node name="ThrownFood" parent="." unique_id=101873407 instance=ExtResource("3_lx7qo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.086899, 2.0149531, -12.9923)
-prompt_message = "Pick Up"
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1618555077]
 navigation_mesh = SubResource("NavigationMesh_lrol0")
@@ -132,10 +127,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11.
 text = "Hello"
 
 [node name="Sprite3D2" parent="Sign" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_ouwm7")
+texture = SubResource("ViewportTexture_x458k")
 
 [node name="Sprite3D" parent="Sign" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_662sx")
+texture = SubResource("ViewportTexture_lrol0")
 
 [node name="Door" parent="." unique_id=1191840203 instance=ExtResource("8_662sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104342, 2.521669, -11.620697)
@@ -144,7 +139,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104342, 2.521669, -11.6206
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54632807, -12.572621)
 itemID = "Food"
 item_amount = 4
-prompt_input = "interact"
 
 [node name="NextLevel" parent="." unique_id=289173879 instance=ExtResource("10_i45ex")]
 transform = Transform3D(3.2164743, 0, 0, 0, 3.203322, 0, 0, 0, 1, -12.085521, 1.8259764, 9.975866)
@@ -201,8 +195,7 @@ shape = SubResource("BoxShape3D_ouwm7")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4" unique_id=1153348717]
 mesh = SubResource("BoxMesh_662sx")
 
-[node name="Enemy" parent="." unique_id=1596931860 instance=ExtResource("15_lrol0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5543792, 6.7461085)
-player_path = NodePath("../Player")
+[node name="FoodItem" parent="." unique_id=480233616 instance=ExtResource("14_lrol0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0867605, 1, -12.745)
 
 [editable path="Sign"]

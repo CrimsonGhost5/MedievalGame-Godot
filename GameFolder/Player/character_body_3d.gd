@@ -40,7 +40,7 @@ var moving = true
 @onready var game_over_ui = $CanvasLayer/GameOverScreen
 @onready var foot_steps: AudioStreamPlayer3D = %FootSteps
  
-var throwable_food = load("res://Interactables/thrown_food.tscn")
+var throwable_food = load("res://Interactables/thrownfood_item.tscn")
 @onready var pos = $Head/Hand
 @onready var head = $Head
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D

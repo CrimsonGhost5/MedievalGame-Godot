@@ -14,7 +14,7 @@ shape = SubResource("BoxShape3D_xlgsp")
 
 [node name="loafBread" parent="." unique_id=1462435266 instance=ExtResource("2_m0368")]
 
-[node name="loafBread" parent="loafBread" index="0" unique_id=535941299]
+[node name="loafBread" parent="loafBread" index="0" unique_id=1186752402]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=255723497]

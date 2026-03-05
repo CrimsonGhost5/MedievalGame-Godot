@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cc1mip8u41of1"]
+
+[ext_resource type="Script" uid="uid://cb8kcf3a1hatq" path="res://Interactables/food_item.gd" id="1_ig6qf"]
+[ext_resource type="PackedScene" uid="uid://donnq44vo7rv2" path="res://Objects/sliceBread.fbx" id="3_ig6qf"]
+[ext_resource type="AudioStream" uid="uid://b6fqiakg0g7b0" path="res://Sounds/EditBreadSound.mp3" id="3_tq2yx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xlgsp"]
+
+[node name="FoodItem" type="RigidBody3D" unique_id=480233616 groups=["pickable"]]
+script = ExtResource("1_ig6qf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=74511693]
+shape = SubResource("BoxShape3D_xlgsp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=255723497]
+stream = ExtResource("3_tq2yx")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=240859388]
+
+[node name="sliceBread" parent="Node3D" unique_id=370454348 instance=ExtResource("3_ig6qf")]
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]

@@ -12,6 +12,7 @@ func _ready() -> void:
 func _on_interacted(body: Variant) -> void:
 	if not open:
 		open = true
+		$ChestOpeningSFX.play()
 		GameState.set_value("food", GameState.get_value("food") + item_amount)
 		playback.travel("ChestOpen")
 		GameState.set_value(itemID, true)
