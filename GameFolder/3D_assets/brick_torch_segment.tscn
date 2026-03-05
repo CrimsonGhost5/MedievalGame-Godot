@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b5gcbb2ixodgb" path="res://3D_assets/brick_wall.tscn" id="1_pbn8e"]
 [ext_resource type="PackedScene" uid="uid://bb5lrxjymyom8" path="res://3D_assets/ceiling.tscn" id="2_s71ka"]
+[ext_resource type="Material" uid="uid://rord3o22a57u" path="res://torchMaterial.tres" id="3_ph1cq"]
 [ext_resource type="ArrayMesh" uid="uid://cuqvwwpw2rlqo" path="res://3D_assets/torch_godot.obj" id="3_s71ka"]
 
 [node name="brick_torchSegment" type="Node3D" unique_id=1390646231]
@@ -20,10 +21,12 @@ skeleton = NodePath("../..")
 
 [node name="torch" type="MeshInstance3D" parent="." unique_id=72950579]
 transform = Transform3D(-4.3711387e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711387e-10, 2.0001767, 0, -2)
+material_overlay = ExtResource("3_ph1cq")
 mesh = ExtResource("3_s71ka")
 
 [node name="torch2" type="MeshInstance3D" parent="." unique_id=963299236]
 transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711387e-10, 2.0000014, 0, -2)
+material_override = ExtResource("3_ph1cq")
 mesh = ExtResource("3_s71ka")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=251359814]

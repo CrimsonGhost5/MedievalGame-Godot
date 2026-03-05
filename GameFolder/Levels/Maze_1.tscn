@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://clysiwetdt610" path="res://Enemy/TheHungry/enemythehungry.tscn" id="6_eyav4"]
 [ext_resource type="PackedScene" uid="uid://okeno01do3rm" path="res://Dialogue/npcdialogue.tscn" id="7_swoll"]
 [ext_resource type="PackedScene" uid="uid://dldj3j6wblwsj" path="res://InteractionFolder/door.tscn" id="8_wlfnc"]
-[ext_resource type="PackedScene" uid="uid://dpcq2xxky5mnf" path="res://Interactables/thrown_food.tscn" id="9_5rch4"]
 [ext_resource type="PackedScene" uid="uid://brka3ai73amxy" path="res://Interactables/food_item.tscn" id="9_duog2"]
 [ext_resource type="PackedScene" uid="uid://b1xepx7vjhgq1" path="res://Enemy/TheRat/enemytherat.tscn" id="9_vlrk1"]
 [ext_resource type="Script" uid="uid://cq6hk7f6e8q76" path="res://Dialogue/dialogue_export_resource.gd" id="9_wlfnc"]
@@ -31,6 +30,7 @@
 [ext_resource type="ArrayMesh" uid="uid://ck4xpbcbdqruw" path="res://3D_assets/ceiling_godot.obj" id="28_tnspj"]
 [ext_resource type="PackedScene" uid="uid://b5gcbb2ixodgb" path="res://3D_assets/brick_wall.tscn" id="29_ffq62"]
 [ext_resource type="PackedScene" uid="uid://dgsiyacwssh23" path="res://3D_assets/half_bone.tscn" id="29_wkkxk"]
+[ext_resource type="Material" uid="uid://dhbdt70o0nclm" path="res://trimMaterial.tres" id="30_1uilv"]
 [ext_resource type="PackedScene" uid="uid://nyxhgpq828au" path="res://3D_assets/half_brick_wall.tscn" id="32_0uent"]
 [ext_resource type="ArrayMesh" uid="uid://btkvl0geql5rm" path="res://3D_assets/outerDoor_godot.obj" id="33_1uvb1"]
 [ext_resource type="Texture2D" uid="uid://5txv5ya7hl3a" path="res://3D_assets/textures/doorMaterials/door_Mat_BaseColor.1001.png" id="33_7dw0s"]
@@ -267,7 +267,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.02
 
 [node name="Food" type="Node3D" parent="." unique_id=1631545506]
 
-[node name="ThrownFood" parent="Food" unique_id=101873407 instance=ExtResource("9_5rch4")]
+[node name="ThrownFood" parent="Food" unique_id=101873407]
 
 [node name="FoodItem2" parent="Food" unique_id=1484234212 instance=ExtResource("9_duog2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.06115, 0.49999994, -0.61230516)
@@ -2687,37 +2687,31 @@ shape = SubResource("ConcavePolygonShape3D_s4y0y")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.2546499, 0.07871455, 15.359758)
 itemID = "Food"
 item_amount = 2
-prompt_input = "interact"
 
 [node name="Chest4" parent="Chests" unique_id=1697968125 instance=ExtResource("10_ueaco")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.214484, 0.07871455, 15.328001)
 itemID = "Food"
 item_amount = 1
-prompt_input = "interact"
 
 [node name="Chest2" parent="Chests" unique_id=2092161180 instance=ExtResource("10_ueaco")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.8210764, 0.07871455, 68.89827)
 itemID = "Food"
 item_amount = 1
-prompt_input = "interact"
 
 [node name="Chest3" parent="Chests" unique_id=902216705 instance=ExtResource("10_ueaco")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -62.130177, 0.07871455, 18.78016)
 itemID = "Food"
 item_amount = 3
-prompt_input = "interact"
 
 [node name="Chest5" parent="Chests" unique_id=1348102578 instance=ExtResource("10_ueaco")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.084463, 0.079082966, -16.693398)
 itemID = "Food"
 item_amount = 3
-prompt_input = "interact"
 
 [node name="Chest6" parent="Chests" unique_id=1978310440 instance=ExtResource("10_ueaco")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -37.536385, 0.079082966, -16.693398)
 itemID = "Food"
 item_amount = 4
-prompt_input = "interact"
 
 [node name="NextLevel" parent="." unique_id=289173879 instance=ExtResource("11_q1yaw")]
 transform = Transform3D(3.786, 0, 0, 0, 3.203, 0, 0, 0, 1, -20.94825, 1.3636057, 48.562813)
@@ -3968,6 +3962,7 @@ skeleton = NodePath("../..")
 
 [node name="brickWall13" parent="walls" unique_id=854017484 instance=ExtResource("29_ffq62")]
 transform = Transform3D(-4.3711387e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711387e-10, 5, 0, 68)
+material_overlay = ExtResource("30_1uilv")
 skeleton = NodePath("../..")
 
 [node name="brickWall14" parent="walls" unique_id=1031356517 instance=ExtResource("29_ffq62")]

@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://4dior5s412m7"]
+
+[ext_resource type="Texture2D" uid="uid://t3cbxfyualjw" path="res://3D_assets/textures/chest/chest_mat_BaseColor.1001.png" id="1_v0xh3"]
+[ext_resource type="Texture2D" uid="uid://jroryyfxlhye" path="res://3D_assets/textures/chest/chest_mat_Metallic.1001.png" id="2_6tphh"]
+[ext_resource type="Texture2D" uid="uid://bxy4700uscrg5" path="res://3D_assets/textures/chest/chest_mat_Normal.1001.png" id="3_fgmv3"]
+[ext_resource type="Texture2D" uid="uid://ddiw0x35cdpa2" path="res://3D_assets/textures/chest/chest_mat_Roughness.1001.png" id="4_a6nhc"]
+
+[resource]
+albedo_texture = ExtResource("1_v0xh3")
+metallic = 1.0
+metallic_texture = ExtResource("2_6tphh")
+roughness_texture = ExtResource("4_a6nhc")
+normal_enabled = true
+normal_texture = ExtResource("3_fgmv3")

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cb8kcf3a1hatq" path="res://Interactables/food_item.gd" id="1_0na5k"]
 [ext_resource type="PackedScene" uid="uid://c507cpev8qmv6" path="res://Objects/loafBread.fbx" id="2_m0368"]
 [ext_resource type="AudioStream" uid="uid://dmo8qwgrquhuf" path="res://Sounds/BreadPickup.wav" id="3_8hsl6"]
+[ext_resource type="Material" uid="uid://bwgseftrhjwcr" path="res://loafBread.tres" id="3_nxs7j"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xlgsp"]
 
@@ -14,8 +15,9 @@ shape = SubResource("BoxShape3D_xlgsp")
 
 [node name="loafBread" parent="." unique_id=1462435266 instance=ExtResource("2_m0368")]
 
-[node name="loafBread" parent="loafBread" index="0" unique_id=367930116]
+[node name="loafBread" parent="loafBread" index="0" unique_id=1485684538]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("3_nxs7j")
 
 [node name="FoodCollectSFX" type="AudioStreamPlayer3D" parent="." unique_id=2012506611]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11385757, 0)

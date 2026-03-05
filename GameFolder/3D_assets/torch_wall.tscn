@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b8plrgwue4wge" path="res://3D_assets/bone_wall.tscn" id="1_jq1kb"]
 [ext_resource type="ArrayMesh" uid="uid://cuqvwwpw2rlqo" path="res://3D_assets/torch_godot.obj" id="2_h0bja"]
+[ext_resource type="Material" uid="uid://rord3o22a57u" path="res://torchMaterial.tres" id="2_n3jud"]
 
 [node name="torchWall" type="Node3D" unique_id=2035192510]
 
@@ -11,6 +12,7 @@ skeleton = NodePath("../..")
 
 [node name="torch" type="MeshInstance3D" parent="." unique_id=1055319497]
 transform = Transform3D(-0.01, 0, -6.9849193e-10, 0, 0.01, 0, 9.313226e-10, 0, -0.009, 0, 0, 1.7967291)
+material_override = ExtResource("2_n3jud")
 mesh = ExtResource("2_h0bja")
 skeleton = NodePath("../..")
 
