@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://x1v3wsuuya02" path="res://Player/player.tscn" id="4_1hhqv"]
 [ext_resource type="PackedScene" uid="uid://xeqfw356wo8k" path="res://Levels/stairs.tscn" id="5_6rv3n"]
 [ext_resource type="PackedScene" uid="uid://by1g13fvc5t3b" path="res://Interactables/previous_level.tscn" id="6_1hhqv"]
+[ext_resource type="PackedScene" uid="uid://dks7ptj0bnp4u" path="res://Enemy/TheStarved/enemy.tscn" id="6_rmbwb"]
 [ext_resource type="PackedScene" uid="uid://cur5tucp5sp28" path="res://Interactables/next_level.tscn" id="7_1hhqv"]
+[ext_resource type="PackedScene" uid="uid://clysiwetdt610" path="res://Enemy/TheHungry/enemythehungry.tscn" id="7_bfnlp"]
 [ext_resource type="PackedScene" uid="uid://bliwvb8npyt4b" path="res://Interactables/chest.tscn" id="8_2cnfy"]
 [ext_resource type="PackedScene" uid="uid://dldj3j6wblwsj" path="res://InteractionFolder/door.tscn" id="9_4q2fa"]
 [ext_resource type="PackedScene" uid="uid://colxn6ub2yp7a" path="res://3D_assets/hall_segment.tscn" id="11_b2hjb"]
@@ -396,6 +398,30 @@ material = SubResource("StandardMaterial3D_lki8o")
 [node name="Player" parent="." unique_id=683224540 instance=ExtResource("4_1hhqv")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.507229, 1, 75.66939)
 
+[node name="Enemies" type="Node3D" parent="." unique_id=212860683]
+
+[node name="Enemy" parent="Enemies" unique_id=1596931860 instance=ExtResource("6_rmbwb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5577927, 1.1806426, 61.906006)
+player_path = NodePath("../../Player")
+
+[node name="Enemy2" parent="Enemies" unique_id=166448292 instance=ExtResource("6_rmbwb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -38.799866, 1.0570927, 64.11296)
+player_path = NodePath("../../Player")
+
+[node name="Enemy3" parent="Enemies" unique_id=656274781 instance=ExtResource("7_bfnlp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -47.382507, 1.4198966, 40.29202)
+
+[node name="Enemy4" parent="Enemies" unique_id=1088216961 instance=ExtResource("7_bfnlp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9392142, 1.3591299, 28.152172)
+
+[node name="Enemy5" parent="Enemies" unique_id=1087828541 instance=ExtResource("6_rmbwb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.324623, 1.2241793, 9.766146)
+player_path = NodePath("../../Player")
+
+[node name="Enemy6" parent="Enemies" unique_id=767266905 instance=ExtResource("6_rmbwb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.058846, 1.2866011, 40.35686)
+player_path = NodePath("../../Player")
+
 [node name="Stairs" parent="." unique_id=499957783 instance=ExtResource("5_6rv3n")]
 transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, 18.760227, 2.4705138, 81.53735)
 
@@ -416,13 +442,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.507, 0, 75.669)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8715706, -0.92498124, 15.823559)
 itemID = "Food"
 item_amount = 3
-prompt_input = "interact"
 
 [node name="Chest2" parent="." unique_id=1768213186 instance=ExtResource("8_2cnfy")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20.140627, -0.92498124, 56.994488)
 itemID = "Food"
 item_amount = 2
-prompt_input = "interact"
 
 [node name="doors" type="Node" parent="." unique_id=929780862]
 

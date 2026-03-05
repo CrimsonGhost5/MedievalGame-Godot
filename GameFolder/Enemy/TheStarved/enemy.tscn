@@ -14,9 +14,6 @@ albedo_texture = ExtResource("2_qg55d")
 material = SubResource("StandardMaterial3D_pp63t")
 size = Vector2(1.5, 2.25)
 
-[sub_resource type="BoxMesh" id="BoxMesh_7xaro"]
-size = Vector3(0.5, 0.2, 0.5)
-
 [sub_resource type="SphereShape3D" id="SphereShape3D_7k104"]
 radius = 7.267
 
@@ -41,10 +38,6 @@ mesh = SubResource("QuadMesh_1mcli")
 [node name="Timer" type="Timer" parent="." unique_id=612238075]
 wait_time = 0.5
 autostart = true
-
-[node name="Face" type="MeshInstance3D" parent="." unique_id=1374361806]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51552093, -0.28525484)
-mesh = SubResource("BoxMesh_7xaro")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=965732701]
 path_height_offset = 0.1
