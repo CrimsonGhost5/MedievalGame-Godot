@@ -472,6 +472,7 @@ transform = Transform3D(-4.3711378e-08, 0, 0.99999976, 0, 1, 0, -0.99999976, 0, 
 transform = Transform3D(-4.3711378e-08, 0, 0.99999976, 0, 1, 0, -0.99999976, 0, -4.3711378e-08, -54.23998, 1, 75.997055)
 
 [node name="maze2Build" type="Node3D" parent="." unique_id=1747181546]
+visible = false
 
 [node name="hallSegment" parent="maze2Build" unique_id=1879853954 instance=ExtResource("11_b2hjb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 0, 64)
@@ -1669,7 +1670,7 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -37, 0, 32)
 skeleton = NodePath("../..")
 
 [node name="floor165" parent="mazeFloors" unique_id=180549858 instance=ExtResource("24_3cjhb")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 22)
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 24)
 skeleton = NodePath("../..")
 
 [node name="floor167" parent="mazeFloors" unique_id=1449115759 instance=ExtResource("24_3cjhb")]
@@ -1677,7 +1678,11 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -57, 0, 20)
 skeleton = NodePath("../..")
 
 [node name="floor166" parent="mazeFloors" unique_id=2132048245 instance=ExtResource("24_3cjhb")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 18)
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 20)
+skeleton = NodePath("../..")
+
+[node name="floor182" parent="mazeFloors" unique_id=993591119 instance=ExtResource("24_3cjhb")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -53, 0, 16)
 skeleton = NodePath("../..")
 
 [node name="floor90" parent="mazeFloors" unique_id=1890232232 instance=ExtResource("24_3cjhb")]
