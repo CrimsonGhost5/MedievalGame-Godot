@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dto31qf30y6mg"]
+
+[ext_resource type="PackedScene" uid="uid://donnq44vo7rv2" path="res://Objects/sliceBread.fbx" id="1_brlc3"]
+[ext_resource type="Material" uid="uid://c1cdqbig4cgux" path="res://sliceBread.tres" id="2_0mw8u"]
+
+[node name="sliceBread" unique_id=370454348 instance=ExtResource("1_brlc3")]
+
+[node name="sliceBread" parent="." index="0" unique_id=1949718174]
+material_override = ExtResource("2_0mw8u")

@@ -133,7 +133,7 @@ texture = SubResource("ViewportTexture_x458k")
 texture = SubResource("ViewportTexture_lrol0")
 
 [node name="Door" parent="." unique_id=1191840203 instance=ExtResource("8_662sx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104342, 2.521669, -11.620697)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104342, 1.3883362, -11.620697)
 
 [node name="Chest" parent="." unique_id=2048806239 instance=ExtResource("9_cn5b1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54632807, -12.572621)

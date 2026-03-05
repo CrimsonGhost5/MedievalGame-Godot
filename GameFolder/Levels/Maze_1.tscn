@@ -257,13 +257,13 @@ dialogue = Array[ExtResource("9_wlfnc")]([SubResource("Resource_ueaco"), SubReso
 [node name="Doors" type="Node3D" parent="." unique_id=529918047]
 
 [node name="Door" parent="Doors" unique_id=929252769 instance=ExtResource("8_wlfnc")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.23331, 1.6392884, 2.0461874)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.23331, 0.88948727, 5.4841585)
 
 [node name="Door3" parent="Doors" unique_id=78293708 instance=ExtResource("8_wlfnc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.89429, 1.6392884, 5.81594)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.485905, 0.8920257, 5.81594)
 
 [node name="Door2" parent="Doors" unique_id=742197431 instance=ExtResource("8_wlfnc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.022943, 1.5011964, 17.89161)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.880005, 0.7668252, 14.368773)
 
 [node name="Food" type="Node3D" parent="." unique_id=1631545506]
 

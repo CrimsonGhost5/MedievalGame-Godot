@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cb8kcf3a1hatq" path="res://Interactables/food_item.gd" id="1_ig6qf"]
 [ext_resource type="PackedScene" uid="uid://donnq44vo7rv2" path="res://Objects/sliceBread.fbx" id="3_ig6qf"]
 [ext_resource type="AudioStream" uid="uid://b6fqiakg0g7b0" path="res://Sounds/EditBreadSound.mp3" id="3_tq2yx"]
+[ext_resource type="Material" uid="uid://c1cdqbig4cgux" path="res://sliceBread.tres" id="4_riv7v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xlgsp"]
 
@@ -19,5 +20,10 @@ shape = SubResource("BoxShape3D_xlgsp")
 
 [node name="sliceBread" parent="Node3D" unique_id=370454348 instance=ExtResource("3_ig6qf")]
 
+[node name="sliceBread" parent="Node3D/sliceBread" index="0" unique_id=1949718174]
+material_override = ExtResource("4_riv7v")
+
 [connection signal="interacted" from="." to="." method="_on_interacted"]
 [connection signal="finished" from="FoodCollectSFX" to="." method="_on_food_collect_sfx_finished"]
+
+[editable path="Node3D/sliceBread"]

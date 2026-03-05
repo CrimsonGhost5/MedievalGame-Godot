@@ -17,21 +17,30 @@ script = ExtResource("1_5xuax")
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1332205103]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.89000005
-anchor_right = 0.272
-anchor_bottom = 0.96800005
-offset_left = 93.0
-offset_top = 0.27996826
-offset_right = 92.655975
-offset_bottom = -0.2640381
+anchor_left = 0.109000005
+anchor_top = 0.90700006
+anchor_right = 0.32700002
+anchor_bottom = 0.96900004
+offset_left = 0.43199158
+offset_top = 0.26397705
+offset_right = 62.29596
+offset_bottom = 10.087952
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 max_value = 50.0
 nine_patch_stretch = true
 texture_under = ExtResource("2_glv47")
 texture_progress = ExtResource("3_vjqmi")
 
-[node name="MedievalUiSprint" type="Sprite2D" parent="." unique_id=832526319]
-position = Vector2(44, 598)
-scale = Vector2(0.7, 0.7)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=781175722]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.86600006
+anchor_right = 0.089
+anchor_bottom = 0.99500006
+offset_top = -0.16809082
+offset_right = 25.472
+offset_bottom = 21.239868
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_lvyk2")
