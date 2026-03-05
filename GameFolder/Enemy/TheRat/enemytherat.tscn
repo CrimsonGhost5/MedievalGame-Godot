@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://dfdsms23l0q6w" path="res://Enemy/TheRat/enemy_rat_wander.gd" id="3_ogwpc"]
 [ext_resource type="Script" uid="uid://dopv3h5qdy4g5" path="res://Enemy/TheRat/enemy_rat_run_away.gd" id="4_kffe0"]
 [ext_resource type="Script" uid="uid://t702kdmqh7wm" path="res://Enemy/TheRat/enemy_rat_attack.gd" id="5_10jul"]
+[ext_resource type="AudioStream" uid="uid://b71vc471b3uky" path="res://Sounds/RatSqueek.mp3" id="6_pspgl"]
+[ext_resource type="AudioStream" uid="uid://clm7r4xumlynw" path="res://Sounds/RatScurry.wav" id="7_lqdgj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7wguf"]
 
@@ -55,3 +57,9 @@ transform = Transform3D(2.78, 0, 0, 0, 2.78, 0, 0, 0, 2.78, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=377304916]
 shape = SubResource("SphereShape3D_kffe0")
+
+[node name="RatSqueek" type="AudioStreamPlayer3D" parent="." unique_id=1941967035]
+stream = ExtResource("6_pspgl")
+
+[node name="RatScurry" type="AudioStreamPlayer3D" parent="." unique_id=1420555478]
+stream = ExtResource("7_lqdgj")

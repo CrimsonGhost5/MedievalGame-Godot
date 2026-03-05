@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://iyocwyrufwnd" path="res://Enemy/TheHungry/enemy_wander.gd" id="3_ea31h"]
 [ext_resource type="Script" uid="uid://dsqea3chtdgle" path="res://Enemy/TheHungry/enemy_chase.gd" id="4_ea31h"]
 [ext_resource type="AudioStream" uid="uid://db007avaax5w6" path="res://Sounds/TheHungryChaseClose.wav" id="6_mj7vp"]
+[ext_resource type="AudioStream" uid="uid://c8gxabveintlm" path="res://Sounds/TheHungryChaseActive.wav" id="7_gxcgv"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7xaro"]
 radius = 1.1601702
@@ -69,10 +70,13 @@ metadata/_custom_type_script = "uid://iyocwyrufwnd"
 script = ExtResource("4_ea31h")
 metadata/_custom_type_script = "uid://dsqea3chtdgle"
 
-[node name="ChaseMusic" type="AudioStreamPlayer3D" parent="." unique_id=2130208843]
+[node name="Close" type="AudioStreamPlayer3D" parent="." unique_id=2130208843]
 stream = ExtResource("6_mj7vp")
 unit_size = 2.0
 autoplay = true
+
+[node name="Chase" type="AudioStreamPlayer3D" parent="." unique_id=976414777]
+stream = ExtResource("7_gxcgv")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -8,7 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://btabv8t1b55ik" path="res://Player/Player UI/hunger_bar.tscn" id="5_dw050"]
 [ext_resource type="PackedScene" uid="uid://cimpg1bmhqsld" path="res://Player/Player UI/healthbar.tscn" id="6_obynr"]
 [ext_resource type="PackedScene" uid="uid://bb5wyt5pinq0m" path="res://Player/Player UI/game_over_screen.tscn" id="9_00tjw"]
-[ext_resource type="AudioStream" uid="uid://l4515eeu4jfp" path="res://Sounds/Walk.mp3" id="9_x3vf3"]
+[ext_resource type="AudioStream" uid="uid://b02x6ooi1biuw" path="res://Sounds/Walk.wav" id="9_5htga"]
+[ext_resource type="AudioStream" uid="uid://dntk3uliuf046" path="res://Sounds/BreadEat.wav" id="10_p5o4e"]
+[ext_resource type="AudioStream" uid="uid://bedqcnlr48g56" path="res://Sounds/BreadEat2.wav" id="11_gu6f8"]
+[ext_resource type="AudioStream" uid="uid://c5566c6y5auoo" path="res://Sounds/BreadThrow.mp3" id="12_dkpta"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c7tqt"]
 resource_local_to_scene = true
@@ -96,6 +99,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1096995, 0)
 
 [node name="FootSteps" type="AudioStreamPlayer3D" parent="Audio" unique_id=1352243815]
 unique_name_in_owner = true
-stream = ExtResource("9_x3vf3")
+stream = ExtResource("9_5htga")
+
+[node name="BreadEat" type="AudioStreamPlayer3D" parent="Audio" unique_id=1627976111]
+stream = ExtResource("10_p5o4e")
+
+[node name="BreadEatAlt" type="AudioStreamPlayer3D" parent="Audio" unique_id=2000038839]
+stream = ExtResource("11_gu6f8")
+
+[node name="BreadThrow" type="AudioStreamPlayer3D" parent="Audio" unique_id=1502255858]
+stream = ExtResource("12_dkpta")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

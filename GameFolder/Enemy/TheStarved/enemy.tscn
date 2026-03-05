@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://pe0s172cxg23" path="res://Enemy/TheStarved/enemy.gd" id="1_7k104"]
 [ext_resource type="Texture2D" uid="uid://mcj6vxdpdsm5" path="res://Enemy/TheStarved/MunchyEnemy1.png" id="2_qg55d"]
+[ext_resource type="AudioStream" uid="uid://cks5s4jksciu3" path="res://Sounds/MonsterGroan.wav" id="3_pp63t"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7k104"]
 
@@ -68,6 +69,9 @@ transform = Transform3D(0.445, 0, 0, 0, 0.855, 0, 0, 0, 0.455, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1615939035]
 shape = SubResource("SphereShape3D_7xaro")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=212880477]
+stream = ExtResource("3_pp63t")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="FoodDectector" to="." method="_on_food_dectector_body_entered"]
