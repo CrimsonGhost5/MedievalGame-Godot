@@ -2682,7 +2682,7 @@ shape = SubResource("ConcavePolygonShape3D_s4y0y")
 [node name="Chests" type="Node3D" parent="." unique_id=724268529]
 
 [node name="Chest" parent="Chests" unique_id=2048806239 instance=ExtResource("10_ueaco")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.2546499, 0.07871455, 15.359758)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.2546499, 0.07871455, 15.359758)
 itemID = "Food"
 item_amount = 2
 
@@ -2692,17 +2692,17 @@ itemID = "Food"
 item_amount = 1
 
 [node name="Chest2" parent="Chests" unique_id=2092161180 instance=ExtResource("10_ueaco")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5.8210764, 0.07871455, 68.89827)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8210764, 0.07871455, 68.89827)
 itemID = "Food"
 item_amount = 1
 
 [node name="Chest3" parent="Chests" unique_id=902216705 instance=ExtResource("10_ueaco")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -62.130177, 0.07871455, 18.78016)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -62.130177, 0.07871455, 18.78016)
 itemID = "Food"
 item_amount = 3
 
 [node name="Chest5" parent="Chests" unique_id=1348102578 instance=ExtResource("10_ueaco")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -28.084463, 0.079082966, -16.693398)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -28.084463, 0.079082966, -16.693398)
 itemID = "Food"
 item_amount = 3
 

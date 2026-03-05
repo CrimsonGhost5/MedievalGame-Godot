@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bliwvb8npyt4b"]
 
 [ext_resource type="Script" uid="uid://buv43mqvw16il" path="res://Interactables/chest.gd" id="1_twpm2"]
-[ext_resource type="AudioStream" uid="uid://bnpkt83vtdwe3" path="res://Sounds/ChestOpen.wav" id="2_enxnb"]
+[ext_resource type="AudioStream" uid="uid://y33plb31yrvd" path="res://Sounds/ChestOpen.mp3" id="2_ohxn3"]
 [ext_resource type="Texture2D" uid="uid://t3cbxfyualjw" path="res://3D_assets/textures/chest/chest_mat_BaseColor.1001.png" id="3_ohxn3"]
 [ext_resource type="Texture2D" uid="uid://jroryyfxlhye" path="res://3D_assets/textures/chest/chest_mat_Metallic.1001.png" id="4_b6v7h"]
 [ext_resource type="Texture2D" uid="uid://bxy4700uscrg5" path="res://3D_assets/textures/chest/chest_mat_Normal.1001.png" id="5_gjs4i"]
@@ -118,7 +118,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42141712, 0)
 shape = SubResource("BoxShape3D_bp1or")
 
 [node name="ChestOpeningSFX" type="AudioStreamPlayer3D" parent="." unique_id=75721907]
-stream = ExtResource("2_enxnb")
+stream = ExtResource("2_ohxn3")
 
 [node name="Hinge" type="Node3D" parent="." unique_id=907021314]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012091696, 0.40820795, 0.27661955)
