@@ -29,17 +29,23 @@ grow_horizontal = 0
 [node name="FoodText" type="Label" parent="CanvasLayer/Control" unique_id=1053702956]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -5.3250003
+anchor_left = -1.2
 anchor_top = 13.025001
-anchor_right = 1.575
-anchor_bottom = 15.450001
-offset_left = 1.5258789e-05
-offset_right = 7.0
-offset_bottom = -1.0
+anchor_right = 1.7500001
+anchor_bottom = 15.425001
+offset_bottom = -6.1035156e-05
 theme_override_font_sizes/font_size = 64
 
-[node name="MedievalUiFood" type="Sprite2D" parent="CanvasLayer" unique_id=254410665]
-z_index = -5
-position = Vector2(1082, 589)
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=920268595]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.8500004
+anchor_top = 12.775001
+anchor_right = -2.1620002
+anchor_bottom = 15.325001
+offset_left = 1.5258789e-05
+offset_top = -3.0517578e-05
+offset_right = 107.48001
+offset_bottom = 102.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_jp3g3")

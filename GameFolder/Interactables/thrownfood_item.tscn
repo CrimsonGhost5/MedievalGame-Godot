@@ -9,14 +9,15 @@
 [node name="FoodItem" type="RigidBody3D" unique_id=480233616 groups=["pickable"]]
 script = ExtResource("1_ig6qf")
 
+[node name="FoodCollectSFX" type="AudioStreamPlayer3D" parent="." unique_id=255723497]
+stream = ExtResource("3_tq2yx")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=74511693]
 shape = SubResource("BoxShape3D_xlgsp")
-
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=255723497]
-stream = ExtResource("3_tq2yx")
 
 [node name="Node3D" type="Node3D" parent="." unique_id=240859388]
 
 [node name="sliceBread" parent="Node3D" unique_id=370454348 instance=ExtResource("3_ig6qf")]
 
 [connection signal="interacted" from="." to="." method="_on_interacted"]
+[connection signal="finished" from="FoodCollectSFX" to="." method="_on_food_collect_sfx_finished"]

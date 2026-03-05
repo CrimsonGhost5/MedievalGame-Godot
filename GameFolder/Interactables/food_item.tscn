@@ -17,9 +17,11 @@ shape = SubResource("BoxShape3D_xlgsp")
 [node name="loafBread" parent="loafBread" index="0" unique_id=1186752402]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=255723497]
+[node name="FoodCollectSFX" type="AudioStreamPlayer3D" parent="." unique_id=2012506611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11385757, 0)
 stream = ExtResource("3_2dgfr")
 
 [connection signal="interacted" from="." to="." method="_on_interacted"]
+[connection signal="finished" from="FoodCollectSFX" to="." method="_on_food_collect_sfx_finished"]
 
 [editable path="loafBread"]

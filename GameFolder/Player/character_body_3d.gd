@@ -101,7 +101,7 @@ func _physics_process(delta: float) -> void:
 		die()
 	
 	
-	$UI/FoodAmount/CanvasLayer/Control/FoodText.text = "Food: " + str(GameState.state["food"])
+	$UI/FoodAmount/CanvasLayer/Control/FoodText.text = str(GameState.state["food"])
 	
 	
 	throw()

@@ -17,15 +17,17 @@ script = ExtResource("1_ojjo8")
 [node name="HungerProgressBar" type="TextureProgressBar" parent="." unique_id=1942420798]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.14
-anchor_right = 0.33
-anchor_bottom = 0.21800001
-offset_left = 83.2
-offset_top = 10.68
-offset_right = 83.04001
-offset_bottom = 10.135986
+anchor_left = 0.098000005
+anchor_top = 0.18100001
+anchor_right = 0.36200002
+anchor_bottom = 0.24200001
+offset_left = 0.10398865
+offset_top = -0.28800964
+offset_right = 75.97598
+offset_bottom = 10.1839905
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 nine_patch_stretch = true
 texture_under = ExtResource("1_sgh5k")
 texture_progress = ExtResource("2_ojjo8")
@@ -34,9 +36,16 @@ texture_progress = ExtResource("2_ojjo8")
 wait_time = 30.0
 autostart = true
 
-[node name="MedievalUiStomach" type="Sprite2D" parent="." unique_id=769920256]
-position = Vector2(38, 131.4)
-scale = Vector2(0.8, 0.8)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=512335984]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.157
+anchor_right = 0.05
+anchor_bottom = 0.272
+offset_top = 0.26399994
+offset_right = 25.399998
+offset_bottom = 31.743988
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("4_pxq38")
 
 [connection signal="timeout" from="HungerTimer" to="." method="_on_hunger_timer_timeout"]
