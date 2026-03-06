@@ -4,23 +4,23 @@ extends Control
 
 @export var player: CharacterBody3D
 
-@export var starting_hunger_timer: float = 180.0
+
 
 var starting_hunger_timer_end: bool = false
 #This will most likely be changed this hunger goes down too fast
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	starting_hunger_timer = PlayerManager.starting_hunger_timer
 	hunger.value = hunger.max_value
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	starting_hunger_timer -= 1 * delta
-	if starting_hunger_timer <= 0:
-		starting_hunger_timer == 0.0
+	PlayerManager.starting_hunger_timer -= 1 * delta
+	if PlayerManager.starting_hunger_timer <= 0:
+		PlayerManager.starting_hunger_timer == 0.0
 		starting_hunger_timer_end = true
+	
 
 
 func change_hunger(change_value: int):
