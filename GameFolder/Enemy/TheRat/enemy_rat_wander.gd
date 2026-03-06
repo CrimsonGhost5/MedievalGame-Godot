@@ -8,6 +8,8 @@ var target: Node3D
 @onready var nav_agent: NavigationAgent3D = $"../../NavigationAgent3D"
 
 @onready var random_pos = Vector3(randf_range(-2.0, 2.0), enemy.position.y, randf_range(-5.0, 5.0))
+@onready var rat_scurry: AudioStreamPlayer3D = $"../../RatScurry"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,6 +26,7 @@ func randomize_variables():
 
 func enter():
 	randomize_variables()
+	rat_scurry.play()
 
 func process(_delta: float):
 	enemy.look_at(enemy.global_transform.origin + enemy.velocity)
@@ -33,6 +36,7 @@ func process(_delta: float):
 	wander_time -= _delta
 	
 	if enemy.global_position.distance_to(target.global_position) < enemy.ChaseDistance:
+		rat_scurry.stop()
 		emit_signal("Transitioned", self, "EnemyRatRunAway")
 	
 

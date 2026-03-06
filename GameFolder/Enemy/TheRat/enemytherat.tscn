@@ -1,18 +1,50 @@
 [gd_scene format=3 uid="uid://b1xepx7vjhgq1"]
 
 [ext_resource type="Script" uid="uid://fparl1n1umu6" path="res://Enemy/TheRat/enemytherat.gd" id="1_eqdyp"]
+[ext_resource type="Texture2D" uid="uid://cekq13xnwbpsx" path="res://3D_assets/textures/sliceBread/sliceBread_Mat_BaseColor.1001.png" id="2_f7mdg"]
 [ext_resource type="Script" uid="uid://c4c4uyxih0slf" path="res://StateMachine/state_machine.gd" id="2_ogwpc"]
+[ext_resource type="Texture2D" uid="uid://bd0tptxl04dn0" path="res://3D_assets/textures/breadLoaf/bread_Materials_BaseColor.1001.png" id="2_y2f8y"]
+[ext_resource type="Texture2D" uid="uid://bmywevq2ssdfq" path="res://3D_assets/textures/sliceBread/sliceBread_Mat_Height.1001.png" id="3_4dt25"]
 [ext_resource type="Script" uid="uid://dfdsms23l0q6w" path="res://Enemy/TheRat/enemy_rat_wander.gd" id="3_ogwpc"]
+[ext_resource type="Texture2D" uid="uid://b5umqjwovmaxk" path="res://3D_assets/textures/breadLoaf/bread_Materials_Height.1001.png" id="3_plkeh"]
 [ext_resource type="Script" uid="uid://dopv3h5qdy4g5" path="res://Enemy/TheRat/enemy_rat_run_away.gd" id="4_kffe0"]
+[ext_resource type="Texture2D" uid="uid://dt76d388sq231" path="res://3D_assets/textures/sliceBread/sliceBread_Mat_Metallic.1001.png" id="4_vh8r1"]
+[ext_resource type="Texture2D" uid="uid://c55venym5ev5i" path="res://3D_assets/textures/breadLoaf/bread_Materials_Metallic.1001.png" id="4_yf41r"]
 [ext_resource type="Script" uid="uid://t702kdmqh7wm" path="res://Enemy/TheRat/enemy_rat_attack.gd" id="5_10jul"]
+[ext_resource type="Texture2D" uid="uid://djt4mgoqfnhs2" path="res://3D_assets/textures/breadLoaf/bread_Materials_Normal.1001.png" id="5_17kbl"]
+[ext_resource type="Texture2D" uid="uid://dkurpjn6lk37q" path="res://3D_assets/textures/sliceBread/sliceBread_Mat_Normal.1001.png" id="5_mw0vg"]
+[ext_resource type="Texture2D" uid="uid://bkj8jpn34u2q0" path="res://3D_assets/textures/sliceBread/sliceBread_Mat_Roughness.1001.png" id="6_bdfvk"]
 [ext_resource type="AudioStream" uid="uid://b71vc471b3uky" path="res://Sounds/RatSqueek.mp3" id="6_pspgl"]
+[ext_resource type="Texture2D" uid="uid://p54xnbfvk624" path="res://3D_assets/textures/breadLoaf/bread_Materials_Roughness.1001.png" id="6_qm1d6"]
 [ext_resource type="AudioStream" uid="uid://clm7r4xumlynw" path="res://Sounds/RatScurry.wav" id="7_lqdgj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7wguf"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f7mdg"]
+albedo_texture = ExtResource("2_f7mdg")
+metallic = 1.0
+metallic_texture = ExtResource("4_vh8r1")
+roughness_texture = ExtResource("6_bdfvk")
+normal_enabled = true
+normal_texture = ExtResource("5_mw0vg")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_4dt25")
+
 [sub_resource type="BoxMesh" id="BoxMesh_tn6j5"]
+material = SubResource("StandardMaterial3D_f7mdg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dt25"]
+albedo_texture = ExtResource("2_y2f8y")
+metallic = 1.0
+metallic_texture = ExtResource("4_yf41r")
+roughness_texture = ExtResource("6_qm1d6")
+normal_enabled = true
+normal_texture = ExtResource("5_17kbl")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_plkeh")
 
 [sub_resource type="BoxMesh" id="BoxMesh_omnql"]
+material = SubResource("StandardMaterial3D_4dt25")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kffe0"]
 
@@ -59,7 +91,11 @@ transform = Transform3D(2.78, 0, 0, 0, 2.78, 0, 0, 0, 2.78, 0, 0, 0)
 shape = SubResource("SphereShape3D_kffe0")
 
 [node name="RatSqueek" type="AudioStreamPlayer3D" parent="." unique_id=1941967035]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 stream = ExtResource("6_pspgl")
+volume_db = -10.0
 
 [node name="RatScurry" type="AudioStreamPlayer3D" parent="." unique_id=1420555478]
+transform = Transform3D(0.195, 0, 0, 0, 0.195, 0, 0, 0, 0.195, 0, 0, 0)
 stream = ExtResource("7_lqdgj")
+volume_db = -10.0

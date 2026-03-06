@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 	if PlayerManager.starting_hunger_timer <= 0:
 		PlayerManager.starting_hunger_timer == 0.0
 		starting_hunger_timer_end = true
+		
 	
 
 

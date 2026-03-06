@@ -182,6 +182,7 @@ func apply_knockback(direction: Vector3, force: float, knockback_duration: float
 func die():
 	moving = false
 	game_over_ui.show_gameover()
+	
 
 #This will most likely be changed but for now this how the player takes damage to Enemies
 func _on_area_3d_body_entered(body: Node3D) -> void:

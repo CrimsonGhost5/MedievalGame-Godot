@@ -3,6 +3,8 @@ class_name EnemyRatRunAway
 
 @onready var enemy: CharacterBody3D = get_parent().get_parent()
 @onready var nav_agent: NavigationAgent3D = $"../../NavigationAgent3D"
+@onready var rat_squeek: AudioStreamPlayer3D = $"../../RatSqueek"
+
 
 var target: Node3D
 
@@ -10,14 +12,18 @@ var target: Node3D
 func _ready() -> void:
 	target = PlayerManager.player
 
+func enter():
+	rat_squeek.play()
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if enemy.global_position.distance_to(target.global_position) > enemy.ChaseDistance:
+		rat_squeek.stop()
 		emit_signal("Transitioned", self, "EnemyRatWander")
 	if enemy.global_position.distance_to(target.global_position) < enemy.AttackRange && enemy.global_position.distance_to(target.global_position) < enemy.ChaseDistance:
 		emit_signal("Transitioned", self, "EnemyRatAttack")
-		
+		rat_squeek.stop()
 
 func physics_process(_delta: float) -> void:
 	var target_origin = target.get_global_transform().origin
