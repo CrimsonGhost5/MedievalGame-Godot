@@ -70,12 +70,14 @@ metadata/_custom_type_script = "uid://iyocwyrufwnd"
 script = ExtResource("4_ea31h")
 metadata/_custom_type_script = "uid://dsqea3chtdgle"
 
-[node name="Close" type="AudioStreamPlayer3D" parent="." unique_id=2130208843]
+[node name="Audio" type="Node3D" parent="." unique_id=1740585991]
+
+[node name="Close" type="AudioStreamPlayer3D" parent="Audio" unique_id=2130208843]
 stream = ExtResource("6_mj7vp")
 unit_size = 2.0
 autoplay = true
 
-[node name="Chase" type="AudioStreamPlayer3D" parent="." unique_id=976414777]
+[node name="Chase" type="AudioStreamPlayer3D" parent="Audio" unique_id=976414777]
 stream = ExtResource("7_gxcgv")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

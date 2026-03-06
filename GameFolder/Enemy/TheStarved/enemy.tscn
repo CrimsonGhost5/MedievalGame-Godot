@@ -36,8 +36,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1375069, 0)
 mesh = SubResource("QuadMesh_1mcli")
 
 [node name="Timer" type="Timer" parent="." unique_id=612238075]
-wait_time = 0.5
-autostart = true
+wait_time = 5.0
+one_shot = true
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=965732701]
 path_height_offset = 0.1
@@ -48,11 +48,19 @@ target_position = Vector3(0, 0, -20)
 debug_shape_custom_color = Color(0.84313726, 0.43529412, 0.20392157, 1)
 
 [node name="FoodRayCast" type="RayCast3D" parent="." unique_id=1249959142]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.61203575, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9130832, 0)
+target_position = Vector3(0, 0, -30)
+
+[node name="FoodRayCast2" type="RayCast3D" parent="." unique_id=1202885493]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20683205, 0)
+target_position = Vector3(0, 0, -30)
+
+[node name="FoodRayCast3" type="RayCast3D" parent="." unique_id=1125551597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6767764, 0)
 target_position = Vector3(0, 0, -30)
 
 [node name="FoodDectector" type="Area3D" parent="." unique_id=2051081523]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+transform = Transform3D(0.435, 0, 0, 0, 0.435, 0, 0, 0, 0.435, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FoodDectector" unique_id=1380514323]
 shape = SubResource("SphereShape3D_7k104")

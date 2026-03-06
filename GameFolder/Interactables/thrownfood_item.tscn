@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cc1mip8u41of1"]
 
-[ext_resource type="Script" uid="uid://cb8kcf3a1hatq" path="res://Interactables/food_item.gd" id="1_ig6qf"]
+[ext_resource type="Script" uid="uid://cft78g3f15mdg" path="res://Interactables/thrown_food.gd" id="1_riv7v"]
 [ext_resource type="PackedScene" uid="uid://donnq44vo7rv2" path="res://Objects/sliceBread.fbx" id="3_ig6qf"]
 [ext_resource type="AudioStream" uid="uid://b6fqiakg0g7b0" path="res://Sounds/EditBreadSound.mp3" id="3_tq2yx"]
 [ext_resource type="Material" uid="uid://c1cdqbig4cgux" path="res://sliceBread.tres" id="4_riv7v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xlgsp"]
 
-[node name="FoodItem" type="RigidBody3D" unique_id=480233616 groups=["pickable"]]
-script = ExtResource("1_ig6qf")
+[node name="FoodItem" type="RigidBody3D" unique_id=480233616 groups=["pickable", "thrown food"]]
+script = ExtResource("1_riv7v")
 
 [node name="FoodCollectSFX" type="AudioStreamPlayer3D" parent="." unique_id=255723497]
 stream = ExtResource("3_tq2yx")
@@ -23,7 +23,15 @@ shape = SubResource("BoxShape3D_xlgsp")
 [node name="sliceBread" parent="Node3D/sliceBread" index="0" unique_id=1949718174]
 material_override = ExtResource("4_riv7v")
 
+[node name="Area3D" type="Area3D" parent="." unique_id=1684028332]
+
+[node name="Timer" type="Timer" parent="." unique_id=1582728068]
+wait_time = 5.0
+autostart = true
+
 [connection signal="interacted" from="." to="." method="_on_interacted"]
 [connection signal="finished" from="FoodCollectSFX" to="." method="_on_food_collect_sfx_finished"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
 [editable path="Node3D/sliceBread"]

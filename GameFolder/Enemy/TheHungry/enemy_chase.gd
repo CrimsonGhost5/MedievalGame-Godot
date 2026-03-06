@@ -3,7 +3,7 @@ class_name EnemyChase
 
 @onready var enemy: CharacterBody3D = get_parent().get_parent()
 @onready var nav_agent: NavigationAgent3D = $"../../NavigationAgent3D"
-
+@onready var chase_audio = $"../../Audio/Chase"
 var target: Node3D
 
 
@@ -11,9 +11,12 @@ var target: Node3D
 func _ready() -> void:
 	target = PlayerManager.player
 
+func enter():
+	chase_audio.play()
+
+
 func process(_delta: float):
 	#nav_agent.set_target_position(target.global_position)
-	
 	if enemy.global_position.distance_to(target.global_position) > enemy.ChaseDistance:
 		emit_signal("Transitioned", self, "EnemyWander")
 

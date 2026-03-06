@@ -3,6 +3,7 @@ extends Interactable
 var collected = false
 
 
+
 func _on_interacted(body: Variant) -> void:
 	if not collected:
 		collected = true

@@ -45,6 +45,10 @@ var throwable_food = load("res://Interactables/thrownfood_item.tscn")
 @onready var head = $Head
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 
+@onready var breadeat = $Audio/BreadEatAlt
+@onready var breadeatalt = $Audio/BreadEatAlt
+@onready var breadthrow = $Audio/BreadThrow
+
 func _ready() -> void:
 	PlayerManager.player = self
 	$UI/Healthbar.health.value = GameState.get_value("health")
@@ -146,7 +150,7 @@ func throw():
 		var instance = throwable_food.instantiate()
 		instance.position = $Head/Hand.global_position
 		get_parent().add_child(instance)
-		
+		breadthrow.play()
 		
 		var force = -10
 		var upDir = 3.5
@@ -163,9 +167,7 @@ func eat():
 		print(eat_amount)
 		$UI/Healthbar.health.value += 5
 		$UI/HungerBar.hunger.value += 10
-		
-	
-	
+		breadeatalt.play()
 	
 	if eat_amount >= 4:
 		$UI/StaminaBar.base_max += 20
