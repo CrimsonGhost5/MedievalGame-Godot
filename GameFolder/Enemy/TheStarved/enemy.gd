@@ -47,7 +47,7 @@ func _physics_process(delta: float) -> void:
 	#This is so the raycast is always looking at the food's position
 	#raycast.look_at(food.global_position, Vector3.UP)
 	velocity = Vector3.ZERO
-	asp.play()
+	
 	
 	#Once the player gets close and collides with the raycast that's when everything happens
 	if raycast.is_colliding():
@@ -60,6 +60,7 @@ func _physics_process(delta: float) -> void:
 			velocity = (next_player_nav_point - global_position).normalized() * speed
 			##The Model turns to look at the player
 			look_at(Vector3(next_player_nav_point.x, global_position.y, next_player_nav_point.z), Vector3.UP)
+			
 			move_and_slide()
 		#if foodraycast.get_collider() == food or foodraycast2.get_collider() == food or foodraycast3.get_collider() == food:
 			#see_food = true
@@ -99,7 +100,7 @@ func _on_food_dectector_body_entered(body: Node3D) -> void:
 	if body.is_in_group("thrown food"):
 		timer.start()
 		speed = 0
-		
+		asp.play()
 	 
 	
 
