@@ -7,7 +7,6 @@ const DialogueSystemPreload = preload("res://Dialogue/dialogue.tscn")
 @export var override_diaiogie_position: bool
 @export var override_position: Vector3
 @export var dialogue: Array[DE]
-
 var player_body_in: bool = false
 var has_activated_already: bool = false
 var desired_dialogue_pos: Vector3

@@ -2716,10 +2716,10 @@ transform = Transform3D(3.786, 0, 0, 0, 3.203, 0, 0, 0, 1, -20.94825, 1.3636057,
 prompt_message = "Enter Second Maze"
 
 [node name="Stairs" parent="." unique_id=499957783 instance=ExtResource("12_vv3pg")]
-transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, -20.94825, -0.51475096, 49.513657)
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, -20.94825, -1.8725027, 51.35446)
 
 [node name="Stairs2" parent="." unique_id=805608593 instance=ExtResource("12_vv3pg")]
-transform = Transform3D(-1.7484555e-07, 0, -1, 0, 1, 0, 4, 0, -4.371139e-08, -2.5343804, 4.4455743, -8.039361)
+transform = Transform3D(-1.7484555e-07, 0, -1, 0, 1, 0, 4, 0, -4.371139e-08, -3.699511, 3.6938787, -8.039361)
 
 [node name="ExitLevel" parent="." unique_id=1160335140 instance=ExtResource("13_oqkef")]
 transform = Transform3D(-1.7703113e-07, 0, 1.11, 0, 2.535, 0, -4.05, 0, -4.851964e-08, 2.1031303, 1.2261543, -8.033291)
@@ -3109,6 +3109,14 @@ skeleton = NodePath("../..")
 
 [node name="boneWall63" parent="walls" unique_id=1842337687 instance=ExtResource("26_woqiw")]
 transform = Transform3D(-2.1855693e-09, 0, 0.01, 0, 0.01, 0, -0.01, 0, -2.1855693e-09, -23, 0, 48)
+skeleton = NodePath("../..")
+
+[node name="boneWall166" parent="walls" unique_id=1730924006 instance=ExtResource("26_woqiw")]
+transform = Transform3D(0.01, 0, 0, 0, 0.0070710676, -0.0070710676, 0, 0.0070710676, 0.0070710676, -20.974663, 1.2250834, 46.34266)
+skeleton = NodePath("../..")
+
+[node name="boneWall167" parent="walls" unique_id=1967109031 instance=ExtResource("26_woqiw")]
+transform = Transform3D(0.01, 0, 0, 0, 0.0070710676, -0.0070710676, 0, 0.0070710676, 0.0070710676, -20.974663, -1.3634946, 43.655655)
 skeleton = NodePath("../..")
 
 [node name="boneWall64" parent="walls" unique_id=933440155 instance=ExtResource("26_woqiw")]

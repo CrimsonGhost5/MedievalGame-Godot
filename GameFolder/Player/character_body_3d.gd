@@ -126,9 +126,11 @@ func crouch():
 			$CollisionShape3D.shape.height = crouch_height 
 			SPEED = 3
 			is_sprinting = false
+			is_crouching = true
 		else:
 			$CollisionShape3D.shape.height = stand_height
 			SPEED = 5
+			is_crouching = false
 	
 	#var target_height: float = crouch_height if not reverse else stand_height
 	#
@@ -187,7 +189,7 @@ func die():
 #This will most likely be changed but for now this how the player takes damage to Enemies
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Enemy"):
-		health -= 50
+		health -= 30
 		GameState.set_value("health", $UI/Healthbar.health.value)
 		$UI/Healthbar.health.value -= 50
 	

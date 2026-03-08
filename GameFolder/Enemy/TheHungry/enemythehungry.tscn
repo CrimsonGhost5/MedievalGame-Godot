@@ -73,7 +73,9 @@ metadata/_custom_type_script = "uid://dsqea3chtdgle"
 [node name="Audio" type="Node3D" parent="." unique_id=1740585991]
 
 [node name="Close" type="AudioStreamPlayer3D" parent="Audio" unique_id=2130208843]
+transform = Transform3D(0.395, 0, 0, 0, 0.395, 0, 0, 0, 0.395, 0, 0, 0)
 stream = ExtResource("6_mj7vp")
+volume_db = -10.0
 unit_size = 2.0
 autoplay = true
 

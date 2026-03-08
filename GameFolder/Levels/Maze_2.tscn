@@ -27,6 +27,8 @@
 [ext_resource type="PackedScene" uid="uid://c7f61ui2ffumc" path="res://3D_assets/brick_Plain_segment.tscn" id="23_h810o"]
 [ext_resource type="PackedScene" uid="uid://bpghtuki1pdkg" path="res://3D_assets/floor.tscn" id="24_3cjhb"]
 [ext_resource type="PackedScene" uid="uid://bcx1518yjrkpi" path="res://3D_assets/fall_through_floor.tscn" id="25_h810o"]
+[ext_resource type="PackedScene" uid="uid://brka3ai73amxy" path="res://Interactables/food_item.tscn" id="28_bfnlp"]
+[ext_resource type="PackedScene" uid="uid://g7vf63c6mufw" path="res://Game UI/pause_menu.tscn" id="29_jvt55"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_fe1fq"]
 
@@ -56,6 +58,9 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
+[node name="Player" parent="." unique_id=683224540 instance=ExtResource("4_1hhqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.968649, 1.3294983, 75.823944)
+
 [node name="blockoutWalls" type="GridMap" parent="." unique_id=667474094]
 visible = false
 mesh_library = ExtResource("3_6rv3n")
@@ -65,7 +70,8 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
-[node name="floors" type="Node" parent="." unique_id=809761067]
+[node name="floors" type="Node3D" parent="." unique_id=207833539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96989775, 0)
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="floors" unique_id=886219554]
 transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 8, -23, -1.5, 10)
@@ -399,9 +405,6 @@ material = SubResource("StandardMaterial3D_lki8o")
 
 [node name="blockoutColors_grid" type="Node" parent="." unique_id=1493468043]
 
-[node name="Player" parent="." unique_id=683224540 instance=ExtResource("4_1hhqv")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.507229, 1, 75.66939)
-
 [node name="Enemies" type="Node3D" parent="." unique_id=212860683]
 
 [node name="Enemy" parent="Enemies" unique_id=1596931860 instance=ExtResource("6_rmbwb")]
@@ -419,7 +422,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -47.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9392142, 1.3591299, 28.152172)
 
 [node name="Enemy5" parent="Enemies" unique_id=1087828541 instance=ExtResource("6_rmbwb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.324623, 1.2241793, 9.766146)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25.365593, 1.2241793, 12.805511)
 player_path = NodePath("../../Player")
 
 [node name="Enemy6" parent="Enemies" unique_id=767266905 instance=ExtResource("6_rmbwb")]
@@ -436,44 +439,35 @@ transform = Transform3D(-1.7484555e-07, 0, -1, 0, 1, 0, 4, 0, -4.371139e-08, -57
 transform = Transform3D(3.2164743, 0, 0, 0, 3.203322, 0, 0, 0, 1, 19.068964, 0, 77.477615)
 prompt_message = "Enter First Maze"
 
-[node name="NextLevel" parent="." unique_id=1864251023 instance=ExtResource("7_1hhqv")]
-transform = Transform3D(-1.7348847e-07, 0, 1, 0, 3.203322, 0, -3.9689536, 0, -4.371139e-08, -57.603493, 0, 0)
+[node name="NextLevel" parent="." unique_id=1468292875 instance=ExtResource("7_1hhqv")]
+transform = Transform3D(3.835607e-08, 0, -1, 0, 3.203322, 0, 3.2164743, 0, 1.1924881e-08, -57.603, 1.973, 0)
+prompt_message = "Enter"
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=390470569]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.507, 0, 75.669)
 
-[node name="Chest" parent="." unique_id=2048806239 instance=ExtResource("8_2cnfy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8715706, -0.92498124, 15.823559)
-itemID = "Food"
-item_amount = 3
-
-[node name="Chest2" parent="." unique_id=1768213186 instance=ExtResource("8_2cnfy")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 20.140627, -0.92498124, 56.994488)
-itemID = "Food"
-item_amount = 2
-
 [node name="doors" type="Node" parent="." unique_id=929780862]
 
 [node name="Door" parent="doors" unique_id=929252769 instance=ExtResource("9_4q2fa")]
-transform = Transform3D(-4.371138e-08, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -4.371138e-08, 16.589588, 1, 52.02954)
+transform = Transform3D(-4.371138e-08, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -4.371138e-08, 16.589588, 0.74792504, 55.69481)
 
 [node name="Door2" parent="doors" unique_id=8097515 instance=ExtResource("9_4q2fa")]
-transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, -21.013874, 1, 14.755958)
+transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, -17.422626, 0.75941396, 14.755958)
 
 [node name="Door3" parent="doors" unique_id=1571339931 instance=ExtResource("9_4q2fa")]
-transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, -1.0706406, 1, 18.324116)
+transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, 2.803376, 0.87649894, 18.324116)
 
 [node name="Door4" parent="doors" unique_id=744276253 instance=ExtResource("9_4q2fa")]
-transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, -60.984375, 1, 2.7686095)
+transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, -57.35624, 0.8672042, 2.7686095)
 
 [node name="Door5" parent="doors" unique_id=148149655 instance=ExtResource("9_4q2fa")]
-transform = Transform3D(-4.3711378e-08, 0, -0.99999976, 0, 1, 0, 0.99999976, 0, -4.3711378e-08, -55.731743, 1, 19.95239)
+transform = Transform3D(-4.3711378e-08, 0, -0.99999976, 0, 1, 0, 0.99999976, 0, -4.3711378e-08, -55.731743, 0.70254254, 15.391691)
 
 [node name="Door6" parent="doors" unique_id=1131006191 instance=ExtResource("9_4q2fa")]
 transform = Transform3D(-4.3711378e-08, 0, 0.99999976, 0, 1, 0, -0.99999976, 0, -4.3711378e-08, -74.20895, 1, 55.982018)
 
 [node name="Door7" parent="doors" unique_id=1455519016 instance=ExtResource("9_4q2fa")]
-transform = Transform3D(-4.3711378e-08, 0, 0.99999976, 0, 1, 0, -0.99999976, 0, -4.3711378e-08, -54.23998, 1, 75.997055)
+transform = Transform3D(-4.3711378e-08, 0, 0.99999976, 0, 1, 0, -0.99999976, 0, -4.3711378e-08, -54.23998, 0.85430455, 72.281235)
 
 [node name="maze2Build" type="Node3D" parent="." unique_id=1747181546]
 
@@ -998,6 +992,14 @@ skeleton = NodePath("../..")
 
 [node name="boneWall10" parent="maze2Build" unique_id=427370304 instance=ExtResource("15_ixdpc")]
 transform = Transform3D(0.01, 0, -2.7755576e-17, 0, 0.01, 0, 2.7755576e-17, 0, 0.01, -53, 0, -2)
+skeleton = NodePath("../..")
+
+[node name="boneWall21" parent="maze2Build" unique_id=522469747 instance=ExtResource("15_ixdpc")]
+transform = Transform3D(-4.3711387e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711387e-10, -54.640274, -0.15798879, 0.039205313)
+skeleton = NodePath("../..")
+
+[node name="boneWall22" parent="maze2Build" unique_id=1685423962 instance=ExtResource("15_ixdpc")]
+transform = Transform3D(-4.3711387e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711387e-10, -52.1229, -2.979661, 0.039205313)
 skeleton = NodePath("../..")
 
 [node name="boneWall11" parent="maze2Build" unique_id=1829312038 instance=ExtResource("15_ixdpc")]
@@ -1826,3 +1828,44 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -55, -4, 0)
 
 [node name="stairs2" parent="." unique_id=1522227729 instance=ExtResource("19_j3wth")]
 transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711387e-10, 19, 0, 80)
+
+[node name="Chests" type="Node3D" parent="." unique_id=385920035]
+
+[node name="Chest" parent="Chests" unique_id=2048806239 instance=ExtResource("8_2cnfy")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -20.48658, -0.04857278, 7.2490654)
+itemID = "Food"
+item_amount = 3
+
+[node name="Chest4" parent="Chests" unique_id=291734430 instance=ExtResource("8_2cnfy")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.8544235, -0.04857278, 10.759632)
+itemID = "Food"
+item_amount = 1
+
+[node name="Chest2" parent="Chests" unique_id=1768213186 instance=ExtResource("8_2cnfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.140627, 0.0041048527, 56.994488)
+itemID = "Food"
+item_amount = 2
+
+[node name="Chest3" parent="Chests" unique_id=1215357761 instance=ExtResource("8_2cnfy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.57038, 0.0041048527, 80.93636)
+itemID = "Food"
+item_amount = 2
+
+[node name="Food" type="Node3D" parent="." unique_id=1639248338]
+
+[node name="FoodItem" parent="Food" unique_id=480233616 instance=ExtResource("28_bfnlp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.718597, 0, 73.26496)
+
+[node name="FoodItem5" parent="Food" unique_id=1433909638 instance=ExtResource("28_bfnlp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5800114, 0, 27.82821)
+
+[node name="FoodItem2" parent="Food" unique_id=1688057925 instance=ExtResource("28_bfnlp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.504097, 0, 80.854706)
+
+[node name="FoodItem3" parent="Food" unique_id=1009330197 instance=ExtResource("28_bfnlp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.740536, 0, 80.854706)
+
+[node name="FoodItem4" parent="Food" unique_id=324003286 instance=ExtResource("28_bfnlp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.901405, 0, 80.854706)
+
+[node name="PauseMenu" parent="." unique_id=1020740941 instance=ExtResource("29_jvt55")]
