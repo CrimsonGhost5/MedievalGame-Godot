@@ -130,12 +130,6 @@ viewport_path = NodePath("SubViewport2")
 [sub_resource type="ViewportTexture" id="ViewportTexture_xim85"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_gcg4u"]
-viewport_path = NodePath("SubViewport2")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_snoaj"]
-viewport_path = NodePath("SubViewport")
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_i3cp3"]
 viewport_path = NodePath("SubViewport2")
 
@@ -182,6 +176,9 @@ data = PackedVector3Array(2.6462, 277.66568, 67.9874, 2.6462, 277.66568, 64.0112
 script = ExtResource("1_k33jf")
 level_name = "Maze1"
 
+[node name="Player" parent="." unique_id=683224540 instance=ExtResource("4_dcwl1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.4570966, 1.0039269, -8.432971)
+
 [node name="WorldEnvironment" parent="." unique_id=2129621095 instance=ExtResource("2_hvdy1")]
 
 [node name="MusicAmbience" type="AudioStreamPlayer" parent="." unique_id=985771495]
@@ -209,9 +206,6 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 2, 0)
 
-[node name="Player" parent="." unique_id=683224540 instance=ExtResource("4_dcwl1")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.156521, 1.0255165, -8.554888)
-
 [node name="Enemies" type="Node3D" parent="." unique_id=1281890190]
 
 [node name="Enemy" parent="Enemies" unique_id=1596931860 instance=ExtResource("5_hvdy1")]
@@ -226,8 +220,8 @@ player_path = NodePath("../../Player")
 food_path = NodePath("../../Food/ThrownFood")
 knockback_force = 10.0
 
-[node name="Enemy2" parent="Enemies" unique_id=1987723422 instance=ExtResource("6_eyav4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.755024, 1.5122902, 47.369057)
+[node name="Enemy2" parent="Enemies" unique_id=1677378096 instance=ExtResource("6_eyav4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.7, 1.512, 47.36)
 
 [node name="EnemyTheRat" parent="Enemies" unique_id=1184139553 instance=ExtResource("9_vlrk1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.41604, 0.6315398, -15.679458)
@@ -2719,7 +2713,7 @@ prompt_message = "Enter Second Maze"
 transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, -20.94825, -1.8725027, 51.35446)
 
 [node name="Stairs2" parent="." unique_id=805608593 instance=ExtResource("12_vv3pg")]
-transform = Transform3D(-1.7484555e-07, 0, -1, 0, 1, 0, 4, 0, -4.371139e-08, -3.699511, 3.6938787, -8.039361)
+transform = Transform3D(-1.7484555e-07, 0, -1, 0, 1, 0, 4, 0, -4.371139e-08, -4.7687645, 3.6938787, -8.039361)
 
 [node name="ExitLevel" parent="." unique_id=1160335140 instance=ExtResource("13_oqkef")]
 transform = Transform3D(-1.7703113e-07, 0, 1.11, 0, 2.535, 0, -4.05, 0, -4.851964e-08, 2.1031303, 1.2261543, -8.033291)
@@ -2748,11 +2742,11 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 23.4
 [node name="Label" parent="Signs/Sign2/SubViewport2" parent_id_path=PackedInt32Array(796788113, 1988828590) index="0" unique_id=1109496230]
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-text = "Collect food, save as much
-as you can. Return to the
-start."
+text = "Press R to Eat"
 
 [node name="Sprite3D2" parent="Signs/Sign2" index="5" unique_id=62140585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3585122, 0)
+visible = true
 texture = SubResource("ViewportTexture_03i6n")
 
 [node name="Label" parent="Signs/Sign2/SubViewport" parent_id_path=PackedInt32Array(796788113, 415910616) index="0" unique_id=757353305]
@@ -2775,21 +2769,6 @@ texture = SubResource("ViewportTexture_nskln")
 
 [node name="Sprite3D" parent="Signs/Sign3" index="7" unique_id=772846068]
 texture = SubResource("ViewportTexture_xim85")
-
-[node name="Sign5" parent="Signs" unique_id=974028831 instance=ExtResource("16_dcwl1")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 42.5851, 0, 35.27738)
-
-[node name="Label" parent="Signs/Sign5/SubViewport2" parent_id_path=PackedInt32Array(974028831, 1988828590) index="0" unique_id=1109496230]
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-text = "Press CTRL to crouch
-Press CTRL again to stand up"
-
-[node name="Sprite3D2" parent="Signs/Sign5" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_gcg4u")
-
-[node name="Sprite3D" parent="Signs/Sign5" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_snoaj")
 
 [node name="Sign4" parent="Signs" unique_id=1030396464 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16480064, 0, 15.174915)
@@ -5208,7 +5187,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConcavePolygonShape3D_w7nhy")
 
 [node name="stairs" parent="." unique_id=222989944 instance=ExtResource("39_1uilv")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, -8)
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -0.9502386, 0, -8)
 
 [node name="stairs2" parent="." unique_id=410362890 instance=ExtResource("39_1uilv")]
 transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711387e-10, -21, -4, 48)
@@ -5219,5 +5198,4 @@ transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.371138
 [editable path="Signs/Sign"]
 [editable path="Signs/Sign2"]
 [editable path="Signs/Sign3"]
-[editable path="Signs/Sign5"]
 [editable path="Signs/Sign4"]

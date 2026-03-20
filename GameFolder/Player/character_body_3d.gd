@@ -41,6 +41,7 @@ var moving = true
 @onready var foot_steps: AudioStreamPlayer3D = %FootSteps
  
 var throwable_food = load("res://Interactables/thrownfood_item.tscn")
+var bread_crumb = load("res://Objects/bread_crumb.tscn")
 @onready var pos = $Head/Hand
 @onready var head = $Head
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
@@ -56,6 +57,8 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	add_to_group("Player")
 	stand_height = collision_shape.shape.height
+	look_rot.x = head.rotation_degrees.x 
+	look_rot.y = rotation_degrees.y 
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -109,11 +112,12 @@ func _physics_process(delta: float) -> void:
 	
 	
 	throw()
+	drop()
 	eat()
 	 #So the camera doesn't glitch out if the player looks a certain direction
-	head.rotation_degrees.x = look_rot.x
-	rotation_degrees.y = look_rot.y
 	
+	head.rotation_degrees.x  = look_rot.x 
+	rotation_degrees.y = look_rot.y  
 	move_and_slide()
 
 func move(speed: float, acceleration: float, delta: float) -> void:
@@ -160,6 +164,13 @@ func throw():
 		var player_direction = $Head.global_transform.basis.z.normalized()
 		
 		instance.apply_central_impulse(player_direction * force + Vector3(0, upDir, 0))
+
+func drop():
+	if Input.is_action_just_pressed("drop") and GameState.state["food"] > 0:
+		GameState.set_value("food", GameState.get_value("food") - 1)
+		var instance = bread_crumb.instantiate()
+		instance.position = $Head/Hand.global_position
+		get_parent().add_child(instance)
 
 func eat():
 	if Input.is_action_just_pressed("eat") and GameState.state["food"] > 0:

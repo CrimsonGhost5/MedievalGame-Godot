@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://dge6cnp055o8x" path="res://Dialogue/dialogue_text_resource.gd" id="13_x458k"]
 [ext_resource type="PackedScene" uid="uid://cc1mip8u41of1" path="res://Interactables/thrownfood_item.tscn" id="14_lrol0"]
 [ext_resource type="PackedScene" uid="uid://g7vf63c6mufw" path="res://Game UI/pause_menu.tscn" id="14_x458k"]
+[ext_resource type="PackedScene" uid="uid://dks7ptj0bnp4u" path="res://Enemy/TheStarved/enemy.tscn" id="15_lrol0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gojnm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -38,10 +39,10 @@ size = Vector3(30, 1, 30)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gojnm"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_x458k"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_lrol0"]
 viewport_path = NodePath("SubViewport2")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_lrol0"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ouwm7"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Resource" id="Resource_x458k"]
@@ -127,10 +128,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11.
 text = "Hello"
 
 [node name="Sprite3D2" parent="Sign" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_x458k")
+texture = SubResource("ViewportTexture_lrol0")
 
 [node name="Sprite3D" parent="Sign" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_lrol0")
+texture = SubResource("ViewportTexture_ouwm7")
 
 [node name="Door" parent="." unique_id=1191840203 instance=ExtResource("8_662sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104342, 1.3883362, -11.620697)
@@ -197,5 +198,10 @@ mesh = SubResource("BoxMesh_662sx")
 
 [node name="ThrownFoodItem" parent="." unique_id=480233616 instance=ExtResource("14_lrol0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0867605, 1.5618145, -11.647491)
+
+[node name="Enemy" parent="." unique_id=1596931860 instance=ExtResource("15_lrol0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5425663, 9.666883)
+player_path = NodePath("../Player")
+food_path = NodePath("../ThrownFoodItem")
 
 [editable path="Sign"]

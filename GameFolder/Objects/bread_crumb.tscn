@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ds5eyujyj1b63"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cjguj"]
+
+[node name="BreadCrumb" type="Node3D" unique_id=550613798]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1324813925]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_cjguj")

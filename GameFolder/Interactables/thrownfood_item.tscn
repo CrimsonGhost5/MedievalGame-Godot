@@ -7,6 +7,8 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xlgsp"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_riv7v"]
+
 [node name="FoodItem" type="RigidBody3D" unique_id=480233616 groups=["pickable", "thrown food"]]
 script = ExtResource("1_riv7v")
 
@@ -25,9 +27,12 @@ material_override = ExtResource("4_riv7v")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1684028332]
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=967097338]
+shape = SubResource("BoxShape3D_riv7v")
+
 [node name="Timer" type="Timer" parent="." unique_id=1582728068]
 wait_time = 5.0
-autostart = true
+one_shot = true
 
 [connection signal="interacted" from="." to="." method="_on_interacted"]
 [connection signal="finished" from="FoodCollectSFX" to="." method="_on_food_collect_sfx_finished"]
