@@ -169,8 +169,9 @@ func drop():
 	if Input.is_action_just_pressed("drop") and GameState.state["food"] > 0:
 		GameState.set_value("food", GameState.get_value("food") - 1)
 		var instance = bread_crumb.instantiate()
-		instance.position = $Head/Hand.global_position
+		instance.position = position
 		get_parent().add_child(instance)
+		
 
 func eat():
 	if Input.is_action_just_pressed("eat") and GameState.state["food"] > 0:
