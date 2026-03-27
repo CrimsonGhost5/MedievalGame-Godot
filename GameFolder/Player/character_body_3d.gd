@@ -107,8 +107,6 @@ func _physics_process(delta: float) -> void:
 	if health <= 0 or $UI/HungerBar.hunger.value == 0:
 		die()
 	
-	#if GameState.get_value("Run Shoes"):
-		#SPEED = 10
 	$UI/FoodAmount/CanvasLayer/Control/FoodText.text = str(GameState.state["food"])
 	
 	
