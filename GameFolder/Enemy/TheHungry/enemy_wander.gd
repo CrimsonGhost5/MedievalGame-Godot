@@ -13,6 +13,8 @@ var target: Node3D
 
 @onready var random_pos = Vector3(randf_range(-5.0, 5.0), enemy.position.y, randf_range(-5.0, 5.0))
 
+@export var new_spot_timer = 1.0
+
 func _ready() -> void:
 	target = PlayerManager.player
 
@@ -34,7 +36,7 @@ func randomize_variables():
 #Enters in the random variable
 func enter():
 	randomize_variables()
-	enemy.spot_timer = 1.0
+	enemy.spot_timer = new_spot_timer
 
 func process(_delta: float):
 	#enemy.look_at(enemy.global_transform.origin + enemy.velocity)
