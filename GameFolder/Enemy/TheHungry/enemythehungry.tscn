@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://iyocwyrufwnd" path="res://Enemy/TheHungry/enemy_wander.gd" id="3_ea31h"]
 [ext_resource type="Script" uid="uid://dsqea3chtdgle" path="res://Enemy/TheHungry/enemy_chase.gd" id="4_ea31h"]
 [ext_resource type="AudioStream" uid="uid://db007avaax5w6" path="res://Sounds/TheHungryChaseClose.wav" id="6_mj7vp"]
+[ext_resource type="Script" uid="uid://biewhn465r46w" path="res://Enemy/TheHungry/enemy_spot.gd" id="6_pf4h5"]
 [ext_resource type="AudioStream" uid="uid://c8gxabveintlm" path="res://Sounds/TheHungryChaseActive.wav" id="7_gxcgv"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7xaro"]
@@ -69,6 +70,10 @@ metadata/_custom_type_script = "uid://iyocwyrufwnd"
 [node name="EnemyChase" type="Node" parent="StateMachine" unique_id=1716368971]
 script = ExtResource("4_ea31h")
 metadata/_custom_type_script = "uid://dsqea3chtdgle"
+
+[node name="EnemySpot" type="Node" parent="StateMachine" unique_id=1907991608]
+script = ExtResource("6_pf4h5")
+metadata/_custom_type_script = "uid://biewhn465r46w"
 
 [node name="Audio" type="Node3D" parent="." unique_id=1740585991]
 

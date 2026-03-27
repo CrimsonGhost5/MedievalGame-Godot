@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://fjrmqlxaeldw"]
+
+[ext_resource type="Script" uid="uid://doemqqpihb8jq" path="res://Interactables/key.gd" id="1_k2o2x"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mh0jk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k2o2x"]
+
+[node name="Key" type="RigidBody3D" unique_id=1851379380]
+script = ExtResource("1_k2o2x")
+prompt_message = "Pick Up"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=465952235]
+mesh = SubResource("BoxMesh_mh0jk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1855693012]
+shape = SubResource("BoxShape3D_k2o2x")
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]

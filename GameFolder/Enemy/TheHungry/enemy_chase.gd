@@ -13,6 +13,7 @@ func _ready() -> void:
 
 func enter():
 	chase_audio.play()
+	enemy.spot_timer = 1.0
 
 
 func process(_delta: float):

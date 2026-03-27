@@ -34,6 +34,7 @@ func randomize_variables():
 #Enters in the random variable
 func enter():
 	randomize_variables()
+	enemy.spot_timer = 1.0
 
 func process(_delta: float):
 	#enemy.look_at(enemy.global_transform.origin + enemy.velocity)
@@ -44,7 +45,7 @@ func process(_delta: float):
 	
 	#If the player gets too close to the enemy then the ememy switches state
 	if enemy.global_position.distance_to(target.global_position) < enemy.ChaseDistance:
-		emit_signal("Transitioned", self, "EnemyChase")
+		emit_signal("Transitioned", self, "EnemySpot")
 	
 	if enemy.global_position.distance_to(target.global_position) < enemy.CloseDistance:
 		close_audio.play()

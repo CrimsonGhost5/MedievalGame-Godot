@@ -6,6 +6,7 @@ extends CharacterBody3D
 @export var ChaseDistance: float = 10.0
 @export var CloseDistance: float = 15
 @export var knockback_force: float
+@export var spot_timer: float = 1.0
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 

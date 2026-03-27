@@ -8,8 +8,10 @@ signal interacted(body)
 @export var prompt_message = "Interact"
 ##Allows for different buttons to bet set as the interact button
 @export var prompt_input = "interact"
-
+@export var enabled := true
 func get_prompt():
+	if not enabled:
+		return ""
 	var key_name = ""
 	
 	##Finds out the key associated with the input action needed for the interactable
@@ -21,4 +23,6 @@ func get_prompt():
 	return prompt_message + "\n[" + key_name + "]"
 
 func interact(body):
+	if not enabled:
+		return
 	interacted.emit(body)
