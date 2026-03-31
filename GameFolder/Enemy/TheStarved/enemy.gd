@@ -33,6 +33,7 @@ const attack_range = 2.0
 @onready var material = $Body.get_active_material(0)
 @onready var standSprite = load("res://Enemy/TheStarved/MunchyEnemy1.png")
 @onready var walkSprite1 = load("res://Enemy/TheStarved/MunchyEnemy2.png")
+@onready var stillSprite = load("res://Enemy/TheStarved/MunchyEnemyStill.png")
 var animating = false
 
 
@@ -71,6 +72,10 @@ func _physics_process(delta: float) -> void:
 			#if not food or not is_instance_valid(food):
 				#return
 			#move_and_slide()
+		else:
+			material.albedo_texture = stillSprite
+	else:
+		material.albedo_texture = stillSprite
 	
 	# animate if velocity is moving
 	if(self.velocity != Vector3(0, 0, 0) && animating == false):
@@ -78,8 +83,8 @@ func _physics_process(delta: float) -> void:
 		animating = true
 		animate(delta)
 	# unanimate if standing still
-	else: if(self.velocity == Vector3(0, 0, 0) && material.albedo_texture != standSprite):
-		material.albedo_texture = standSprite
+	#else: if(self.velocity == Vector3(0, 0, 0) && material.albedo_texture != standSprite):
+		#material.albedo_texture = standSprite
 	
 	
 

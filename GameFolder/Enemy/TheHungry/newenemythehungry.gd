@@ -9,12 +9,15 @@ extends CharacterBody3D
 @export var spot_timer: float = 1.0
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
+@onready var state_machine: StateMachine = $StateMachine
+@onready var wander_state: State = $StateMachine/EnemyWander
 
 # animation stuff
 @onready var material = $Body.get_active_material(0)
 @onready var standSprite = load("res://Enemy/TheHungry/HungryEnemy1.png")
 @onready var walkSprite1 = load("res://Enemy/TheHungry/HungryEnemy2.png")
 @onready var walkSprite2 = load("res://Enemy/TheHungry/HungryEnemy3.png")
+@onready var stillSprite = load("res://Enemy/TheHungry/HungryEnemyStill.png")
 var animating = false
 
 var target: Node3D
@@ -28,12 +31,18 @@ func _physics_process(delta: float) -> void:
 	
 	# animate if velocity is moving
 	if(self.velocity != Vector3(0, 0, 0) && animating == false):
-		# animation
-		animating = true
-		animate(delta)
+		if(state_machine.current_state == wander_state):
+			material.albedo_texture = stillSprite
+		else:
+			# animation
+			animating = true
+			animate(delta)
 	# unanimate if standing still
-	else: if(self.velocity == Vector3(0, 0, 0) && material.albedo_texture != standSprite):
-		material.albedo_texture = standSprite
+	else: if(self.velocity == Vector3(0, 0, 0) && material.albedo_texture != standSprite || stillSprite):
+		if(state_machine.current_state == wander_state):
+			material.albedo_texture = stillSprite
+		else:
+			material.albedo_texture = standSprite
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
