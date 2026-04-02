@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bkcdmu2dxtpnr"]
+
+[ext_resource type="PackedScene" uid="uid://drknntesg3iuv" path="res://3D_assets/brick_wall_c.tscn" id="1_f4s6j"]
+[ext_resource type="PackedScene" uid="uid://bpghtuki1pdkg" path="res://3D_assets/floor.tscn" id="2_6tg56"]
+[ext_resource type="PackedScene" uid="uid://bb5lrxjymyom8" path="res://3D_assets/ceiling.tscn" id="3_gt6aa"]
+[ext_resource type="Material" uid="uid://rord3o22a57u" path="res://3D_assets/textures/3D_materials/torchMaterial.tres" id="4_ktns5"]
+[ext_resource type="ArrayMesh" uid="uid://cuqvwwpw2rlqo" path="res://3D_assets/torch_godot.obj" id="5_jvn6g"]
+
+[node name="birck_c_torch_segment" type="Node3D" unique_id=71423489]
+
+[node name="brickWall_c2" parent="." unique_id=213867016 instance=ExtResource("1_f4s6j")]
+transform = Transform3D(-0.01, 0, 8.7422775e-10, 0, 0.01, 0, -8.7422775e-10, 0, -0.01, 0, 0, 4)
+skeleton = NodePath("../..")
+
+[node name="floor2" parent="." unique_id=1184286252 instance=ExtResource("2_6tg56")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 2)
+skeleton = NodePath("../..")
+
+[node name="ceiling" parent="." unique_id=639545133 instance=ExtResource("3_gt6aa")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 2)
+skeleton = NodePath("../..")
+
+[node name="TorchGodot" type="MeshInstance3D" parent="." unique_id=792645090]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.31619668, 2)
+material_override = ExtResource("4_ktns5")
+mesh = ExtResource("5_jvn6g")
+skeleton = NodePath("../..")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1870586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9479358, 3.746867)
+light_color = Color(1, 0.5803922, 0, 1)
+light_energy = 0.4
