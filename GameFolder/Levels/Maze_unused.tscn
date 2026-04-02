@@ -5,6 +5,15 @@
 [ext_resource type="MeshLibrary" uid="uid://b7kt6w5af4pmm" path="res://Other/colors3.tres" id="2_t516e"]
 [ext_resource type="PackedScene" uid="uid://x1v3wsuuya02" path="res://Player/player.tscn" id="3_vdimr"]
 [ext_resource type="PackedScene" uid="uid://dldj3j6wblwsj" path="res://InteractionFolder/door.tscn" id="4_15g84"]
+[ext_resource type="PackedScene" uid="uid://b8k5aruenr8mn" path="res://3D_assets/column.tscn" id="8_i2i86"]
+[ext_resource type="PackedScene" uid="uid://c1ren5eg3kvvq" path="res://3D_assets/column_b.tscn" id="9_qwycr"]
+[ext_resource type="PackedScene" uid="uid://b80towcyxe0w8" path="res://3D_assets/brick_b_corner.tscn" id="10_crcfb"]
+[ext_resource type="PackedScene" uid="uid://c8c3m7by0bor7" path="res://3D_assets/brick_c_segment.tscn" id="11_ky24d"]
+[ext_resource type="PackedScene" uid="uid://ckmusqdovwx00" path="res://3D_assets/brick_b_segment.tscn" id="12_724ri"]
+[ext_resource type="PackedScene" uid="uid://befo2sank5aba" path="res://3D_assets/birck_c_torch_segment.tscn" id="12_b0yl8"]
+[ext_resource type="PackedScene" uid="uid://cbjfncp0qmkko" path="res://3D_assets/archway_segment.tscn" id="13_i2i86"]
+[ext_resource type="PackedScene" uid="uid://bdpg8uxnng63v" path="res://3D_assets/brick_b_torch_segment.tscn" id="13_txmi1"]
+[ext_resource type="PackedScene" uid="uid://by0eox3p54b24" path="res://3D_assets/brick_b_one_segment.tscn" id="14_b0yl8"]
 
 [node name="Maze3" type="Node3D" unique_id=576804716]
 
@@ -43,6 +52,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 2, 0)
 
 [node name="floor2_walls" type="GridMap" parent="." unique_id=1287722621]
+visible = false
 mesh_library = ExtResource("2_t516e")
 cell_size = Vector3(1, 1, 1)
 data = {
@@ -51,12 +61,68 @@ data = {
 metadata/_editor_floor_ = Vector3(0, -8, 0)
 
 [node name="Player" parent="." unique_id=683224540 instance=ExtResource("3_vdimr")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -29.03627, -5.9521613, 45.60558)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -29.03627, 1.0478387, 45.60558)
 
 [node name="Door" parent="." unique_id=929252769 instance=ExtResource("4_15g84")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0476456, 2, 0.83518386)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9523544, 1, 0.83518386)
 
 [node name="Door2" parent="." unique_id=1484373439 instance=ExtResource("4_15g84")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -15.1540985, 2, 5.9978313)
 
 [node name="Enemies" type="Node3D" parent="." unique_id=1364832277]
+
+[node name="column" parent="." unique_id=1034557719 instance=ExtResource("8_i2i86")]
+visible = false
+
+[node name="column_b" parent="." unique_id=509902873 instance=ExtResource("9_qwycr")]
+visible = false
+
+[node name="brick_c_segment" parent="." unique_id=1543600118 instance=ExtResource("11_ky24d")]
+visible = false
+
+[node name="birck_c_torch_segment" parent="." unique_id=71423489 instance=ExtResource("12_b0yl8")]
+visible = false
+
+[node name="archway_segment" parent="." unique_id=1457593977 instance=ExtResource("13_i2i86")]
+visible = false
+
+[node name="level3_build" type="Node3D" parent="." unique_id=2006882864]
+
+[node name="brick_b_corner" parent="level3_build" unique_id=357538525 instance=ExtResource("10_crcfb")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -34, 0, 48)
+
+[node name="brick_b_corner2" parent="level3_build" unique_id=1237810220 instance=ExtResource("10_crcfb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 36)
+
+[node name="brick_b_corner3" parent="level3_build" unique_id=1411321307 instance=ExtResource("10_crcfb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -24, 0, 26)
+
+[node name="brick_b_segment" parent="level3_build" unique_id=2139549120 instance=ExtResource("12_724ri")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -36, 0, 30)
+
+[node name="brick_b_segment3" parent="level3_build" unique_id=163376217 instance=ExtResource("12_724ri")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 36)
+
+[node name="brick_b_segment5" parent="level3_build" unique_id=1633833190 instance=ExtResource("12_724ri")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -20, 0, 30)
+
+[node name="brick_b_torch_segment" parent="level3_build" unique_id=956875016 instance=ExtResource("13_txmi1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 44)
+
+[node name="brick_b_torch_segment2" parent="level3_build" unique_id=1917829075 instance=ExtResource("13_txmi1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -32, 0, 42)
+
+[node name="brick_b_torch_segment4" parent="level3_build" unique_id=471972160 instance=ExtResource("13_txmi1")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -26, 0, 40)
+
+[node name="brick_b_torch_segment5" parent="level3_build" unique_id=1336402019 instance=ExtResource("13_txmi1")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -24, 0, 34)
+
+[node name="brick_b_torch_segment3" parent="level3_build" unique_id=1123637703 instance=ExtResource("13_txmi1")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -32, 0, 34)
+
+[node name="brick_b_segment2" parent="level3_build" unique_id=97001226 instance=ExtResource("14_b0yl8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -32, 0, 38)
+
+[node name="brick_b_segment4" parent="level3_build" unique_id=1318834827 instance=ExtResource("14_b0yl8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 36)

@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://cft78g3f15mdg" path="res://Interactables/thrown_food.gd" id="1_riv7v"]
 [ext_resource type="PackedScene" uid="uid://donnq44vo7rv2" path="res://Objects/sliceBread.fbx" id="3_ig6qf"]
 [ext_resource type="AudioStream" uid="uid://b6fqiakg0g7b0" path="res://Sounds/EditBreadSound.mp3" id="3_tq2yx"]
-[ext_resource type="Material" uid="uid://c1cdqbig4cgux" path="res://sliceBread.tres" id="4_riv7v"]
+[ext_resource type="Material" uid="uid://c1cdqbig4cgux" path="res://3D_assets/textures/3D_materials/sliceBread.tres" id="4_riv7v"]
+
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xlgsp"]
 

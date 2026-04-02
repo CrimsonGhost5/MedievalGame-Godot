@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cbjfncp0qmkko"]
+
+[ext_resource type="PackedScene" uid="uid://dorfnndm7vrv" path="res://3D_assets/archway_wall.tscn" id="1_1bfle"]
+[ext_resource type="PackedScene" uid="uid://bpghtuki1pdkg" path="res://3D_assets/floor.tscn" id="2_5ukb5"]
+[ext_resource type="PackedScene" uid="uid://bb5lrxjymyom8" path="res://3D_assets/ceiling.tscn" id="3_p7j15"]
+[ext_resource type="PackedScene" uid="uid://jefcrvmpd6jk" path="res://3D_assets/brick_wall_b.tscn" id="4_23jpq"]
+
+[node name="archway_segment" type="Node3D" unique_id=1457593977]
+
+[node name="archwayWall" parent="." unique_id=2004325171 instance=ExtResource("1_1bfle")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 1)
+skeleton = NodePath("../..")
+
+[node name="floor3" parent="." unique_id=1184286252 instance=ExtResource("2_5ukb5")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 2)
+skeleton = NodePath("../..")
+
+[node name="ceiling" parent="." unique_id=639545133 instance=ExtResource("3_p7j15")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 2)
+skeleton = NodePath("../..")
+
+[node name="brickWall_b" parent="." unique_id=475210228 instance=ExtResource("4_23jpq")]
+transform = Transform3D(-4.3711387e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711387e-10, 2, 0, 2)
+skeleton = NodePath("../..")
+
+[node name="brickWall_b2" parent="." unique_id=646660004 instance=ExtResource("4_23jpq")]
+transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711387e-10, -2, 0, 2)
+skeleton = NodePath("../..")

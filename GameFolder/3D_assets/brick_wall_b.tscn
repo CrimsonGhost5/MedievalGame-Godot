@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://jefcrvmpd6jk"]
+
+[ext_resource type="Material" uid="uid://8h78yckf0c66" path="res://3D_assets/textures/3D_materials/trimB.tres" id="1_l4mcu"]
+[ext_resource type="ArrayMesh" uid="uid://mul2mrvwpmq" path="res://3D_assets/brickWall_b_godot.obj" id="2_106mq"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_v6tb7"]
+data = PackedVector3Array(200, 200, 0, -200, 200, 0, 200, 400, 0, 200, 400, 0, -200, 200, 0, -200, 400, 0, 200, 0, 0, -200, 0, 0, 200, 200, 0, 200, 200, 0, -200, 0, 0, -200, 200, 0)
+
+[node name="brickWall_b" type="MeshInstance3D" unique_id=475210228]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+material_override = ExtResource("1_l4mcu")
+mesh = ExtResource("2_106mq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2091619801]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1622734142]
+shape = SubResource("ConcavePolygonShape3D_v6tb7")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b8k5aruenr8mn"]
+
+[ext_resource type="Material" uid="uid://8h78yckf0c66" path="res://3D_assets/textures/3D_materials/trimB.tres" id="1_555ma"]
+[ext_resource type="ArrayMesh" uid="uid://dh2n4nmelv2sw" path="res://3D_assets/column_godot.obj" id="2_m1j43"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_blf1l"]
+height = 400.0
+radius = 31.838743
+
+[node name="column" type="MeshInstance3D" unique_id=1034557719]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+material_override = ExtResource("1_555ma")
+mesh = ExtResource("2_m1j43")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=722950855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 200, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1623921823]
+shape = SubResource("CylinderShape3D_blf1l")

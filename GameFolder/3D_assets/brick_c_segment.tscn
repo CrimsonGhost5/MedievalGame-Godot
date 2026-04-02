@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c8c3m7by0bor7"]
+
+[ext_resource type="PackedScene" uid="uid://drknntesg3iuv" path="res://3D_assets/brick_wall_c.tscn" id="1_txe33"]
+[ext_resource type="PackedScene" uid="uid://bpghtuki1pdkg" path="res://3D_assets/floor.tscn" id="2_yi4yo"]
+[ext_resource type="PackedScene" uid="uid://bb5lrxjymyom8" path="res://3D_assets/ceiling.tscn" id="3_c8bmv"]
+
+[node name="brick_c_segment" type="Node3D" unique_id=1543600118]
+
+[node name="brickWall_c3" parent="." unique_id=537454487 instance=ExtResource("1_txe33")]
+skeleton = NodePath("../..")
+
+[node name="brickWall_c4" parent="." unique_id=1113312036 instance=ExtResource("1_txe33")]
+transform = Transform3D(-0.01, 0, 8.7422775e-10, 0, 0.01, 0, -8.7422775e-10, 0, -0.01, 0, 0, 4)
+skeleton = NodePath("../..")
+
+[node name="floor4" parent="." unique_id=1184286252 instance=ExtResource("2_yi4yo")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 2)
+skeleton = NodePath("../..")
+
+[node name="ceiling2" parent="." unique_id=639545133 instance=ExtResource("3_c8bmv")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 2)
+skeleton = NodePath("../..")

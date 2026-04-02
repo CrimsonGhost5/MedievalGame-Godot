@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cb8kcf3a1hatq" path="res://Interactables/food_item.gd" id="1_0na5k"]
 [ext_resource type="PackedScene" uid="uid://c507cpev8qmv6" path="res://Objects/loafBread.fbx" id="2_m0368"]
-[ext_resource type="Material" uid="uid://bwgseftrhjwcr" path="res://loafBread.tres" id="3_nxs7j"]
+[ext_resource type="Material" uid="uid://bwgseftrhjwcr" path="res://3D_assets/textures/3D_materials/loafBread.tres" id="3_nxs7j"]
 [ext_resource type="AudioStream" uid="uid://bg715mia6ipyw" path="res://Sounds/BreadPickup.mp3" id="4_nxs7j"]
+
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xlgsp"]
 

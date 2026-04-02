@@ -30,7 +30,7 @@
 [ext_resource type="ArrayMesh" uid="uid://ck4xpbcbdqruw" path="res://3D_assets/ceiling_godot.obj" id="28_tnspj"]
 [ext_resource type="PackedScene" uid="uid://b5gcbb2ixodgb" path="res://3D_assets/brick_wall.tscn" id="29_ffq62"]
 [ext_resource type="PackedScene" uid="uid://dgsiyacwssh23" path="res://3D_assets/half_bone.tscn" id="29_wkkxk"]
-[ext_resource type="Material" uid="uid://dhbdt70o0nclm" path="res://trimMaterial.tres" id="30_1uilv"]
+[ext_resource type="Material" uid="uid://dhbdt70o0nclm" path="res://3D_assets/textures/3D_materials/trimMaterial.tres" id="30_1uilv"]
 [ext_resource type="PackedScene" uid="uid://nyxhgpq828au" path="res://3D_assets/half_brick_wall.tscn" id="32_0uent"]
 [ext_resource type="ArrayMesh" uid="uid://btkvl0geql5rm" path="res://3D_assets/outerDoor_godot.obj" id="33_1uvb1"]
 [ext_resource type="Texture2D" uid="uid://5txv5ya7hl3a" path="res://3D_assets/textures/doorMaterials/door_Mat_BaseColor.1001.png" id="33_7dw0s"]
@@ -130,10 +130,10 @@ viewport_path = NodePath("SubViewport2")
 [sub_resource type="ViewportTexture" id="ViewportTexture_xim85"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_i3cp3"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_gcg4u"]
 viewport_path = NodePath("SubViewport2")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_65dei"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_snoaj"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkkxk"]
@@ -2781,10 +2781,10 @@ Open them to get food
 and other loot."
 
 [node name="Sprite3D2" parent="Signs/Sign4" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_i3cp3")
+texture = SubResource("ViewportTexture_gcg4u")
 
 [node name="Sprite3D" parent="Signs/Sign4" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_65dei")
+texture = SubResource("ViewportTexture_snoaj")
 
 [node name="PauseMenu" parent="." unique_id=1020740941 instance=ExtResource("17_hvdy1")]
 

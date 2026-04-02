@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bdpg8uxnng63v"]
+
+[ext_resource type="PackedScene" uid="uid://bpghtuki1pdkg" path="res://3D_assets/floor.tscn" id="1_cbofs"]
+[ext_resource type="PackedScene" uid="uid://jefcrvmpd6jk" path="res://3D_assets/brick_wall_b.tscn" id="2_5snln"]
+[ext_resource type="PackedScene" uid="uid://bb5lrxjymyom8" path="res://3D_assets/ceiling.tscn" id="3_odryk"]
+[ext_resource type="Material" uid="uid://rord3o22a57u" path="res://3D_assets/textures/3D_materials/torchMaterial.tres" id="4_1jl57"]
+[ext_resource type="ArrayMesh" uid="uid://cuqvwwpw2rlqo" path="res://3D_assets/torch_godot.obj" id="5_uv7q3"]
+
+[node name="brick_b_torch_segment" type="Node3D" unique_id=956875016]
+
+[node name="floor" parent="." unique_id=1184286252 instance=ExtResource("1_cbofs")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 2)
+skeleton = NodePath("../..")
+
+[node name="brickWall_b" parent="." unique_id=475210228 instance=ExtResource("2_5snln")]
+skeleton = NodePath("../..")
+
+[node name="brickWall_b2" parent="." unique_id=1779383536 instance=ExtResource("2_5snln")]
+transform = Transform3D(-0.01, 0, 8.7422775e-10, 0, 0.01, 0, -8.7422775e-10, 0, -0.01, 0, 0, 4)
+skeleton = NodePath("../..")
+
+[node name="ceiling" parent="." unique_id=639545133 instance=ExtResource("3_odryk")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 2)
+skeleton = NodePath("../..")
+
+[node name="TorchGodot" type="MeshInstance3D" parent="." unique_id=212317584]
+transform = Transform3D(-0.01, 0, 8.7422775e-10, 0, 0.01, 0, -8.7422775e-10, 0, -0.01, 0, 0, 2)
+material_override = ExtResource("4_1jl57")
+mesh = ExtResource("5_uv7q3")
+skeleton = NodePath("../..")
+
+[node name="TorchGodot2" type="MeshInstance3D" parent="." unique_id=1205484872]
+transform = Transform3D(0.01, 0, -5.551115e-17, 0, 0.01, 0, 5.551115e-17, 0, 0.01, 0, 0, 2)
+material_override = ExtResource("4_1jl57")
+mesh = ExtResource("5_uv7q3")
+skeleton = NodePath("../..")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=654829573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.63046, 0.24722445)
+light_color = Color(1, 0.5803922, 0, 1)
+light_energy = 0.4
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=2091393658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.63046, 3.7207823)
+light_color = Color(1, 0.5803922, 0, 1)
+light_energy = 0.4
