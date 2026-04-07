@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://c1cdqbig4cgux"]
-
-[ext_resource type="Texture2D" uid="uid://cekq13xnwbpsx" path="res://3D_assets/textures/sliceBread/sliceBread_Mat_BaseColor.1001.png" id="1_ag1tj"]
-[ext_resource type="Texture2D" uid="uid://bkj8jpn34u2q0" path="res://3D_assets/textures/sliceBread/sliceBread_Mat_Roughness.1001.png" id="2_7krr8"]
-
-[resource]
-albedo_texture = ExtResource("1_ag1tj")
-roughness_texture = ExtResource("2_7krr8")
