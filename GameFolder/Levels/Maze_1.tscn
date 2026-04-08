@@ -32,10 +32,13 @@
 [ext_resource type="PackedScene" uid="uid://dgsiyacwssh23" path="res://3D_assets/half_bone.tscn" id="29_wkkxk"]
 [ext_resource type="Material" uid="uid://dhbdt70o0nclm" path="res://3D_assets/textures/3D_materials/trimMaterial.tres" id="30_1uilv"]
 [ext_resource type="PackedScene" uid="uid://nyxhgpq828au" path="res://3D_assets/half_brick_wall.tscn" id="32_0uent"]
+[ext_resource type="PackedScene" uid="uid://xhh4etb54bl1" path="res://3D_assets/bone_pile_b.tscn" id="32_imq4i"]
 [ext_resource type="ArrayMesh" uid="uid://btkvl0geql5rm" path="res://3D_assets/outerDoor_godot.obj" id="33_1uvb1"]
 [ext_resource type="Texture2D" uid="uid://5txv5ya7hl3a" path="res://3D_assets/textures/doorMaterials/door_Mat_BaseColor.1001.png" id="33_7dw0s"]
+[ext_resource type="PackedScene" uid="uid://bpjmvm6ej1qg5" path="res://3D_assets/plank_bed.tscn" id="33_nskln"]
 [ext_resource type="Texture2D" uid="uid://b23liqcuvcsl" path="res://3D_assets/textures/doorMaterials/door_Mat_Metallic.1001.png" id="34_1uilv"]
 [ext_resource type="ArrayMesh" uid="uid://geoag222qucs" path="res://3D_assets/metalDoor_godot.obj" id="34_pkymi"]
+[ext_resource type="PackedScene" uid="uid://c3rirqqc262rx" path="res://3D_assets/bone_pile_a.tscn" id="34_xim85"]
 [ext_resource type="Texture2D" uid="uid://bpn8aax3mq7br" path="res://3D_assets/textures/doorMaterials/door_Mat_Normal.1001.png" id="35_s4y0y"]
 [ext_resource type="Texture2D" uid="uid://2ed4jcio7jm7" path="res://3D_assets/textures/doorMaterials/door_Mat_Roughness.1001.png" id="36_03i6n"]
 [ext_resource type="PackedScene" uid="uid://cgg3o3upnjfe5" path="res://3D_assets/stairs.tscn" id="39_1uilv"]
@@ -112,28 +115,28 @@ normal_texture = ExtResource("22_vlrk1")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s4y0y"]
 data = PackedVector3Array(99.9985, 0, -200, 200, 0, -200, 99.9985, 0, -100.0046, 99.9985, 0, -100.0046, 200, 0, -200, 200, 0, -100.0046, -0.0030999999, 0, -100.0046, 99.9985, 0, -200, 99.9985, 0, -100.0046, -0.0030999999, 0, -200, 99.9985, 0, -200, -0.0030999999, 0, -100.0046, 99.9985, 0, -100.0046, 200, 0, -100.0046, 99.9985, 0, -0.0030999999, 99.9985, 0, -0.0030999999, 200, 0, -100.0046, 200, 0, -0.0030999999, -0.0030999999, 0, -100.0046, 99.9985, 0, -100.0046, -0.0030999999, 0, -0.0030999999, -0.0030999999, 0, -0.0030999999, 99.9985, 0, -100.0046, 99.9985, 0, -0.0030999999, -100.0046, 0, -100.0046, -0.0030999999, 0, -200, -0.0030999999, 0, -100.0046, -100.0046, 0, -200, -0.0030999999, 0, -200, -100.0046, 0, -100.0046, -200, 0, -100.0046, -100.0046, 0, -200, -100.0046, 0, -100.0046, -200, 0, -200, -100.0046, 0, -200, -200, 0, -100.0046, -200, 0, -100.0046, -100.0046, 0, -100.0046, -200, 0, -0.0030999999, -100.0046, 0, -100.0046, -0.0030999999, 0, -100.0046, -100.0046, 0, -0.0030999999, -200, 0, -0.0030999999, -100.0046, 0, -100.0046, -100.0046, 0, -0.0030999999, -100.0046, 0, -0.0030999999, -0.0030999999, 0, -100.0046, -0.0030999999, 0, -0.0030999999, -200, 0, -0.0030999999, -100.0046, 0, -0.0030999999, -200, 0, 99.9985, -200, 0, 99.9985, -100.0046, 0, -0.0030999999, -100.0046, 0, 99.9985, -100.0046, 0, -0.0030999999, -0.0030999999, 0, -0.0030999999, -100.0046, 0, 99.9985, -200, 0, 99.9985, -100.0046, 0, 99.9985, -200, 0, 200, -200, 0, 200, -100.0046, 0, 99.9985, -100.0046, 0, 200, -100.0046, 0, 99.9985, -0.0030999999, 0, -0.0030999999, -0.0030999999, 0, 99.9985, -100.0046, 0, 99.9985, -0.0030999999, 0, 99.9985, -100.0046, 0, 200, -0.0030999999, 0, -0.0030999999, 99.9985, 0, -0.0030999999, -0.0030999999, 0, 99.9985, -100.0046, 0, 200, -0.0030999999, 0, 99.9985, -0.0030999999, 0, 200, -0.0030999999, 0, 99.9985, 99.9985, 0, -0.0030999999, 99.9985, 0, 99.9985, -0.0030999999, 0, 99.9985, 99.9985, 0, 99.9985, -0.0030999999, 0, 200, 99.9985, 0, -0.0030999999, 200, 0, -0.0030999999, 99.9985, 0, 99.9985, -0.0030999999, 0, 200, 99.9985, 0, 99.9985, 99.9985, 0, 200, 99.9985, 0, 99.9985, 200, 0, -0.0030999999, 200, 0, 99.9985, 99.9985, 0, 99.9985, 200, 0, 99.9985, 99.9985, 0, 200, 99.9985, 0, 200, 200, 0, 99.9985, 200, 0, 200)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_1uilv"]
-viewport_path = NodePath("SubViewport2")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_s4y0y"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_03i6n"]
-viewport_path = NodePath("SubViewport2")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_imq4i"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_nskln"]
-viewport_path = NodePath("SubViewport2")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_xim85"]
-viewport_path = NodePath("SubViewport")
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_gcg4u"]
 viewport_path = NodePath("SubViewport2")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_snoaj"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_i3cp3"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_65dei"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_d500m"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ib5u0"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_d1h3v"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_u03ga"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkkxk"]
@@ -2731,10 +2734,10 @@ text = "Remember to always watch
  your hunger."
 
 [node name="Sprite3D2" parent="Signs/Sign" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_1uilv")
+texture = SubResource("ViewportTexture_gcg4u")
 
 [node name="Sprite3D" parent="Signs/Sign" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_s4y0y")
+texture = SubResource("ViewportTexture_snoaj")
 
 [node name="Sign2" parent="Signs" unique_id=796788113 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 23.476013, 0, 5.428658)
@@ -2747,13 +2750,13 @@ text = "Press R to Eat"
 [node name="Sprite3D2" parent="Signs/Sign2" index="5" unique_id=62140585]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3585122, 0)
 visible = true
-texture = SubResource("ViewportTexture_03i6n")
+texture = SubResource("ViewportTexture_i3cp3")
 
 [node name="Label" parent="Signs/Sign2/SubViewport" parent_id_path=PackedInt32Array(796788113, 415910616) index="0" unique_id=757353305]
 autowrap_mode = 3
 
 [node name="Sprite3D" parent="Signs/Sign2" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_imq4i")
+texture = SubResource("ViewportTexture_65dei")
 
 [node name="Sign3" parent="Signs" unique_id=995994448 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9436216, 0, 21.516214)
@@ -2765,10 +2768,10 @@ text = "Hold Shift to Sprint.
 Let go to regain Sprint."
 
 [node name="Sprite3D2" parent="Signs/Sign3" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_nskln")
+texture = SubResource("ViewportTexture_d500m")
 
 [node name="Sprite3D" parent="Signs/Sign3" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_xim85")
+texture = SubResource("ViewportTexture_ib5u0")
 
 [node name="Sign4" parent="Signs" unique_id=1030396464 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16480064, 0, 15.174915)
@@ -2781,10 +2784,10 @@ Open them to get food
 and other loot."
 
 [node name="Sprite3D2" parent="Signs/Sign4" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_gcg4u")
+texture = SubResource("ViewportTexture_d1h3v")
 
 [node name="Sprite3D" parent="Signs/Sign4" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_snoaj")
+texture = SubResource("ViewportTexture_u03ga")
 
 [node name="PauseMenu" parent="." unique_id=1020740941 instance=ExtResource("17_hvdy1")]
 
@@ -4085,6 +4088,36 @@ skeleton = NodePath("../..")
 [node name="brickWall37" parent="walls" unique_id=725413493 instance=ExtResource("29_ffq62")]
 transform = Transform3D(0.01, 0, -3.330669e-16, 0, 0.01, 0, 3.330669e-16, 0, 0.01, -29, 0, -6)
 skeleton = NodePath("../..")
+
+[node name="bonePile_b" parent="walls" unique_id=812870123 instance=ExtResource("32_imq4i")]
+transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711387e-10, 22, 0, 5)
+skeleton = NodePath("../..")
+
+[node name="bonePile_b2" parent="walls" unique_id=1853157280 instance=ExtResource("32_imq4i")]
+transform = Transform3D(0.01, 0, 2.7755576e-17, 0, 0.01, 0, -2.7755576e-17, 0, 0.01, 22, 0, -1)
+skeleton = NodePath("../..")
+
+[node name="bonePile_b3" parent="walls" unique_id=991253510 instance=ExtResource("32_imq4i")]
+transform = Transform3D(-4.3711385e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711385e-10, 12, 0, -9)
+skeleton = NodePath("../..")
+
+[node name="plankBed" parent="walls" unique_id=2044950594 instance=ExtResource("33_nskln")]
+transform = Transform3D(0.9162998, 0, 0.40049297, 0, 1, 0, -0.40049297, 0, 0.9162998, -1.2768116, 0, 20.670843)
+
+[node name="plankBed2" parent="walls" unique_id=1165042063 instance=ExtResource("33_nskln")]
+transform = Transform3D(0.9162998, 0, 0.40049297, 0, 1, 0, -0.40049297, 0, 0.9162998, -37.282898, 0, -7.5187883)
+
+[node name="plankBed3" parent="walls" unique_id=17704108 instance=ExtResource("33_nskln")]
+transform = Transform3D(-0.010890573, 0, 0.9999409, 0, 1, 0, -0.9999409, 0, -0.010890573, -28.443966, 0, -7.6514683)
+
+[node name="bonePile_a" parent="walls" unique_id=1566153456 instance=ExtResource("34_xim85")]
+transform = Transform3D(0.0067709433, 0, 0.007358962, 0, 0.01, 0, -0.007358962, 0, 0.0067709433, -38.55144, 0, -12)
+
+[node name="bonePile_a2" parent="walls" unique_id=1441043481 instance=ExtResource("34_xim85")]
+transform = Transform3D(0.009905765, 0, 0.0013696039, 0, 0.01, 0, -0.0013696039, 0, 0.009905765, -38.55144, 0, -11.449605)
+
+[node name="bonePile_a3" parent="walls" unique_id=847876374 instance=ExtResource("34_xim85")]
+transform = Transform3D(-0.002214292, 0, 0.009751764, 0, 0.01, 0, -0.009751764, 0, -0.002214292, -38.20935, 0, -11.896194)
 
 [node name="ceilings" type="Node3D" parent="." unique_id=418314573]
 

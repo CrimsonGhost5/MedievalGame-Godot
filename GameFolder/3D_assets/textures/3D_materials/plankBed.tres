@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b5ir83lw0djxw"]
+
+[ext_resource type="Texture2D" uid="uid://b0v17jwny4i75" path="res://3D_assets/textures/plankBed_materials/standardSurface1_BaseColor.1001.png" id="1_x57ow"]
+[ext_resource type="Texture2D" uid="uid://cg8yqkt14scbn" path="res://3D_assets/textures/plankBed_materials/standardSurface1_Metallic.1001.png" id="2_f8luo"]
+[ext_resource type="Texture2D" uid="uid://bf7maauelcxf0" path="res://3D_assets/textures/plankBed_materials/standardSurface1_Normal.1001.png" id="3_ypa72"]
+[ext_resource type="Texture2D" uid="uid://bxy14eb5tri2k" path="res://3D_assets/textures/plankBed_materials/standardSurface1_Roughness.1001.png" id="4_i66ax"]
+
+[resource]
+albedo_texture = ExtResource("1_x57ow")
+metallic = 1.0
+metallic_texture = ExtResource("2_f8luo")
+roughness_texture = ExtResource("4_i66ax")
+normal_enabled = true
+normal_texture = ExtResource("3_ypa72")

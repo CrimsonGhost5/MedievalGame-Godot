@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvwokeqpiu1c7"
+path="res://.godot/imported/plankBedBase_godot.obj-173f245d64f9424e35e2f79bdb0430bc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/plankBedBase_godot.obj-173f245d64f9424e35e2f79bdb0430bc.mesh"]
+
+source_file="res://3D_assets/plankBedBase_godot.obj"
+dest_files=["res://.godot/imported/plankBedBase_godot.obj-173f245d64f9424e35e2f79bdb0430bc.mesh", "res://.godot/imported/plankBedBase_godot.obj-173f245d64f9424e35e2f79bdb0430bc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
