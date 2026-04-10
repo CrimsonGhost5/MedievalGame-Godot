@@ -45,6 +45,8 @@ var bread_crumb = load("res://Objects/bread_crumb.tscn")
 @onready var pos = $Head/Hand
 @onready var head = $Head
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
+@onready var bread_crumb_spawn_point: Node3D = $BreadCrumbSpawnPoint
+
 
 @onready var breadeat = $Audio/BreadEatAlt
 @onready var breadeatalt = $Audio/BreadEatAlt
@@ -168,7 +170,7 @@ func drop():
 	if Input.is_action_just_pressed("drop") and GameState.state["food"] > 0:
 		GameState.set_value("food", GameState.get_value("food") - 1)
 		var instance = bread_crumb.instantiate()
-		instance.position = position
+		instance.position = bread_crumb_spawn_point.global_position
 		get_parent().add_child(instance)
 		
 

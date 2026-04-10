@@ -1,9 +1,137 @@
 [gd_scene format=3 uid="uid://ds5eyujyj1b63"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_cjguj"]
+[ext_resource type="Texture2D" uid="uid://c3li6u2xuvqjd" path="res://Player/Player UI/bread crumb.png" id="1_weyqu"]
 
-[node name="BreadCrumb" type="Node3D" unique_id=550613798]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_weyqu"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1324813925]
+[sub_resource type="BoxShape3D" id="BoxShape3D_cjguj"]
+
+[sub_resource type="Animation" id="Animation_weyqu"]
+resource_name = "Falling"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7yhc7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h23oj"]
+_data = {
+&"Falling": SubResource("Animation_weyqu"),
+&"RESET": SubResource("Animation_7yhc7")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0bqym"]
+animation = &"Falling"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_14jlj"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_5ysgm"]
+states/Falling/node = SubResource("AnimationNodeAnimation_0bqym")
+states/Falling/position = Vector2(346, 98.888885)
+transitions = ["Start", "Falling", SubResource("AnimationNodeStateMachineTransition_14jlj")]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7yhc7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_h23oj"]
+
+[node name="BreadCrumbTrail" type="Node3D" unique_id=550613798]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="BreadCrumb" type="Node3D" parent="." unique_id=1995127899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BreadCrumb" unique_id=1324813925]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-mesh = SubResource("BoxMesh_cjguj")
+skeleton = NodePath("../..")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="BreadCrumb/MeshInstance3D" unique_id=823024452]
+physics_material_override = SubResource("PhysicsMaterial_weyqu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreadCrumb/MeshInstance3D/RigidBody3D" unique_id=1360753710]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.40021247, 0)
+shape = SubResource("BoxShape3D_cjguj")
+disabled = true
+
+[node name="Sprite3D" type="Sprite3D" parent="BreadCrumb/MeshInstance3D" unique_id=1916224118]
+texture = ExtResource("1_weyqu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BreadCrumb" unique_id=486661261]
+libraries/ = SubResource("AnimationLibrary_h23oj")
+
+[node name="AnimationTree" type="AnimationTree" parent="BreadCrumb" unique_id=445455296]
+tree_root = SubResource("AnimationNodeStateMachine_5ysgm")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="BreadCrumb2" type="Node3D" parent="." unique_id=337879652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BreadCrumb2" unique_id=357222313]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.64836335, 0, 0.31425428)
+skeleton = NodePath("../..")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="BreadCrumb2/MeshInstance3D" unique_id=926421921]
+physics_material_override = SubResource("PhysicsMaterial_7yhc7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreadCrumb2/MeshInstance3D/RigidBody3D" unique_id=2046727631]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.40021247, 0)
+shape = SubResource("BoxShape3D_cjguj")
+disabled = true
+
+[node name="Sprite3D" type="Sprite3D" parent="BreadCrumb2/MeshInstance3D" unique_id=1178100024]
+texture = ExtResource("1_weyqu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BreadCrumb2" unique_id=1491949594]
+libraries/ = SubResource("AnimationLibrary_h23oj")
+
+[node name="AnimationTree" type="AnimationTree" parent="BreadCrumb2" unique_id=718288952]
+tree_root = SubResource("AnimationNodeStateMachine_5ysgm")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="BreadCrumb3" type="Node3D" parent="." unique_id=590493512]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BreadCrumb3" unique_id=133937081]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.2706149, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="BreadCrumb3/MeshInstance3D" unique_id=1517949049]
+physics_material_override = SubResource("PhysicsMaterial_h23oj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreadCrumb3/MeshInstance3D/RigidBody3D" unique_id=1224922841]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.40021247, 0)
+shape = SubResource("BoxShape3D_cjguj")
+disabled = true
+
+[node name="Sprite3D" type="Sprite3D" parent="BreadCrumb3/MeshInstance3D" unique_id=641706278]
+texture = ExtResource("1_weyqu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BreadCrumb3" unique_id=2065722791]
+libraries/ = SubResource("AnimationLibrary_h23oj")
+
+[node name="AnimationTree" type="AnimationTree" parent="BreadCrumb3" unique_id=1009658387]
+tree_root = SubResource("AnimationNodeStateMachine_5ysgm")
+anim_player = NodePath("../AnimationPlayer")
