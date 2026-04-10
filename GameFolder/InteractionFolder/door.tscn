@@ -163,6 +163,7 @@ transform = Transform3D(0.20791166, 0, -0.9781476, 0, 1, 0, 0.9781476, 0, 0.2079
 stream = ExtResource("3_i516g")
 
 [node name="DoorHandle" parent="Hinge" unique_id=767818049 instance=ExtResource("10_y3d63")]
+transform = Transform3D(0.25, 0, 0, 0, 0.63, 0, 0, 0, 0.965, 1.666, 2.001, -0.03492555)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=187906136]
 libraries/ = SubResource("AnimationLibrary_gp2dl")
@@ -173,3 +174,5 @@ anim_player = NodePath("../AnimationPlayer")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=441670739]
 stream = ExtResource("3_i516g")
+
+[connection signal="interacted" from="Hinge/DoorHandle" to="." method="_on_door_handle_interacted"]
