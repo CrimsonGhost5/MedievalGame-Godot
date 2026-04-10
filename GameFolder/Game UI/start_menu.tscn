@@ -14,8 +14,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ia0g5")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=816996031]
-position = Vector2(576, 320)
+[node name="TextureRect" type="TextureRect" parent="." unique_id=26035251]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 texture = ExtResource("2_lys1q")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1447610775]

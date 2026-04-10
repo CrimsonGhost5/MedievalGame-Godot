@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bm5847ure3bxu"]
 
 [ext_resource type="PackedScene" uid="uid://g7vf63c6mufw" path="res://Game UI/pause_menu.tscn" id="1_hckwf"]
+[ext_resource type="PackedScene" uid="uid://dfbd6ubayf60a" path="res://Levels/world_environment.tscn" id="1_kqbxx"]
 [ext_resource type="AudioStream" uid="uid://nc8p0he6d6u3" path="res://Sounds/Catacombs Game Ambience.mp3" id="2_aj67a"]
 [ext_resource type="MeshLibrary" uid="uid://b7kt6w5af4pmm" path="res://Other/colors3.tres" id="3_bphbb"]
 [ext_resource type="PackedScene" uid="uid://x1v3wsuuya02" path="res://Player/player.tscn" id="4_kqbxx"]
@@ -29,6 +30,8 @@
 [ext_resource type="PackedScene" uid="uid://by1g13fvc5t3b" path="res://Interactables/previous_level.tscn" id="26_aj67a"]
 
 [node name="Maze3" type="Node3D" unique_id=576804716]
+
+[node name="WorldEnvironment" parent="." unique_id=2129621095 instance=ExtResource("1_kqbxx")]
 
 [node name="PauseMenu" parent="." unique_id=1020740941 instance=ExtResource("1_hckwf")]
 

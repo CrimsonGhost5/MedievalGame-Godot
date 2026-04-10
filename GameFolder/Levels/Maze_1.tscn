@@ -60,7 +60,7 @@ metadata/_custom_type_script = "uid://dge6cnp055o8x"
 [sub_resource type="Resource" id="Resource_vv3pg"]
 script = ExtResource("10_duog2")
 speaker_name = "Old Man"
-text = "Everyone has gone hungry and staved. "
+text = "Everyone has gone hungry and starved. "
 text_speed = 30.0
 metadata/_custom_type_script = "uid://dge6cnp055o8x"
 
@@ -81,7 +81,7 @@ metadata/_custom_type_script = "uid://dge6cnp055o8x"
 [sub_resource type="Resource" id="Resource_wlfnc"]
 script = ExtResource("10_duog2")
 speaker_name = "Old Man"
-text = "There may be better loot there."
+text = "There may be better loot down there."
 text_speed = 30.0
 metadata/_custom_type_script = "uid://dge6cnp055o8x"
 
