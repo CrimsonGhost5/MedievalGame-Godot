@@ -96,7 +96,7 @@ func _physics_process(delta: float) -> void:
 		SPEED = 5
 		is_sprinting = false
 	
-	if sprint_amount == 400:
+	if sprint_amount == 100:
 		$UI/HungerBar.hunger.value -= 5
 		sprint_amount = 0
 	

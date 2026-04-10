@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bliwvb8npyt4b" path="res://Interactables/chest.tscn" id="10_ueaco"]
 [ext_resource type="PackedScene" uid="uid://cur5tucp5sp28" path="res://Interactables/next_level.tscn" id="11_q1yaw"]
 [ext_resource type="PackedScene" uid="uid://xeqfw356wo8k" path="res://Levels/stairs.tscn" id="12_vv3pg"]
-[ext_resource type="PackedScene" uid="uid://vxswb5r75j0w" path="res://Interactables/exit_level.tscn" id="13_oqkef"]
+[ext_resource type="PackedScene" uid="uid://bf0yfbhb4xsl7" path="res://InteractionFolder/CutsceneDoor.tscn" id="14_nskln"]
 [ext_resource type="PackedScene" uid="uid://bfs550d8o24m2" path="res://Interactables/sign.tscn" id="16_dcwl1"]
 [ext_resource type="PackedScene" uid="uid://g7vf63c6mufw" path="res://Game UI/pause_menu.tscn" id="17_hvdy1"]
 [ext_resource type="Texture2D" uid="uid://c3448pqjssd7o" path="res://3D_assets/textures/useThese/medievalTrim_BaseColor.1001.png" id="20_vv3pg"]
@@ -261,6 +261,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.485905, 0.8920257, 5.8159
 
 [node name="Door2" parent="Doors" unique_id=742197431 instance=ExtResource("8_wlfnc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.880005, 0.7668252, 14.368773)
+
+[node name="Door4" parent="Doors" unique_id=2030946850 instance=ExtResource("14_nskln")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.3579555, 0.9071332, -4.486237)
 
 [node name="Food" type="Node3D" parent="." unique_id=1631545506]
 
@@ -2717,10 +2720,6 @@ transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1, -20.94825, -1.8725027, 51.354
 
 [node name="Stairs2" parent="." unique_id=805608593 instance=ExtResource("12_vv3pg")]
 transform = Transform3D(-1.7484555e-07, 0, -1, 0, 1, 0, 4, 0, -4.371139e-08, -4.7687645, 3.6938787, -8.039361)
-
-[node name="ExitLevel" parent="." unique_id=1160335140 instance=ExtResource("13_oqkef")]
-transform = Transform3D(-1.7703113e-07, 0, 1.11, 0, 2.535, 0, -4.05, 0, -4.851964e-08, 2.1031303, 1.2261543, -8.033291)
-prompt_message = "Exit Maze"
 
 [node name="Signs" type="Node3D" parent="." unique_id=2126893438]
 
