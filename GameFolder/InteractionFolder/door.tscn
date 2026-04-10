@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dldj3j6wblwsj"]
 
 [ext_resource type="Script" uid="uid://bvi1avywoj8wd" path="res://Interactables/door.gd" id="1_qkvdp"]
-[ext_resource type="PackedScene" uid="uid://dlypycvyhboy3" path="res://InteractionFolder/door_handle.tscn" id="2_wlm4t"]
 [ext_resource type="Texture2D" uid="uid://5txv5ya7hl3a" path="res://3D_assets/textures/doorMaterials/door_Mat_BaseColor.1001.png" id="3_6kvaw"]
 [ext_resource type="AudioStream" uid="uid://cyktxb6ocrfoq" path="res://Sounds/Door.wav" id="3_i516g"]
 [ext_resource type="Texture2D" uid="uid://plkrrnmdpyl5" path="res://3D_assets/textures/doorMaterials/door_Mat_Height.1001.png" id="4_y3d63"]
@@ -10,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://2ed4jcio7jm7" path="res://3D_assets/textures/doorMaterials/door_Mat_Roughness.1001.png" id="7_fd8dl"]
 [ext_resource type="ArrayMesh" uid="uid://btkvl0geql5rm" path="res://3D_assets/outerDoor_godot.obj" id="8_j2q3i"]
 [ext_resource type="ArrayMesh" uid="uid://geoag222qucs" path="res://3D_assets/metalDoor_godot.obj" id="9_gg3rd"]
+[ext_resource type="PackedScene" uid="uid://d2i1ubw7x0g2x" path="res://InteractionFolder/lockeddoor_handle.tscn" id="10_y3d63"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wun0d"]
 albedo_texture = ExtResource("3_6kvaw")
@@ -162,8 +162,7 @@ shape = SubResource("ConvexPolygonShape3D_gp2dl")
 transform = Transform3D(0.20791166, 0, -0.9781476, 0, 1, 0, 0.9781476, 0, 0.20791166, 0.6987891, 0.88439405, -0.08625245)
 stream = ExtResource("3_i516g")
 
-[node name="DoorHandle" parent="Hinge" unique_id=767818049 instance=ExtResource("2_wlm4t")]
-transform = Transform3D(0.25, 0, 0, 0, 0.63, 0, 0, 0, 0.965, 1.6660116, 2.0005023, -0.091376305)
+[node name="DoorHandle" parent="Hinge" unique_id=767818049 instance=ExtResource("10_y3d63")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=187906136]
 libraries/ = SubResource("AnimationLibrary_gp2dl")
@@ -174,5 +173,3 @@ anim_player = NodePath("../AnimationPlayer")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=441670739]
 stream = ExtResource("3_i516g")
-
-[connection signal="interacted" from="Hinge/DoorHandle" to="." method="_on_door_handle_interacted"]

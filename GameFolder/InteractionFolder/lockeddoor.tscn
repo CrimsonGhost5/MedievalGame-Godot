@@ -1,0 +1,178 @@
+[gd_scene format=3 uid="uid://b13wxhoh3cmfw"]
+
+[ext_resource type="Script" uid="uid://poeqwa3rdata" path="res://Interactables/lockeddoor.gd" id="1_tk1yf"]
+[ext_resource type="Texture2D" uid="uid://5txv5ya7hl3a" path="res://3D_assets/textures/doorMaterials/door_Mat_BaseColor.1001.png" id="2_h40cl"]
+[ext_resource type="Texture2D" uid="uid://plkrrnmdpyl5" path="res://3D_assets/textures/doorMaterials/door_Mat_Height.1001.png" id="3_2iej3"]
+[ext_resource type="Texture2D" uid="uid://b23liqcuvcsl" path="res://3D_assets/textures/doorMaterials/door_Mat_Metallic.1001.png" id="4_rfb8e"]
+[ext_resource type="Texture2D" uid="uid://bpn8aax3mq7br" path="res://3D_assets/textures/doorMaterials/door_Mat_Normal.1001.png" id="5_6bphk"]
+[ext_resource type="Texture2D" uid="uid://2ed4jcio7jm7" path="res://3D_assets/textures/doorMaterials/door_Mat_Roughness.1001.png" id="6_d4dcq"]
+[ext_resource type="ArrayMesh" uid="uid://btkvl0geql5rm" path="res://3D_assets/outerDoor_godot.obj" id="7_44cfr"]
+[ext_resource type="ArrayMesh" uid="uid://geoag222qucs" path="res://3D_assets/metalDoor_godot.obj" id="8_t7frl"]
+[ext_resource type="AudioStream" uid="uid://cyktxb6ocrfoq" path="res://Sounds/Door.wav" id="9_y5v2h"]
+[ext_resource type="PackedScene" uid="uid://dlypycvyhboy3" path="res://InteractionFolder/door_handle.tscn" id="10_i83d2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wun0d"]
+albedo_texture = ExtResource("2_h40cl")
+metallic = 1.0
+metallic_texture = ExtResource("4_rfb8e")
+roughness_texture = ExtResource("6_d4dcq")
+normal_enabled = true
+normal_texture = ExtResource("5_6bphk")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_2iej3")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6kvaw"]
+points = PackedVector3Array(3.431867, 403.1746, 83.694725, -9.265303, 288.8889, -81.35232, 9.782316, 288.8889, -81.35232, -9.265303, 288.8889, 83.694725, -2.9148533, 403.1746, -81.35232, 9.782316, 288.8889, 83.694725, 3.431867, 403.1746, -81.35232, -2.9148533, 403.1746, 83.694725, -9.265303, 307.95142, -81.35232, 9.782316, 307.95142, 83.694725, 9.782316, 307.95142, -81.35232, -9.265303, 307.95142, 83.694725)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y3d63"]
+points = PackedVector3Array(-9.265303, -3.174591, -87.73261, 3.431867, 403.1746, -81.36849, -2.9148533, 403.1746, -81.36849, 9.782316, 403.1746, -201.97981, -9.265303, 403.1746, -201.97981, 9.782316, -3.174591, -201.97981, 9.782316, -3.174591, -87.73261, -9.265303, -3.174591, -201.97981, 9.782316, 403.1746, -87.73261, -9.265303, 403.1746, -87.73261, -9.265303, 288.85907, -81.36849, 9.782316, 288.85907, -81.36849, 9.782316, 307.91165, -81.36849, -9.265303, 307.91165, -81.36849)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k4gdq"]
+points = PackedVector3Array(-9.265303, 288.85907, 83.7109, 9.782316, 403.1746, 204.32222, 9.782316, 403.1746, 90.07502, 9.782316, -3.174591, 204.32222, -9.265303, 403.1746, 204.32222, -9.265303, -3.174591, 90.07502, 9.782316, -3.174591, 90.07502, -9.265303, -3.174591, 204.32222, -9.265303, 403.1746, 90.07502, 9.782316, 307.91165, 83.7109, -2.9148533, 371.39377, 83.7109, 3.431867, 371.39377, 83.7109, 9.782316, 288.85907, 83.7109, -9.265303, 307.91165, 83.7109)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhspw"]
+albedo_texture = ExtResource("2_h40cl")
+metallic = 1.0
+metallic_texture = ExtResource("4_rfb8e")
+roughness_texture = ExtResource("6_d4dcq")
+normal_enabled = true
+normal_texture = ExtResource("5_6bphk")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_2iej3")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gp2dl"]
+points = PackedVector3Array(-6.2481155, -2.332611, -96.27022, 7.747575, 296.2421, 95.00421, -6.2481155, 296.2421, 95.00421, 7.747575, -2.332611, 95.00421, 7.747575, 296.2421, -96.27022, -6.2481155, 296.2421, -96.27022, -6.2481155, -2.332611, 95.00421, 7.747575, -2.332611, -96.27022)
+
+[sub_resource type="Animation" id="Animation_6kvaw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_y3d63"]
+resource_name = "close"
+length = 3.34
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.34),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.3613569, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k4gdq"]
+resource_name = "open"
+length = 3.34
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hinge:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.34),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.3613569, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gp2dl"]
+_data = {
+&"RESET": SubResource("Animation_6kvaw"),
+&"close": SubResource("Animation_y3d63"),
+&"open": SubResource("Animation_k4gdq")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6kvaw"]
+animation = &"close"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y3d63"]
+animation = &"open"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gp2dl"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fd8dl"]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y3d63"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_j2q3i"]
+states/close/node = SubResource("AnimationNodeAnimation_6kvaw")
+states/close/position = Vector2(331.77777, 140.66666)
+states/open/node = SubResource("AnimationNodeAnimation_y3d63")
+states/open/position = Vector2(332, 21.333334)
+transitions = ["open", "close", SubResource("AnimationNodeStateMachineTransition_gp2dl"), "close", "open", SubResource("AnimationNodeStateMachineTransition_fd8dl"), "Start", "open", SubResource("AnimationNodeStateMachineTransition_y3d63")]
+graph_offset = Vector2(26, -46)
+
+[node name="LockedDoor" type="Node3D" unique_id=929252769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4219096, 0, 0)
+script = ExtResource("1_tk1yf")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=675115137]
+
+[node name="OuterDoorGodot" type="MeshInstance3D" parent="StaticBody3D" unique_id=115761138]
+transform = Transform3D(-4.371139e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.371139e-10, -3.5237155, -0.8671799, 0.1608715)
+material_override = SubResource("StandardMaterial3D_wun0d")
+mesh = ExtResource("7_44cfr")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=423170113]
+transform = Transform3D(-4.371139e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.371139e-10, -3.5237155, -0.8671799, 0.1608715)
+shape = SubResource("ConvexPolygonShape3D_6kvaw")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1670099328]
+transform = Transform3D(-4.371139e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.371139e-10, -3.5237155, -0.8671799, 0.1608715)
+shape = SubResource("ConvexPolygonShape3D_y3d63")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=820138104]
+transform = Transform3D(-4.371139e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.371139e-10, -3.5237155, -0.8671799, 0.1608715)
+shape = SubResource("ConvexPolygonShape3D_k4gdq")
+
+[node name="Hinge" type="Node3D" parent="." unique_id=1960253249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.443177, -0.88439405, 0.120877564)
+
+[node name="Area3D" type="StaticBody3D" parent="Hinge" unique_id=421925464]
+
+[node name="MetalDoorGodot" type="MeshInstance3D" parent="Hinge/Area3D" unique_id=1917071804]
+transform = Transform3D(-4.3711387e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711387e-10, 0.9074886, 0.015338659, 0.026058495)
+material_override = SubResource("StandardMaterial3D_xhspw")
+mesh = ExtResource("8_t7frl")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hinge/Area3D" unique_id=1317130081]
+transform = Transform3D(-4.3711387e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.3711387e-10, 0.9074886, 0.015338659, 0.026058495)
+shape = SubResource("ConvexPolygonShape3D_gp2dl")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Hinge" unique_id=224180028]
+transform = Transform3D(0.20791166, 0, -0.9781476, 0, 1, 0, 0.9781476, 0, 0.20791166, 0.6987891, 0.88439405, -0.08625245)
+stream = ExtResource("9_y5v2h")
+
+[node name="DoorHandle" parent="Hinge" unique_id=767818049 instance=ExtResource("10_i83d2")]
+transform = Transform3D(0.25, 0, 0, 0, 0.63, 0, 0, 0, 0.965, 1.6660116, 2.0005023, -0.091376305)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=187906136]
+libraries/ = SubResource("AnimationLibrary_gp2dl")
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1557023258]
+tree_root = SubResource("AnimationNodeStateMachine_j2q3i")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=441670739]
+stream = ExtResource("9_y5v2h")
+
+[connection signal="interacted" from="Hinge/DoorHandle" to="." method="_on_door_handle_interacted"]
