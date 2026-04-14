@@ -47,23 +47,23 @@ theme_override_constants/separation = 62
 
 [node name="Label" type="Label" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=87332345]
 layout_mode = 2
-text = "Press WASD or ArrowKeys to move"
+text = "Press WASD or ArrowKeys to move (Left Joystick on Controller)"
 
 [node name="Label2" type="Label" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1855439810]
 layout_mode = 2
-text = "Press Left SHIFT to sprint"
+text = "Press Left SHIFT to sprint (Hold RB/Right Button on Controller)"
 
 [node name="Label3" type="Label" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1172919848]
 layout_mode = 2
-text = "Press Left CTRL to crouch"
+text = "Press Left CTRL to crouch (Press in on the Right Joystick on Controller)"
 
 [node name="Label4" type="Label" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1121724442]
 layout_mode = 2
-text = "Use Mouse to look around"
+text = "Use Mouse to look around (Right Joystick on Controller)"
 
 [node name="Label5" type="Label" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=945299245]
 layout_mode = 2
-text = "Press E or Right click to pick up"
+text = "Press E or Right click to pick up (Press X on Controller)"
 
 [node name="Label7" type="Label" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2134564270]
 layout_mode = 2

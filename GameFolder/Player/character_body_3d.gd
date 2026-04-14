@@ -62,6 +62,22 @@ func _ready() -> void:
 	look_rot.x = head.rotation_degrees.x 
 	look_rot.y = rotation_degrees.y 
 
+func _process(delta: float) -> void:
+	var axis_y := Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
+	if axis_y != 0:
+		if abs(axis_y) > 0.2:
+			if axis_y > 0:
+				look_rot.x -= (axis_y * sensitivity)
+			elif axis_y < 0:
+				look_rot.x -= (axis_y * sensitivity)
+	var axis_x := Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
+	if axis_x != 0:
+		if abs(axis_x) > 0.2:
+			if axis_x > 0:
+				look_rot.y -= (axis_x * sensitivity)
+			elif axis_x < 0:
+				look_rot.y -= (axis_x * sensitivity)
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
