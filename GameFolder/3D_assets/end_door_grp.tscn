@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bdonj7mmim3bx"]
+
+[ext_resource type="Material" uid="uid://8h78yckf0c66" path="res://3D_assets/textures/3D_materials/trimB.tres" id="1_5ftp8"]
+[ext_resource type="ArrayMesh" uid="uid://cdfa5qbkwhxsd" path="res://3D_assets/endDoorFrame_godot.obj" id="2_n1d8y"]
+[ext_resource type="Material" uid="uid://brbd6sfj1a3w5" path="res://3D_assets/textures/3D_materials/endDoorMat.tres" id="3_d7xqe"]
+[ext_resource type="ArrayMesh" uid="uid://cnv2evatjkycg" path="res://3D_assets/endDoorAlone_godot.obj" id="4_oarbc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jvf7d"]
+size = Vector3(400, 400, 56.22679)
+
+[node name="endDoorGRP" type="Node3D" unique_id=398845763]
+
+[node name="endDoorFrame" type="MeshInstance3D" parent="." unique_id=562779085]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+material_override = ExtResource("1_5ftp8")
+mesh = ExtResource("2_n1d8y")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="endDoorFrame" unique_id=2027045417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 200, -17.74641)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="endDoorFrame/StaticBody3D" unique_id=1520388905]
+shape = SubResource("BoxShape3D_jvf7d")
+
+[node name="endDoor" type="MeshInstance3D" parent="." unique_id=2105485483]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+material_override = ExtResource("3_d7xqe")
+mesh = ExtResource("4_oarbc")
+skeleton = NodePath("../..")
