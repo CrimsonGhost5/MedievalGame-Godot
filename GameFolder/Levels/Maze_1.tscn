@@ -2792,10 +2792,6 @@ texture = SubResource("ViewportTexture_d500m")
 
 [node name="walls" type="Node3D" parent="." unique_id=1949410667]
 
-[node name="boneWall" parent="walls" unique_id=501439588 instance=ExtResource("26_woqiw")]
-transform = Transform3D(0.01, 0, -2.7755576e-17, 0, 0.01, 0, 2.7755576e-17, 0, 0.01, 3, 0, -10)
-skeleton = NodePath("../..")
-
 [node name="boneWall4" parent="walls" unique_id=1851034569 instance=ExtResource("26_woqiw")]
 transform = Transform3D(-0.01, 0, -8.742277e-10, 0, 0.01, 0, 8.742277e-10, 0, -0.01, 3, 0, -6)
 skeleton = NodePath("../..")
@@ -3122,6 +3118,10 @@ skeleton = NodePath("../..")
 
 [node name="boneWall3" parent="walls" unique_id=634873656 instance=ExtResource("26_woqiw")]
 transform = Transform3D(0.01, 0, -2.7755576e-17, 0, 0.01, 0, 2.7755576e-17, 0, 0.01, 11, 0, -10)
+skeleton = NodePath("../..")
+
+[node name="boneWall168" parent="walls" unique_id=501439588 instance=ExtResource("26_woqiw")]
+transform = Transform3D(0.01, 0, -2.7755576e-17, 0, 0.01, 0, 2.7755576e-17, 0, 0.01, 3, 0, -10)
 skeleton = NodePath("../..")
 
 [node name="torchWall" parent="walls" unique_id=2035192510 instance=ExtResource("27_tnspj")]
