@@ -1,18 +1,23 @@
 [gd_scene format=3 uid="uid://g7vf63c6mufw"]
 
 [ext_resource type="Script" uid="uid://f42dn202lm66" path="res://Game UI/pause_menu.gd" id="1_7iis3"]
+[ext_resource type="Shader" uid="uid://bdd60w5sqexxr" path="res://Levels/Maze_1.gdshader" id="2_p4jf0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_abu3j"]
+shader = ExtResource("2_p4jf0")
+shader_parameter/gamma = 1.0
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1020740941]
 process_mode = 3
 script = ExtResource("1_7iis3")
 
-[node name="BackGround" type="ColorRect" parent="." unique_id=2058571022]
+[node name="GammaOverlay" type="ColorRect" parent="." unique_id=1909332181]
+material = SubResource("ShaderMaterial_abu3j")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.15294118, 0.16862746, 0.19607843, 0.34901962)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1048668178]
 anchors_preset = 15
@@ -20,6 +25,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="BackGround" type="ColorRect" parent="CenterContainer" unique_id=2058571022]
+layout_mode = 2
+color = Color(0.15294118, 0.16862746, 0.19607843, 0.34901962)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1762003904]
 layout_mode = 2
@@ -43,10 +52,24 @@ text = "Resume"
 layout_mode = 2
 text = "Restart"
 
+[node name="Gamma" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1101250]
+layout_mode = 2
+disabled = true
+text = "Gamma
+"
+
+[node name="GammaSlider" type="HSlider" parent="CenterContainer/VBoxContainer" unique_id=2116095783]
+layout_mode = 2
+min_value = 0.5
+max_value = 2.0
+step = 0.01
+value = 1.0
+
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=911056720]
 layout_mode = 2
 text = "Quit"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Gamma" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
