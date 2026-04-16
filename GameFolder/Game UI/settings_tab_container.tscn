@@ -67,11 +67,15 @@ text = "Press E or Right click to pick up (Press X on Controller)"
 
 [node name="Label7" type="Label" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=2134564270]
 layout_mode = 2
-text = "Press F or Left Click to throw"
+text = "Press F or Left Click to throw (RT on Controller)"
 
 [node name="Label8" type="Label" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1272569701]
 layout_mode = 2
-text = "Press R to Eat"
+text = "Press R to Eat (LB on Controller)"
+
+[node name="Label9" type="Label" parent="TabContainer/Controls/MarginContainer/ScrollContainer/VBoxContainer" unique_id=12334198]
+layout_mode = 2
+text = "Press Q to Drop Bread Crumbs (LT on Controller)"
 
 [node name="Story" type="TabBar" parent="TabContainer" unique_id=1438610799]
 visible = false
