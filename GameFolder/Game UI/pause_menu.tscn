@@ -18,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1048668178]
 anchors_preset = 15
@@ -28,7 +29,8 @@ grow_vertical = 2
 
 [node name="BackGround" type="ColorRect" parent="CenterContainer" unique_id=2058571022]
 layout_mode = 2
-color = Color(0.15294118, 0.16862746, 0.19607843, 0.34901962)
+mouse_filter = 2
+color = Color(0, 0, 0, 0.34901962)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1762003904]
 layout_mode = 2
