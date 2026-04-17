@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://f42dn202lm66" path="res://Game UI/pause_menu.gd" id="1_7iis3"]
 [ext_resource type="Shader" uid="uid://bdd60w5sqexxr" path="res://Levels/Maze_1.gdshader" id="2_p4jf0"]
+[ext_resource type="Texture2D" uid="uid://c5n47gvdaxnrw" path="res://Game UI/skull borders.png" id="3_abu3j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_abu3j"]
 shader = ExtResource("2_p4jf0")
@@ -20,17 +21,21 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="BackGround" type="TextureRect" parent="." unique_id=214089071]
+modulate = Color(1, 1, 1, 0.49019608)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_abu3j")
+
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1048668178]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="BackGround" type="ColorRect" parent="CenterContainer" unique_id=2058571022]
-layout_mode = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 0.34901962)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1762003904]
 layout_mode = 2

@@ -9,6 +9,7 @@ extends CanvasLayer
 func _ready() -> void:
 	menu_ui.visible = false
 	get_tree().paused = false
+	$BackGround.visible = false
 	process_mode = Node.PROCESS_MODE_ALWAYS
 
 	gamma_slider.value = 1.0
@@ -25,10 +26,12 @@ func _input(event: InputEvent) -> void:
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			menu_ui.visible = false
 			get_tree().paused = false
+			$BackGround.visible = false
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			menu_ui.visible = true
 			get_tree().paused = true
+			$BackGround.visible = true
 
 
 func _on_resume_pressed() -> void:
