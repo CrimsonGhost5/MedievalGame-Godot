@@ -46,10 +46,10 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body == target:
-		var knockback_direction = (body.global_position - global_position).normalized()
-		body.apply_knockback(knockback_direction, 5.0, 0.12)
-		$AnimationPlayer.play("pushback")
+	#if body == target:
+		#var knockback_direction = (body.global_position - global_position).normalized()
+		#body.apply_knockback(knockback_direction, 5.0, 0.12)
+		pass
 
 func animate(delta: float) -> void:
 	material.albedo_texture = walkSprite1

@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cqwg7cj3s6heb" path="res://Player/Player UI/door_key.tscn" id="8_p5o4e"]
 [ext_resource type="PackedScene" uid="uid://bb5wyt5pinq0m" path="res://Player/Player UI/game_over_screen.tscn" id="9_00tjw"]
 [ext_resource type="AudioStream" uid="uid://b02x6ooi1biuw" path="res://Sounds/Walk.wav" id="9_5htga"]
+[ext_resource type="Script" uid="uid://dix01au3b8ev8" path="res://Player/Player UI/player_hurt.gd" id="9_gu6f8"]
 [ext_resource type="AudioStream" uid="uid://dntk3uliuf046" path="res://Sounds/BreadEat.wav" id="10_p5o4e"]
 [ext_resource type="AudioStream" uid="uid://bedqcnlr48g56" path="res://Sounds/BreadEat2.wav" id="11_gu6f8"]
 [ext_resource type="AudioStream" uid="uid://c5566c6y5auoo" path="res://Sounds/BreadThrow.mp3" id="12_dkpta"]
@@ -64,6 +65,11 @@ radius = 0.5551758
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 script = ExtResource("1_fb3t6")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=450627375]
+
+[node name="GameOverScreen" parent="CanvasLayer" unique_id=335445674 instance=ExtResource("9_00tjw")]
+visible = false
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=450083388]
 shape = SubResource("CapsuleShape3D_c7tqt")
 
@@ -100,6 +106,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="FoodAmount" parent="UI" unique_id=1256735136 instance=ExtResource("4_c7tqt")]
+layout_mode = 1
+
 [node name="StaminaBar" parent="UI" unique_id=1962409081 instance=ExtResource("3_vd578")]
 layout_mode = 1
 
@@ -122,11 +131,28 @@ offset_top = 0.0
 offset_right = 1.0
 offset_bottom = 0.0
 
-[node name="FoodAmount" parent="UI" unique_id=1256735136 instance=ExtResource("4_c7tqt")]
-layout_mode = 1
-
 [node name="DoorKey" parent="UI" unique_id=1306265259 instance=ExtResource("8_p5o4e")]
 layout_mode = 1
+
+[node name="Hurt" type="Control" parent="UI" unique_id=139417433]
+z_index = 4
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_gu6f8")
+
+[node name="ColorRect" type="ColorRect" parent="UI/Hurt" unique_id=1140067965]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.77254903, 0.007843138, 0, 0.40392157)
 
 [node name="Area3D" type="Area3D" parent="." unique_id=753565640]
 visible = false
@@ -135,11 +161,6 @@ visible = false
 shape = SubResource("CapsuleShape3D_obynr")
 
 [node name="Timer" type="Timer" parent="." unique_id=1596302599]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=450627375]
-
-[node name="GameOverScreen" parent="CanvasLayer" unique_id=335445674 instance=ExtResource("9_00tjw")]
-visible = false
 
 [node name="Audio" type="Node3D" parent="." unique_id=1848108054]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1096995, 0)
@@ -160,4 +181,5 @@ stream = ExtResource("12_dkpta")
 [node name="BreadCrumbSpawnPoint" type="Node3D" parent="." unique_id=1052821139]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0018935e-07, -0.48766255, 2.2920651)
 
+[connection signal="player_hit" from="." to="UI/Hurt" method="_on_player_player_hit"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

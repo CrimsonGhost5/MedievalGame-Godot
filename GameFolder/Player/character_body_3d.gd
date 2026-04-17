@@ -20,7 +20,7 @@ var eat_amount = 0
 #This is checked to see how much the player has sprinted
 var sprint_amount = 0
 #When an enemy hits the player they get pushed back a bit
-var push_back = 100
+var push_back = 30.0
 var knockback: Vector3 = Vector3.ZERO
 var knockback_timer: float = 0.0
 var knockback_resistance = 10
@@ -34,8 +34,10 @@ var input_dir = Vector3.ZERO
 var is_sprinting = false
 var is_crouching = false
 var moving = true
+var getting_hurt = false
 
-
+# This signal triggers when the player is hit by an enemy
+signal player_hit
 
 
 @onready var game_over_ui = $CanvasLayer/GameOverScreen
@@ -142,6 +144,7 @@ func _physics_process(delta: float) -> void:
 	throw()
 	drop()
 	eat()
+	got_hit(Vector3.BACK)
 	 #So the camera doesn't glitch out if the player looks a certain direction
 	
 	head.rotation_degrees.x  = look_rot.x 
@@ -233,16 +236,33 @@ func apply_knockback(direction: Vector3, force: float, knockback_duration: float
 func die():
 	moving = false
 	game_over_ui.show_gameover()
-	
+	$UI/FoodAmount.visible = false
+	$UI/StaminaBar.visible = false
+	$UI/Healthbar.visible = false
+	$UI/HungerBar.visible = false
+	$UI/CrossHair.visible = false
+	$UI/DoorKey.visible = false
+	$UI/FoodAmount/CanvasLayer/Control/TextureRect.visible = false
+	$UI/FoodAmount/CanvasLayer/Control/FoodText.visible = false
+
+func got_hit(dir):
+	if getting_hurt == true:
+		health -= 30 
+		GameState.set_value("health", $UI/Healthbar.health.value)
+		$UI/Healthbar.health.value -= 30
+		emit_signal("player_hit")
+		velocity += dir * push_back
+		getting_hurt = false
+		await get_tree().create_timer(0.8).timeout
+
+
 
 #This will most likely be changed but for now this how the player takes damage to Enemies
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Enemy"):
-		$Timer.start
-		health -= 30 
-		GameState.set_value("health", $UI/Healthbar.health.value)
-		$UI/Healthbar.health.value -= 30
-	
+		getting_hurt = true
+	else:
+		getting_hurt = false
 	if body.is_in_group("EnemyRat"):
 		print("Is in body")
 		$UI/HungerBar.hunger.value -= 5
