@@ -809,6 +809,7 @@ visible = false
 
 [node name="PreviousLevel" parent="." unique_id=289173879 instance=ExtResource("26_aj67a")]
 transform = Transform3D(-1.8196164e-07, 0, 1, 0, 3.203322, 0, -4.1627975, 0, -4.371139e-08, -28.134874, 1.2616737, 45.9073)
+script = null
 
 [node name="endDoorGRP" parent="." unique_id=398845763 instance=ExtResource("29_1qbx8")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 32, 0, 14.026344)
