@@ -61,6 +61,7 @@ func _ready() -> void:
 	stand_height = collision_shape.shape.height
 	look_rot.x = head.rotation_degrees.x 
 	look_rot.y = rotation_degrees.y 
+	$Head/AnimationPlayer.play("headbob")
 
 func _process(delta: float) -> void:
 	var axis_y := Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
@@ -93,9 +94,13 @@ func _physics_process(delta: float) -> void:
 	var input_dir = Input.get_vector("left", "right", "up", "down").normalized()
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction and moving:
+		if $Head/AnimationPlayer.speed_scale != 1.5:
+			$Head/AnimationPlayer.speed_scale = 1.5
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
+		if $Head/AnimationPlayer.speed_scale != 0.0:
+			$Head/AnimationPlayer.speed_scale = 0.0
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
@@ -106,6 +111,8 @@ func _physics_process(delta: float) -> void:
 		$UI/StaminaBar.s_timer = 0
 		is_sprinting = true
 		sprint_amount += 1
+		if $Head/AnimationPlayer.speed_scale != 2.0:
+			$Head/AnimationPlayer.speed_scale = 2.0
 	
 	
 	if Input.is_action_just_released("sprint") or $UI/StaminaBar.stamina.value == 0:
@@ -148,10 +155,14 @@ func crouch():
 			SPEED = 3
 			is_sprinting = false
 			is_crouching = true
+			if $Head/AnimationPlayer.speed_scale != 1.0:
+				$Head/AnimationPlayer.speed_scale = 1.0
 		else:
 			$CollisionShape3D.shape.height = stand_height
 			SPEED = 5
 			is_crouching = false
+			if $Head/AnimationPlayer.speed_scale != 1.5:
+				$Head/AnimationPlayer.speed_scale = 1.5
 	
 	#var target_height: float = crouch_height if not reverse else stand_height
 	#
