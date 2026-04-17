@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bjb6rgnpf7ts" path="res://Game UI/control_menu.gd" id="1_bkl5u"]
 [ext_resource type="PackedScene" uid="uid://rs1flyrjgm0g" path="res://Game UI/settings_tab_container.tscn" id="1_ggsak"]
+[ext_resource type="Texture2D" uid="uid://c5n47gvdaxnrw" path="res://Game UI/skull borders.png" id="2_jff8h"]
 
 [node name="ControlsMenu" type="Control" unique_id=414875959]
 layout_mode = 3
@@ -11,6 +12,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bkl5u")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=568933486]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jff8h")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1341106104]
 layout_mode = 1
