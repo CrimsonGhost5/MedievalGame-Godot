@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cqwg7cj3s6heb"]
+
+[node name="DoorKey" type="Control" unique_id=1306265259]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1746204427]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=16624535]
+layout_mode = 3
+anchor_left = 0.939
+anchor_top = 0.046
+anchor_right = 0.974
+anchor_bottom = 0.108
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1177626958]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -2.2250001
+anchor_top = 6.7250004
+anchor_right = 0.85
+anchor_bottom = 7.6480002
+offset_left = 0.98387146
+offset_top = 0.008361816
+offset_right = 1.5258789e-05
+offset_bottom = 0.00592041
+theme_override_font_sizes/font_size = 48
+text = "Door Key"

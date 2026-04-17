@@ -8,7 +8,8 @@ var state :={
 	"food": 0,
 	"health": 100,
 	"hunger": 100,
-	"key": 0
+	"key": 0,
+	"door key": false
 }
 
 func get_value(food):

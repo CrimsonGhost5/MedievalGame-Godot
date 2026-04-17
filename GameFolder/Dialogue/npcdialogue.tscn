@@ -29,7 +29,7 @@ override_position = null
 dialogue = Array[ExtResource("2_bycjn")]([SubResource("Resource_kh24r"), SubResource("Resource_xxcha")])
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=490412080]
-transform = Transform3D(2.97, 0, 0, 0, 2.97, 0, 0, 0, 2.97, 0, 0, 0)
+transform = Transform3D(2.52057, 0, 0, 0, 2.6769109, 0, 0, 0, 2.97, 0, 0, 0)
 shape = SubResource("SphereShape3D_xxcha")
 
 [node name="NPC" parent="." unique_id=1679543906 instance=ExtResource("4_2h5xs")]

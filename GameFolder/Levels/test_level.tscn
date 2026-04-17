@@ -140,8 +140,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104342, 1.3883362, -11.620
 
 [node name="Chest" parent="." unique_id=2048806239 instance=ExtResource("9_cn5b1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54632807, -12.572621)
-itemID = "Food"
-item_amount = 4
+itemID = "door key"
 
 [node name="NextLevel" parent="." unique_id=289173879 instance=ExtResource("10_i45ex")]
 transform = Transform3D(3.2164743, 0, 0, 0, 3.203322, 0, 0, 0, 1, -12.085521, 1.8259764, 9.975866)
@@ -212,7 +211,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.441128, 1.6272249, 6.2344
 
 [node name="LockedChest" parent="." unique_id=844919964 instance=ExtResource("16_ouwm7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1637926, 0.5298202, -12.672388)
-itemID = "Run Shoes"
+itemID = "running shoes"
 
 [node name="LockedDoor" parent="." unique_id=929252769 instance=ExtResource("17_662sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.64258, 1.4834716, 0)

@@ -138,6 +138,12 @@ viewport_path = NodePath("SubViewport2")
 [sub_resource type="ViewportTexture" id="ViewportTexture_65dei"]
 viewport_path = NodePath("SubViewport")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_d500m"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ib5u0"]
+viewport_path = NodePath("SubViewport")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkkxk"]
 albedo_texture = ExtResource("20_vv3pg")
 metallic = 1.0
@@ -241,7 +247,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.808426, 0.6315417, 55.716
 [node name="NPCs" type="Node3D" parent="." unique_id=665630493]
 
 [node name="NPCArea" parent="NPCs" unique_id=1120903475 instance=ExtResource("7_swoll")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 42.926514, 0.9071332, 32.085247)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 44.41596, 0.9071332, 32.085247)
 activate_instant = false
 only_activate_once = false
 override_diaiogie_position = false
@@ -2785,6 +2791,20 @@ texture = SubResource("ViewportTexture_i3cp3")
 [node name="Sprite3D" parent="Signs/Sign4" index="7" unique_id=772846068]
 texture = SubResource("ViewportTexture_65dei")
 
+[node name="Sign5" parent="Signs" unique_id=1148888901 instance=ExtResource("16_dcwl1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 28.376772)
+
+[node name="Label" parent="Signs/Sign5/SubViewport2" parent_id_path=PackedInt32Array(1148888901, 1988828590) index="0" unique_id=1109496230]
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "When you have more than 1 bread
+Press Q to leave a trail behind you"
+
+[node name="Sprite3D2" parent="Signs/Sign5" index="5" unique_id=62140585]
+texture = SubResource("ViewportTexture_d500m")
+
+[node name="Sprite3D" parent="Signs/Sign5" index="7" unique_id=772846068]
+texture = SubResource("ViewportTexture_ib5u0")
+
 [node name="PauseMenu" parent="." unique_id=1020740941 instance=ExtResource("17_hvdy1")]
 
 [node name="walls" type="Node3D" parent="." unique_id=1949410667]
@@ -5221,9 +5241,14 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -0.9502386, 0, -8)
 [node name="stairs2" parent="." unique_id=410362890 instance=ExtResource("39_1uilv")]
 transform = Transform3D(-4.3711387e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711387e-10, -21, -4, 48)
 
+[node name="Chest" parent="." unique_id=596103355 instance=ExtResource("10_ueaco")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 35)
+itemID = "bread knife"
+
 [connection signal="body_entered" from="NextLevel" to="." method="_on_next_level_body_entered"]
 
 [editable path="Signs/Sign"]
 [editable path="Signs/Sign2"]
 [editable path="Signs/Sign3"]
 [editable path="Signs/Sign4"]
+[editable path="Signs/Sign5"]

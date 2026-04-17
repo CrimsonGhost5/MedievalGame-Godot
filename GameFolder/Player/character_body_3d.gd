@@ -6,6 +6,7 @@ const JUMP_VELOCITY = 4.5
 
 #For camera
 var sensitivity = 0.2
+var controller_sensitivity = 0.9
 var min_angle = -80
 var max_angle = 90
 var look_rot: Vector2
@@ -68,16 +69,16 @@ func _process(delta: float) -> void:
 	if axis_y != 0:
 		if abs(axis_y) > 0.2:
 			if axis_y > 0:
-				look_rot.x -= (axis_y * sensitivity)
+				look_rot.x -= (axis_y * controller_sensitivity)
 			elif axis_y < 0:
-				look_rot.x -= (axis_y * sensitivity)
+				look_rot.x -= (axis_y * controller_sensitivity)
 	var axis_x := Input.get_joy_axis(0, JOY_AXIS_RIGHT_X)
 	if axis_x != 0:
 		if abs(axis_x) > 0.2:
 			if axis_x > 0:
-				look_rot.y -= (axis_x * sensitivity)
+				look_rot.y -= (axis_x * controller_sensitivity)
 			elif axis_x < 0:
-				look_rot.y -= (axis_x * sensitivity)
+				look_rot.y -= (axis_x * controller_sensitivity)
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -114,6 +115,9 @@ func _physics_process(delta: float) -> void:
 		if $Head/AnimationPlayer.speed_scale != 2.0:
 			$Head/AnimationPlayer.speed_scale = 2.0
 	
+	if GameState.state["running shoes"] == true:
+		SPEED = 7
+	
 	
 	if Input.is_action_just_released("sprint") or $UI/StaminaBar.stamina.value == 0:
 		SPEED = 5
@@ -143,6 +147,10 @@ func _physics_process(delta: float) -> void:
 	head.rotation_degrees.x  = look_rot.x 
 	rotation_degrees.y = look_rot.y  
 	move_and_slide()
+	if GameState.state["door key"] == false:
+		$UI/DoorKey/CanvasLayer/Control/Label.visible = false
+	else:
+		$UI/DoorKey/CanvasLayer/Control/Label.visible = true
 
 func move(speed: float, acceleration: float, delta: float) -> void:
 	velocity = lerp(velocity, input_dir * speed, acceleration * delta)
@@ -194,7 +202,7 @@ func throw():
 		instance.apply_central_impulse(player_direction * force + Vector3(0, upDir, 0))
 
 func drop():
-	if Input.is_action_just_pressed("drop") and GameState.state["food"] > 0:
+	if Input.is_action_just_pressed("drop") and GameState.state["food"] > 0 and GameState.state["bread knife"] == true:
 		GameState.set_value("food", GameState.get_value("food") - 1)
 		var instance = bread_crumb.instantiate()
 		instance.position = bread_crumb_spawn_point.global_position

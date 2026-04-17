@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dvhy6xlxd7fen" path="res://InteractionFolder/cross_hair.tscn" id="4_dw050"]
 [ext_resource type="PackedScene" uid="uid://btabv8t1b55ik" path="res://Player/Player UI/hunger_bar.tscn" id="5_dw050"]
 [ext_resource type="PackedScene" uid="uid://cimpg1bmhqsld" path="res://Player/Player UI/healthbar.tscn" id="6_obynr"]
+[ext_resource type="PackedScene" uid="uid://cqwg7cj3s6heb" path="res://Player/Player UI/door_key.tscn" id="8_p5o4e"]
 [ext_resource type="PackedScene" uid="uid://bb5wyt5pinq0m" path="res://Player/Player UI/game_over_screen.tscn" id="9_00tjw"]
 [ext_resource type="AudioStream" uid="uid://b02x6ooi1biuw" path="res://Sounds/Walk.wav" id="9_5htga"]
 [ext_resource type="AudioStream" uid="uid://dntk3uliuf046" path="res://Sounds/BreadEat.wav" id="10_p5o4e"]
@@ -122,6 +123,9 @@ offset_right = 1.0
 offset_bottom = 0.0
 
 [node name="FoodAmount" parent="UI" unique_id=1256735136 instance=ExtResource("4_c7tqt")]
+layout_mode = 1
+
+[node name="DoorKey" parent="UI" unique_id=1306265259 instance=ExtResource("8_p5o4e")]
 layout_mode = 1
 
 [node name="Area3D" type="Area3D" parent="." unique_id=753565640]
