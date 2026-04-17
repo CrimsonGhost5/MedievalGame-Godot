@@ -226,7 +226,8 @@ func eat():
 		eat_amount = 0
 
 func apply_knockback(direction: Vector3, force: float, knockback_duration: float) -> void:
-	knockback = direction * force
+	force = 8.0
+	knockback += direction * force
 	knockback_timer = knockback_duration
 
 func die():
@@ -237,9 +238,10 @@ func die():
 #This will most likely be changed but for now this how the player takes damage to Enemies
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Enemy"):
-		health -= 30
+		$Timer.start
+		health -= 30 
 		GameState.set_value("health", $UI/Healthbar.health.value)
-		$UI/Healthbar.health.value -= 50
+		$UI/Healthbar.health.value -= 30
 	
 	if body.is_in_group("EnemyRat"):
 		print("Is in body")

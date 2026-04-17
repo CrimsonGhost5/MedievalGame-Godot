@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://fjrmqlxaeldw" path="res://Interactables/Key.tscn" id="15_lrol0"]
 [ext_resource type="PackedScene" uid="uid://cu878sk7lv6fg" path="res://Interactables/locked_chest.tscn" id="16_ouwm7"]
 [ext_resource type="PackedScene" uid="uid://b13wxhoh3cmfw" path="res://InteractionFolder/lockeddoor.tscn" id="17_662sx"]
+[ext_resource type="PackedScene" uid="uid://clysiwetdt610" path="res://Enemy/TheHungry/enemythehungry.tscn" id="18_cn5b1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gojnm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -41,10 +42,10 @@ size = Vector3(30, 1, 30)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gojnm"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_662sx"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_cn5b1"]
 viewport_path = NodePath("SubViewport2")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_cn5b1"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_i45ex"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Resource" id="Resource_x458k"]
@@ -130,10 +131,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11.
 text = "Hello"
 
 [node name="Sprite3D2" parent="Sign" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_662sx")
+texture = SubResource("ViewportTexture_cn5b1")
 
 [node name="Sprite3D" parent="Sign" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_cn5b1")
+texture = SubResource("ViewportTexture_i45ex")
 
 [node name="Door" parent="." unique_id=1191840203 instance=ExtResource("8_662sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104342, 1.3883362, -11.620697)
@@ -215,5 +216,8 @@ itemID = "running shoes"
 
 [node name="LockedDoor" parent="." unique_id=929252769 instance=ExtResource("17_662sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.64258, 1.4834716, 0)
+
+[node name="Enemy" parent="." unique_id=1596931860 instance=ExtResource("18_cn5b1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [editable path="Sign"]
