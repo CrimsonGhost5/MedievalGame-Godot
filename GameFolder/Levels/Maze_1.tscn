@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://2ed4jcio7jm7" path="res://3D_assets/textures/doorMaterials/door_Mat_Roughness.1001.png" id="36_03i6n"]
 [ext_resource type="PackedScene" uid="uid://cgg3o3upnjfe5" path="res://3D_assets/stairs.tscn" id="39_1uilv"]
 [ext_resource type="PackedScene" uid="uid://dlhd0emunkpwi" path="res://3D_assets/textures/stool.tscn" id="42_imq4i"]
+[ext_resource type="PackedScene" uid="uid://d4lps227eohim" path="res://3D_assets/rat.tscn" id="43_nskln"]
 
 [sub_resource type="Resource" id="Resource_ueaco"]
 script = ExtResource("10_duog2")
@@ -115,34 +116,34 @@ normal_texture = ExtResource("22_vlrk1")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s4y0y"]
 data = PackedVector3Array(99.9985, 0, -200, 200, 0, -200, 99.9985, 0, -100.0046, 99.9985, 0, -100.0046, 200, 0, -200, 200, 0, -100.0046, -0.0030999999, 0, -100.0046, 99.9985, 0, -200, 99.9985, 0, -100.0046, -0.0030999999, 0, -200, 99.9985, 0, -200, -0.0030999999, 0, -100.0046, 99.9985, 0, -100.0046, 200, 0, -100.0046, 99.9985, 0, -0.0030999999, 99.9985, 0, -0.0030999999, 200, 0, -100.0046, 200, 0, -0.0030999999, -0.0030999999, 0, -100.0046, 99.9985, 0, -100.0046, -0.0030999999, 0, -0.0030999999, -0.0030999999, 0, -0.0030999999, 99.9985, 0, -100.0046, 99.9985, 0, -0.0030999999, -100.0046, 0, -100.0046, -0.0030999999, 0, -200, -0.0030999999, 0, -100.0046, -100.0046, 0, -200, -0.0030999999, 0, -200, -100.0046, 0, -100.0046, -200, 0, -100.0046, -100.0046, 0, -200, -100.0046, 0, -100.0046, -200, 0, -200, -100.0046, 0, -200, -200, 0, -100.0046, -200, 0, -100.0046, -100.0046, 0, -100.0046, -200, 0, -0.0030999999, -100.0046, 0, -100.0046, -0.0030999999, 0, -100.0046, -100.0046, 0, -0.0030999999, -200, 0, -0.0030999999, -100.0046, 0, -100.0046, -100.0046, 0, -0.0030999999, -100.0046, 0, -0.0030999999, -0.0030999999, 0, -100.0046, -0.0030999999, 0, -0.0030999999, -200, 0, -0.0030999999, -100.0046, 0, -0.0030999999, -200, 0, 99.9985, -200, 0, 99.9985, -100.0046, 0, -0.0030999999, -100.0046, 0, 99.9985, -100.0046, 0, -0.0030999999, -0.0030999999, 0, -0.0030999999, -100.0046, 0, 99.9985, -200, 0, 99.9985, -100.0046, 0, 99.9985, -200, 0, 200, -200, 0, 200, -100.0046, 0, 99.9985, -100.0046, 0, 200, -100.0046, 0, 99.9985, -0.0030999999, 0, -0.0030999999, -0.0030999999, 0, 99.9985, -100.0046, 0, 99.9985, -0.0030999999, 0, 99.9985, -100.0046, 0, 200, -0.0030999999, 0, -0.0030999999, 99.9985, 0, -0.0030999999, -0.0030999999, 0, 99.9985, -100.0046, 0, 200, -0.0030999999, 0, 99.9985, -0.0030999999, 0, 200, -0.0030999999, 0, 99.9985, 99.9985, 0, -0.0030999999, 99.9985, 0, 99.9985, -0.0030999999, 0, 99.9985, 99.9985, 0, 99.9985, -0.0030999999, 0, 200, 99.9985, 0, -0.0030999999, 200, 0, -0.0030999999, 99.9985, 0, 99.9985, -0.0030999999, 0, 200, 99.9985, 0, 99.9985, 99.9985, 0, 200, 99.9985, 0, 99.9985, 200, 0, -0.0030999999, 200, 0, 99.9985, 99.9985, 0, 99.9985, 200, 0, 99.9985, 99.9985, 0, 200, 99.9985, 0, 200, 200, 0, 99.9985, 200, 0, 200)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_nskln"]
-viewport_path = NodePath("SubViewport2")
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_xim85"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("SubViewport2")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_gcg4u"]
-viewport_path = NodePath("SubViewport2")
+viewport_path = NodePath("SubViewport")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_snoaj"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("SubViewport2")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_i3cp3"]
-viewport_path = NodePath("SubViewport2")
+viewport_path = NodePath("SubViewport")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_65dei"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("SubViewport2")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_d500m"]
-viewport_path = NodePath("SubViewport2")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_ib5u0"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_d1h3v"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_ib5u0"]
 viewport_path = NodePath("SubViewport2")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_d1h3v"]
+viewport_path = NodePath("SubViewport")
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_u03ga"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ec4aq"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkkxk"]
@@ -2737,10 +2738,10 @@ text = "Remember to always watch
  your hunger."
 
 [node name="Sprite3D2" parent="Signs/Sign" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_nskln")
+texture = SubResource("ViewportTexture_xim85")
 
 [node name="Sprite3D" parent="Signs/Sign" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_xim85")
+texture = SubResource("ViewportTexture_gcg4u")
 
 [node name="Sign2" parent="Signs" unique_id=796788113 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 23.476013, 0, 5.428658)
@@ -2753,13 +2754,13 @@ text = "Press R or LB to Eat"
 [node name="Sprite3D2" parent="Signs/Sign2" index="5" unique_id=62140585]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3585122, 0)
 visible = true
-texture = SubResource("ViewportTexture_gcg4u")
+texture = SubResource("ViewportTexture_snoaj")
 
 [node name="Label" parent="Signs/Sign2/SubViewport" parent_id_path=PackedInt32Array(796788113, 415910616) index="0" unique_id=757353305]
 autowrap_mode = 3
 
 [node name="Sprite3D" parent="Signs/Sign2" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_snoaj")
+texture = SubResource("ViewportTexture_i3cp3")
 
 [node name="Sign3" parent="Signs" unique_id=995994448 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.9436216, 0, 21.516214)
@@ -2771,10 +2772,10 @@ text = "Hold Shift or RB to Sprint.
 Let go to regain Sprint."
 
 [node name="Sprite3D2" parent="Signs/Sign3" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_i3cp3")
+texture = SubResource("ViewportTexture_65dei")
 
 [node name="Sprite3D" parent="Signs/Sign3" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_65dei")
+texture = SubResource("ViewportTexture_d500m")
 
 [node name="Sign4" parent="Signs" unique_id=1030396464 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16480064, 0, 15.174915)
@@ -2787,10 +2788,10 @@ Open them to get food
 and other loot."
 
 [node name="Sprite3D2" parent="Signs/Sign4" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_d500m")
+texture = SubResource("ViewportTexture_ib5u0")
 
 [node name="Sprite3D" parent="Signs/Sign4" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_ib5u0")
+texture = SubResource("ViewportTexture_d1h3v")
 
 [node name="Sign5" parent="Signs" unique_id=1148888901 instance=ExtResource("16_dcwl1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0, 28.376772)
@@ -2801,10 +2802,10 @@ text = "When you have more than 1 bread
 Press Q to leave a trail behind you"
 
 [node name="Sprite3D2" parent="Signs/Sign5" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_d1h3v")
+texture = SubResource("ViewportTexture_u03ga")
 
 [node name="Sprite3D" parent="Signs/Sign5" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_u03ga")
+texture = SubResource("ViewportTexture_ec4aq")
 
 [node name="PauseMenu" parent="." unique_id=1020740941 instance=ExtResource("17_hvdy1")]
 
@@ -5207,6 +5208,7 @@ mesh = ExtResource("28_tnspj")
 skeleton = NodePath("../..")
 
 [node name="doorGRP" type="Node3D" parent="." unique_id=632209252]
+visible = false
 
 [node name="outerDoor" type="MeshInstance3D" parent="doorGRP" unique_id=1824804431]
 transform = Transform3D(-4.3711396e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.3711396e-10, -2, 0, 0)
@@ -5251,6 +5253,8 @@ transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 3.2926326, 0, 14.512
 
 [node name="stool2" parent="." unique_id=570360564 instance=ExtResource("42_imq4i")]
 transform = Transform3D(0.0071504633, 0, -0.00699077, 0, 0.01, 0, 0.00699077, 0, 0.0071504633, 4.188725, 1.1920929e-07, 14.925355)
+
+[node name="rat" parent="." unique_id=1034740808 instance=ExtResource("43_nskln")]
 
 [connection signal="body_entered" from="NextLevel" to="." method="_on_next_level_body_entered"]
 
