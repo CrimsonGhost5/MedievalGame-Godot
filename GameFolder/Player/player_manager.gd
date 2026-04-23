@@ -4,4 +4,4 @@ var player = null
 # So that the player spawn point can be set where ever when entering a scene
 var position = Vector3(7.825, 1.026, -7.756)
 
-var starting_hunger_timer = 180.0
+var starting_hunger_timer = 120.0

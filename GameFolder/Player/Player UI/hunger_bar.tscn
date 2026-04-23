@@ -33,7 +33,7 @@ texture_under = ExtResource("1_sgh5k")
 texture_progress = ExtResource("2_ojjo8")
 
 [node name="HungerTimer" type="Timer" parent="." unique_id=1132144858]
-wait_time = 30.0
+wait_time = 15.0
 autostart = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=512335984]

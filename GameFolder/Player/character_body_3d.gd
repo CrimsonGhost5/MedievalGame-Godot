@@ -218,7 +218,7 @@ func eat():
 		eat_amount += 1
 		health += 5
 		print(eat_amount)
-		$UI/Healthbar.health.value += 5
+		$UI/Healthbar.health.value += 15
 		$UI/HungerBar.hunger.value += 10
 		breadeatalt.play()
 	

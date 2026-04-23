@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 	if PlayerManager.starting_hunger_timer <= 0:
 		PlayerManager.starting_hunger_timer == 0.0
 		starting_hunger_timer_end = true
-		
+	print(PlayerManager.starting_hunger_timer)
 	
 
 
@@ -29,9 +29,8 @@ func change_hunger(change_value: int):
 	# Needs to be linked to the gamestate script so that the bar visibly changes and gets updated
 	GameState.set_value("hunger", hunger.value)
 	
-	#To enusre that the player's hunger doesn't go over or under the hunger value
-	hunger.value = clamp(hunger.value, 0, 100)
+	
 
 func _on_hunger_timer_timeout() -> void:
 	if starting_hunger_timer_end == true:
-		change_hunger(-2)
+		change_hunger(-5)
