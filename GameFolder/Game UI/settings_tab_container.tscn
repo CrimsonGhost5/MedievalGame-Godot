@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://rs1flyrjgm0g"]
 
+[ext_resource type="Script" uid="uid://vhs7m1xvobaq" path="res://Game UI/controls.gd" id="1_00xn4"]
+
 [node name="SettingsTabContainer" type="Control" unique_id=975179285]
 layout_mode = 3
 anchors_preset = 15
@@ -24,6 +26,7 @@ current_tab = 0
 
 [node name="Controls" type="TabBar" parent="TabContainer" unique_id=981564983]
 layout_mode = 2
+script = ExtResource("1_00xn4")
 metadata/_tab_index = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Controls" unique_id=1314957467]

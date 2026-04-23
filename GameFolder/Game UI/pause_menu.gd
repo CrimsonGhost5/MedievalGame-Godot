@@ -28,6 +28,7 @@ func _input(event: InputEvent) -> void:
 			menu_ui.visible = false
 			get_tree().paused = false
 			$BackGround.visible = false
+			
 		else:
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			menu_ui.visible = true
@@ -41,6 +42,7 @@ func _on_resume_pressed() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	menu_ui.visible = false
 	get_tree().paused = false
+	$BackGround.visible = false
 
 func _on_restart_pressed() -> void:
 	GameState.set_value("health", 100)

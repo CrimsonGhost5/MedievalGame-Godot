@@ -19,3 +19,8 @@ func open_menu() -> void:
 func on_exit_pressed() -> void:
 	exit_controls_menu.emit()
 	set_process(false)
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("exit_text"):
+		exit_controls_menu.emit()
+		set_process(false)
