@@ -15,25 +15,33 @@ extends Control
 func _ready() -> void:
 	handle_connecting_signals()
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	start_button.focus_mode = Control.FOCUS_ALL
+	controls_button.focus_mode = Control.FOCUS_ALL
+	exit_button.focus_mode = Control.FOCUS_ALL
+	start_button.grab_focus()
+
 
 
 func on_start_pressed() -> void:
 	get_tree().change_scene_to_packed(start_level)
 
 func on_options_pressed() -> void:
-	margin_container.visible = false
-	control_menu.set_process(true)
-	control_menu.visible = true
+	control_menu.open_menu()
+	margin_container.visible = false 
+	control_menu.set_process(true) 
+	control_menu.visible = true 
+	control_menu.grab_focus()
 
 func on_exit_controls_menu() -> void:
 	margin_container.visible = true
 	control_menu.visible = false
+	start_button.grab_focus()
 
 func on_exit_pressed() -> void:
 	get_tree().quit()
 
 func handle_connecting_signals() -> void:
-	start_button.button_down.connect(on_start_pressed)
-	controls_button.button_down.connect(on_options_pressed)
-	exit_button.button_down.connect(on_exit_pressed)
+	start_button.pressed.connect(on_start_pressed)
+	controls_button.pressed.connect(on_options_pressed)
+	exit_button.pressed.connect(on_exit_pressed)
 	control_menu.exit_controls_menu.connect(on_exit_controls_menu)
