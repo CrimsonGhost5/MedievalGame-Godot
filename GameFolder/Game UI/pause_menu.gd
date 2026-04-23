@@ -5,6 +5,7 @@ extends CanvasLayer
 @onready var gamma_overlay = $GammaOverlay
 @onready var menu_ui = $CenterContainer
 @onready var pause_bg = $BackGround
+@onready var resume_button = $CenterContainer/VBoxContainer/Resume
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	menu_ui.visible = false
@@ -32,6 +33,8 @@ func _input(event: InputEvent) -> void:
 			menu_ui.visible = true
 			get_tree().paused = true
 			$BackGround.visible = true
+			await get_tree().process_frame
+			resume_button.grab_focus()
 
 
 func _on_resume_pressed() -> void:

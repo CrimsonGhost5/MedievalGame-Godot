@@ -7,9 +7,14 @@ signal exit_controls_menu
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	exit_button.button_down.connect(on_exit_pressed)
+	exit_button.pressed.connect(on_exit_pressed)
 	set_process(false)
+	exit_button.focus_mode = Control.FOCUS_ALL
 
+func open_menu() -> void:
+	set_process(true)
+	visible = true
+	exit_button.grab_focus()
 
 func on_exit_pressed() -> void:
 	exit_controls_menu.emit()
