@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://cqwg7cj3s6heb"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_frj4v"]
+load_path = "res://.godot/imported/medieval UI key.png-ff5802ff047d4f8929cfe47d0828e396.ctex"
+
 [node name="DoorKey" type="Control" unique_id=1306265259]
 layout_mode = 3
 anchors_preset = 15
@@ -20,7 +23,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1177626958]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -2.2250001
@@ -33,3 +35,12 @@ offset_right = 1.5258789e-05
 offset_bottom = 0.00592041
 theme_override_font_sizes/font_size = 48
 text = "Door Key"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=741165850]
+layout_mode = 0
+offset_left = -299.72803
+offset_top = 527.192
+offset_right = -74.72803
+offset_bottom = 700.192
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CompressedTexture2D_frj4v")
