@@ -93,7 +93,7 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("crouch"):
 			crouch()
 		else:
-			crouch()
+			crouch() #Maybe problem?
 	var input_dir = Input.get_vector("left", "right", "up", "down").normalized()
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction and moving:

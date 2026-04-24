@@ -27,8 +27,10 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	move_and_slide()
 	
+	velocity.y = 0 #hacky fix for lag spike, lock y velocity
+	move_and_slide()
+	print(velocity)
 	# animate if velocity is moving
 	if(self.velocity != Vector3(0, 0, 0) && animating == false):
 		if(state_machine.current_state == wander_state):
