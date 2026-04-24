@@ -81,6 +81,10 @@ func _process(delta: float) -> void:
 				look_rot.y -= (axis_x * controller_sensitivity)
 			elif axis_x < 0:
 				look_rot.y -= (axis_x * controller_sensitivity)
+		
+	
+	
+	
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -146,14 +150,15 @@ func _physics_process(delta: float) -> void:
 	eat()
 	got_hit(Vector3.BACK)
 	 #So the camera doesn't glitch out if the player looks a certain direction
-	
 	head.rotation_degrees.x  = look_rot.x 
 	rotation_degrees.y = look_rot.y  
 	move_and_slide()
 	if GameState.state["door key"] == false:
 		$UI/DoorKey/CanvasLayer/Control/Label.visible = false
+		$UI/DoorKey/CanvasLayer/Control/TextureRect.visible = false
 	else:
 		$UI/DoorKey/CanvasLayer/Control/Label.visible = true
+		$UI/DoorKey/CanvasLayer/Control/TextureRect.visible = true
 
 func move(speed: float, acceleration: float, delta: float) -> void:
 	velocity = lerp(velocity, input_dir * speed, acceleration * delta)
@@ -188,6 +193,8 @@ func _input(event: InputEvent) -> void:
 		look_rot.y -= (event.relative.x * sensitivity)
 		look_rot.x -= (event.relative.y * sensitivity)
 		look_rot.x = clamp(look_rot.x, min_angle, max_angle)
+	
+
 
 func throw():
 	if Input.is_action_just_pressed("throw") and GameState.state["food"] > 0:

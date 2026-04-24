@@ -17,10 +17,10 @@ grow_vertical = 2
 layout_mode = 3
 anchor_left = 0.939
 anchor_top = 0.046
-anchor_right = 0.974
-anchor_bottom = 0.108
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 1.0090001
+anchor_bottom = 0.17
+offset_right = -0.32006836
+offset_bottom = -0.1760025
 
 [node name="Label" type="Label" parent="CanvasLayer/Control" unique_id=1177626958]
 layout_mode = 1
@@ -30,17 +30,17 @@ anchor_top = 6.7250004
 anchor_right = 0.85
 anchor_bottom = 7.6480002
 offset_left = 0.98387146
-offset_top = 0.008361816
+offset_top = -133.99164
 offset_right = 1.5258789e-05
-offset_bottom = 0.00592041
+offset_bottom = -133.99408
 theme_override_font_sizes/font_size = 48
 text = "Door Key"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=741165850]
 layout_mode = 0
 offset_left = -299.72803
-offset_top = 527.192
+offset_top = 393.19202
 offset_right = -74.72803
-offset_bottom = 700.192
+offset_bottom = 566.192
 scale = Vector2(0.5, 0.5)
 texture = SubResource("CompressedTexture2D_frj4v")

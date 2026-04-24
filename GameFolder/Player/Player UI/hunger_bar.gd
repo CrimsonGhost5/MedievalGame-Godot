@@ -12,6 +12,7 @@ var starting_hunger_timer_end: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hunger.value = hunger.max_value
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

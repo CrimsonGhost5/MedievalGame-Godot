@@ -21,6 +21,6 @@ func on_exit_pressed() -> void:
 	set_process(false)
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("exit_text"):
+	if Input.is_action_just_pressed("exit_text") or Input.is_action_just_pressed("ui_cancel"):
 		exit_controls_menu.emit()
 		set_process(false)
