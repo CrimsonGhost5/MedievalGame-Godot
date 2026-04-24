@@ -117,7 +117,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.361545, 1.1783996, -5.99178
 prompt_message = "Pick Up"
 
 [node name="EnemyTheRat" parent="." unique_id=1184139553 instance=ExtResource("5_ouwm7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.527, 1.0443231, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.527, 0.6348976, 0)
 
 [node name="ExitLevel" parent="." unique_id=1160335140 instance=ExtResource("6_lrol0")]
 transform = Transform3D(1.725, 0, 0, 0, 2.535, 0, 0, 0, 1.11, 12.411239, 1.809669, 12.134663)
