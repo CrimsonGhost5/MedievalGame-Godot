@@ -32,7 +32,7 @@ var currentvel := Vector3.ZERO
 var input_dir = Vector3.ZERO
 
 var is_sprinting = false
-var is_crouching = false
+var is_crouching: bool = false
 var moving = true
 var getting_hurt = false
 
@@ -50,10 +50,14 @@ var bread_crumb = load("res://Objects/bread_crumb.tscn")
 @onready var collision_shape: CollisionShape3D = $CollisionShape3D
 @onready var bread_crumb_spawn_point: Node3D = $BreadCrumbSpawnPoint
 
+@onready var ap: AnimationPlayer = $Head/AnimationPlayer
+@export_range(5, 10, 0.1) var crouch_speed : float = 7.0
 
 @onready var breadeat = $Audio/BreadEatAlt
 @onready var breadeatalt = $Audio/BreadEatAlt
 @onready var breadthrow = $Audio/BreadThrow
+@onready var crouch_cast: ShapeCast3D = $ShapeCast3D
+
 
 func _ready() -> void:
 	PlayerManager.player = self
@@ -65,6 +69,8 @@ func _ready() -> void:
 	look_rot.x = head.rotation_degrees.x 
 	look_rot.y = rotation_degrees.y 
 	$Head/AnimationPlayer.play("headbob")
+	# so that the shapecast3d doesn't detect the player collision so crouching can work
+	crouch_cast.add_exception($".")
 
 func _process(delta: float) -> void:
 	var axis_y := Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y)
@@ -89,15 +95,11 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	if !moving:
-		return
-	if moving:
-		if Input.is_action_just_pressed("crouch"):
-			crouch()
-		else:
-			crouch() #Maybe problem?
+	
 	var input_dir = Input.get_vector("left", "right", "up", "down").normalized()
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction and moving:
@@ -111,7 +113,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
-	if Input.is_action_pressed("sprint") and is_on_floor() and $UI/StaminaBar.stamina.value > 0 and is_crouching != true :
+	if Input.is_action_pressed("sprint") and is_on_floor() and $UI/StaminaBar.stamina.value > 0 and is_crouching == false :
 		SPEED = 10
 		$UI/StaminaBar.stamina.value -= 1
 		$UI/StaminaBar.can_regen = false
@@ -160,42 +162,26 @@ func _physics_process(delta: float) -> void:
 		$UI/DoorKey/CanvasLayer/Control/Label.visible = true
 		$UI/DoorKey/CanvasLayer/Control/TextureRect.visible = true
 
-func move(speed: float, acceleration: float, delta: float) -> void:
-	velocity = lerp(velocity, input_dir * speed, acceleration * delta)
-
-func crouch():
-	if Input.is_action_just_pressed("crouch"):
-		is_crouching = !is_crouching
-		if is_crouching:
-			$CollisionShape3D.shape.height = crouch_height 
-			SPEED = 3
-			is_sprinting = false
-			is_crouching = true
-			if $Head/AnimationPlayer.speed_scale != 1.0:
-				$Head/AnimationPlayer.speed_scale = 1.0
-		else:
-			$CollisionShape3D.shape.height = stand_height
-			SPEED = 5
-			is_crouching = false
-			if $Head/AnimationPlayer.speed_scale != 1.5:
-				$Head/AnimationPlayer.speed_scale = 1.5
-	
-	#var target_height: float = crouch_height if not reverse else stand_height
-	#
-	#collision_shape.shape.height = lerp(collision_shape.shape.height, target_height, crouch_transition * delta)
-	#collision_shape.position.y = lerp(collision_shape.position.y, target_height * 0.8, crouch_transition * delta)
-	#head.position.y = lerp(head.position.y, target_height - 1, crouch_transition * delta)
- 
-
-
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and moving == true:
 		look_rot.y -= (event.relative.x * sensitivity)
 		look_rot.x -= (event.relative.y * sensitivity)
 		look_rot.x = clamp(look_rot.x, min_angle, max_angle)
-	
+	if event.is_action_pressed("crouch"):
+			new_crouch()
 
+func move(speed: float, acceleration: float, delta: float) -> void:
+	velocity = lerp(velocity, input_dir * speed, acceleration * delta)
 
+func new_crouch():
+	if is_crouching == true and crouch_cast.is_colliding() == false:
+		ap.play("crouch", -1, -crouch_speed)
+		print("is crouching")
+	elif is_crouching == false:
+		ap.play("crouch", -1, crouch_speed)
+		print("not crouching")
+
+ 
 func throw():
 	if Input.is_action_just_pressed("throw") and GameState.state["food"] > 0:
 		GameState.set_value("food", GameState.get_value("food") - 1)
@@ -276,3 +262,8 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 
 func _add_food_amount(value: Variant) -> void:
 	GameState.set_value("food", GameState.get_value("food") + 1)
+
+
+func _on_animation_player_animation_started(anim_name: StringName) -> void:
+	if anim_name == "crouch":
+		is_crouching = !is_crouching
