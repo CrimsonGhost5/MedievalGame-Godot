@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bb5wyt5pinq0m"]
 
 [ext_resource type="Script" uid="uid://cd8sv2ne6gsby" path="res://Player/Player UI/game_over_screen.gd" id="1_vf8nb"]
+[ext_resource type="Texture2D" uid="uid://cv1mky55onj8e" path="res://Game UI/skull menu.png" id="2_domef"]
+[ext_resource type="FontFile" uid="uid://djisxeh81ietx" path="res://Game UI/Fonts/Metamorphous-Regular.ttf" id="3_xj0m4"]
 
 [node name="GameOverScreen" type="Control" unique_id=335445674]
 z_index = 3
@@ -14,44 +16,294 @@ script = ExtResource("1_vf8nb")
 
 [node name="Panel" type="Panel" parent="." unique_id=1988464901]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.293
-anchor_right = 1.0
-anchor_bottom = 0.67300004
-offset_top = 0.13598633
-offset_bottom = -0.104034424
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="BoxContainer" type="BoxContainer" parent="Panel" unique_id=291661776]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Panel/BoxContainer" unique_id=1075963218]
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1401796782]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_domef")
+
+[node name="BoxContainer" type="BoxContainer" parent="Panel" unique_id=291661776]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -129.0
+offset_right = 129.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -200
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="Panel/BoxContainer" unique_id=941667373]
 layout_mode = 2
-size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/BoxContainer/VBoxContainer2" unique_id=892766310]
+layout_mode = 2
+size_flags_vertical = 4
+size_flags_stretch_ratio = 14.85
+
+[node name="Label" type="Label" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1075963218]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xj0m4")
 theme_override_font_sizes/font_size = 60
 text = "You Died"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/BoxContainer" unique_id=1143644800]
+[node name="Control19" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1021683317]
 layout_mode = 2
-size_flags_horizontal = 3
 
-[node name="RestartButton" type="Button" parent="Panel/BoxContainer/VBoxContainer" unique_id=597234101]
+[node name="Control20" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=789190815]
 layout_mode = 2
+
+[node name="Control21" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=290455624]
+layout_mode = 2
+
+[node name="Control22" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1573178255]
+layout_mode = 2
+
+[node name="Control23" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=443743596]
+layout_mode = 2
+
+[node name="Control24" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=306821195]
+layout_mode = 2
+
+[node name="Control25" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1344152935]
+layout_mode = 2
+
+[node name="Control26" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=47278504]
+layout_mode = 2
+
+[node name="Control27" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=607363507]
+layout_mode = 2
+
+[node name="Control28" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=382054170]
+layout_mode = 2
+
+[node name="Control29" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=97312929]
+layout_mode = 2
+
+[node name="Control30" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1030631503]
+layout_mode = 2
+
+[node name="Control31" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=2084072108]
+layout_mode = 2
+
+[node name="Control32" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1797124861]
+layout_mode = 2
+
+[node name="Control33" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=2119501149]
+layout_mode = 2
+
+[node name="Control34" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=469785541]
+layout_mode = 2
+
+[node name="Control35" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=535850529]
+layout_mode = 2
+
+[node name="Control36" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=338976644]
+layout_mode = 2
+
+[node name="Control37" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=635737097]
+layout_mode = 2
+
+[node name="Control38" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=2067165438]
+layout_mode = 2
+
+[node name="Control39" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1307443635]
+layout_mode = 2
+
+[node name="Control40" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1005988540]
+layout_mode = 2
+
+[node name="Control41" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1733506093]
+layout_mode = 2
+
+[node name="Control42" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=455989518]
+layout_mode = 2
+
+[node name="Control43" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=767719793]
+layout_mode = 2
+
+[node name="Control44" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=525723917]
+layout_mode = 2
+
+[node name="Control45" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1657126413]
+layout_mode = 2
+
+[node name="Control46" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=271555765]
+layout_mode = 2
+
+[node name="Control47" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=568495785]
+layout_mode = 2
+
+[node name="Control48" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1492771214]
+layout_mode = 2
+
+[node name="Control49" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1691708062]
+layout_mode = 2
+
+[node name="Control50" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=439889485]
+layout_mode = 2
+
+[node name="Control51" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=957919115]
+layout_mode = 2
+
+[node name="Control52" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1413032068]
+layout_mode = 2
+
+[node name="Control53" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1081167944]
+layout_mode = 2
+
+[node name="Control54" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=937704119]
+layout_mode = 2
+
+[node name="Control55" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1076685913]
+layout_mode = 2
+
+[node name="Control56" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1282848013]
+layout_mode = 2
+
+[node name="Control57" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=347430050]
+layout_mode = 2
+
+[node name="Control58" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=966132402]
+layout_mode = 2
+
+[node name="Control59" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1237481898]
+layout_mode = 2
+
+[node name="Control60" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1786037868]
+layout_mode = 2
+
+[node name="Control61" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=2145696767]
+layout_mode = 2
+
+[node name="Control62" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=471903055]
+layout_mode = 2
+
+[node name="Control63" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1735953879]
+layout_mode = 2
+
+[node name="Control64" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=473169360]
+layout_mode = 2
+
+[node name="Control65" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=699879807]
+layout_mode = 2
+
+[node name="Control66" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1401269309]
+layout_mode = 2
+
+[node name="Control67" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=837094351]
+layout_mode = 2
+
+[node name="Control68" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=470224058]
+layout_mode = 2
+
+[node name="Control69" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=282342624]
+layout_mode = 2
+
+[node name="Control70" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=540852470]
+layout_mode = 2
+
+[node name="Control71" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1139053532]
+layout_mode = 2
+
+[node name="Control72" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1475033908]
+layout_mode = 2
+
+[node name="Control73" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=645882435]
+layout_mode = 2
+
+[node name="Control74" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1128206765]
+layout_mode = 2
+
+[node name="Control75" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1512564472]
+layout_mode = 2
+
+[node name="Control76" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=2376511]
+layout_mode = 2
+
+[node name="Control77" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1894223174]
+layout_mode = 2
+
+[node name="Control78" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=820483775]
+layout_mode = 2
+
+[node name="Control79" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=88948303]
+layout_mode = 2
+
+[node name="Control80" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1368403424]
+layout_mode = 2
+
+[node name="Control81" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1266506265]
+layout_mode = 2
+
+[node name="Control82" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=385784289]
+layout_mode = 2
+
+[node name="Control83" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=986121264]
+layout_mode = 2
+
+[node name="Control84" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1234412089]
+layout_mode = 2
+
+[node name="Control85" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=891746089]
+layout_mode = 2
+
+[node name="Control86" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1789621089]
+layout_mode = 2
+
+[node name="RestartButton" type="Button" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=597234101]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("3_xj0m4")
 text = "Restart"
 
-[node name="QuitButton" type="Button" parent="Panel/BoxContainer/VBoxContainer" unique_id=448831046]
+[node name="Control87" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=2094119187]
 layout_mode = 2
-size_flags_vertical = 10
+
+[node name="Control88" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1292938288]
+layout_mode = 2
+
+[node name="Control89" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=2060336642]
+layout_mode = 2
+
+[node name="Control90" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1129993807]
+layout_mode = 2
+
+[node name="Control91" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1095513939]
+layout_mode = 2
+
+[node name="Control92" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=2084835856]
+layout_mode = 2
+
+[node name="Control93" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1847753927]
+layout_mode = 2
+
+[node name="Control94" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1046793791]
+layout_mode = 2
+
+[node name="Control95" type="Control" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=1153873413]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="Panel/BoxContainer/VBoxContainer2/VBoxContainer" unique_id=448831046]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("3_xj0m4")
 text = "Quit"
 
-[connection signal="pressed" from="Panel/BoxContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="Panel/BoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Panel/BoxContainer/VBoxContainer2/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="Panel/BoxContainer/VBoxContainer2/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

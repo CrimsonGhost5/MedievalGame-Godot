@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c520sluek1cwa" path="res://Interactables/food_amount.gd" id="1_5jb4y"]
 [ext_resource type="Texture2D" uid="uid://1tjs487km4xj" path="res://Player/Player UI/medieval UI food.png" id="2_jp3g3"]
+[ext_resource type="FontFile" uid="uid://djisxeh81ietx" path="res://Game UI/Fonts/Metamorphous-Regular.ttf" id="2_vft2y"]
 
 [node name="FoodAmount" type="Control" unique_id=468157705]
 layout_mode = 3
@@ -34,6 +35,7 @@ anchor_top = 13.025001
 anchor_right = 1.7500001
 anchor_bottom = 15.425001
 offset_bottom = -6.1035156e-05
+theme_override_fonts/font = ExtResource("2_vft2y")
 theme_override_font_sizes/font_size = 64
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=920268595]

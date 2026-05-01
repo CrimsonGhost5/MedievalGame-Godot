@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dc0my6b1kwaie"]
 
 [ext_resource type="Script" uid="uid://sbyjluqv1rw7" path="res://InteractionFolder/interact_ray.gd" id="1_6rj82"]
+[ext_resource type="FontFile" uid="uid://djisxeh81ietx" path="res://Game UI/Fonts/Metamorphous-Regular.ttf" id="2_ah58j"]
 
 [node name="InteractRay" type="RayCast3D" unique_id=356334689]
 target_position = Vector3(0, 0, -4)
@@ -18,6 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_ah58j")
 theme_override_font_sizes/font_size = 32
 text = "Prompt
 [Key]"

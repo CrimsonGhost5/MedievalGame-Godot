@@ -5,10 +5,11 @@
 [ext_resource type="AudioStream" uid="uid://b6fqiakg0g7b0" path="res://Sounds/EditBreadSound.mp3" id="3_tq2yx"]
 [ext_resource type="Material" uid="uid://c1cdqbig4cgux" path="res://3D_assets/textures/3D_materials/sliceBread.tres" id="4_riv7v"]
 
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xlgsp"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_tq2yx"]
+size = Vector3(1.1220093, 0.6191406, 1.3310547)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_riv7v"]
+size = Vector3(1, 0.5600586, 1)
 
 [node name="FoodItem" type="RigidBody3D" unique_id=480233616 groups=["pickable", "thrown food"]]
 script = ExtResource("1_riv7v")
@@ -16,19 +17,21 @@ script = ExtResource("1_riv7v")
 [node name="FoodCollectSFX" type="AudioStreamPlayer3D" parent="." unique_id=255723497]
 stream = ExtResource("3_tq2yx")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=74511693]
-shape = SubResource("BoxShape3D_xlgsp")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=786264274]
+transform = Transform3D(0.22, 0, 0, 0, 0.55, 0, 0, 0, 0.04, -0.0037799072, 0.13884278, 0.02908644)
+shape = SubResource("BoxShape3D_tq2yx")
 
 [node name="Node3D" type="Node3D" parent="." unique_id=240859388]
 
 [node name="sliceBread" parent="Node3D" unique_id=370454348 instance=ExtResource("3_ig6qf")]
 
-[node name="sliceBread" parent="Node3D/sliceBread" index="0" unique_id=1949718174]
+[node name="sliceBread" parent="Node3D/sliceBread" index="0" unique_id=1927446017]
 material_override = ExtResource("4_riv7v")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1684028332]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=967097338]
+transform = Transform3D(0.22, 0, 0, 0, 0.55, 0, 0, 0, 0.04, 0, 0.12098389, 0.025498241)
 shape = SubResource("BoxShape3D_riv7v")
 
 [node name="Timer" type="Timer" parent="." unique_id=1582728068]

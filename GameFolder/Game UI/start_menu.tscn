@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dcbeehiymgro2" path="res://Game UI/start_menu.gd" id="1_ia0g5"]
 [ext_resource type="Texture2D" uid="uid://b3r1krwesiicg" path="res://Game UI/plague hunger title screen.png" id="2_lys1q"]
 [ext_resource type="PackedScene" uid="uid://dr43w8a3reucl" path="res://Game UI/control_menu.tscn" id="2_vpdu5"]
+[ext_resource type="FontFile" uid="uid://djisxeh81ietx" path="res://Game UI/Fonts/Metamorphous-Regular.ttf" id="3_mdmha"]
 
 [node name="StartMenu" type="Control" unique_id=2001510953]
 process_mode = 3
@@ -53,14 +54,17 @@ alignment = 1
 
 [node name="StartButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1430718181]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_mdmha")
 text = "               Start              "
 
 [node name="ControlsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=646396453]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_mdmha")
 text = "Controls"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=2016796995]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_mdmha")
 text = "Exit"
 
 [node name="Control" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1724570952]

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bfs550d8o24m2"]
 
 [ext_resource type="Script" uid="uid://brod5osf786lq" path="res://Player/sub_viewport.gd" id="1_mbcot"]
+[ext_resource type="FontFile" uid="uid://djisxeh81ietx" path="res://Game UI/Fonts/Metamorphous-Regular.ttf" id="2_fpufx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_efcy8"]
 size = Vector3(1, 1.5712891, 1)
@@ -56,6 +57,7 @@ offset_right = 256.0
 offset_bottom = 236.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_fpufx")
 text = "odnmoqwndionddjkcmdkcmkc dvbndsivndivndmvkmdivndivndivndnudnvj"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -73,6 +75,7 @@ size = Vector2i(256, 256)
 [node name="Label" type="Label" parent="SubViewport" unique_id=757353305]
 offset_right = 256.0
 offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("2_fpufx")
 text = "Read Me"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -178,7 +178,7 @@ func new_crouch():
 	if is_crouching == true and crouch_cast.is_colliding() == false:
 		ap.play("crouch", -1, -crouch_speed)
 		print("is crouching")
-	elif is_crouching == false:
+	elif is_crouching == false and is_sprinting == false:
 		ap.play("crouch", -1, crouch_speed)
 		print("not crouching")
 

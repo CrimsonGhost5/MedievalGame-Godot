@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://f42dn202lm66" path="res://Game UI/pause_menu.gd" id="1_7iis3"]
 [ext_resource type="Shader" uid="uid://bdd60w5sqexxr" path="res://Levels/Maze_1.gdshader" id="2_p4jf0"]
 [ext_resource type="Texture2D" uid="uid://c5n47gvdaxnrw" path="res://Game UI/skull borders.png" id="3_abu3j"]
+[ext_resource type="FontFile" uid="uid://djisxeh81ietx" path="res://Game UI/Fonts/Metamorphous-Regular.ttf" id="4_cdsux"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_abu3j"]
 shader = ExtResource("2_p4jf0")
@@ -43,6 +44,7 @@ theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer" unique_id=629002809]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_cdsux")
 text = "Paused"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -53,14 +55,17 @@ layout_mode = 2
 
 [node name="Resume" type="Button" parent="CenterContainer/VBoxContainer" unique_id=690267398]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_cdsux")
 text = "Resume"
 
 [node name="Restart" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1585744895]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_cdsux")
 text = "Restart"
 
 [node name="Gamma" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1101250]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_cdsux")
 disabled = true
 text = "Gamma
 "
@@ -74,6 +79,7 @@ value = 1.0
 
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer" unique_id=911056720]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_cdsux")
 text = "Quit"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

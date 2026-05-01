@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cqwg7cj3s6heb"]
 
+[ext_resource type="FontFile" uid="uid://djisxeh81ietx" path="res://Game UI/Fonts/Metamorphous-Regular.ttf" id="1_ohoaq"]
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_frj4v"]
 load_path = "res://.godot/imported/medieval UI key.png-ff5802ff047d4f8929cfe47d0828e396.ctex"
 
@@ -33,6 +35,7 @@ offset_left = 0.98387146
 offset_top = -133.99164
 offset_right = 1.5258789e-05
 offset_bottom = -133.99408
+theme_override_fonts/font = ExtResource("1_ohoaq")
 theme_override_font_sizes/font_size = 48
 text = "Door Key"
 
