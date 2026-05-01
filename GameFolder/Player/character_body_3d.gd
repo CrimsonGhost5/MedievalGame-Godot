@@ -87,7 +87,8 @@ func _process(delta: float) -> void:
 				look_rot.y -= (axis_x * controller_sensitivity)
 			elif axis_x < 0:
 				look_rot.y -= (axis_x * controller_sensitivity)
-		
+	look_rot.x = clamp(look_rot.x, min_angle, max_angle)
+	
 	
 	
 	
