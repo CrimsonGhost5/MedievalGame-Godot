@@ -1,0 +1,491 @@
+[gd_scene format=3 uid="uid://7fk6ssip73qd"]
+
+[ext_resource type="Script" path="res://Levels/end_credits.gd" id="1_mx8bh"]
+
+[node name="EndCredits" type="Control" unique_id=2096855772]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mx8bh")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=897577812]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2036669847]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer" unique_id=439248104]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer" unique_id=863748129]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1153805011]
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1788666952]
+layout_mode = 2
+
+[node name="Control5" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1677863454]
+layout_mode = 2
+
+[node name="Control6" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1730340687]
+layout_mode = 2
+
+[node name="Control7" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1628156553]
+layout_mode = 2
+
+[node name="Control8" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1020908111]
+layout_mode = 2
+
+[node name="Control9" type="Control" parent="MarginContainer/HBoxContainer" unique_id=303753296]
+layout_mode = 2
+
+[node name="Control10" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1324595310]
+layout_mode = 2
+
+[node name="Control11" type="Control" parent="MarginContainer/HBoxContainer" unique_id=288872145]
+layout_mode = 2
+
+[node name="Control12" type="Control" parent="MarginContainer/HBoxContainer" unique_id=984259677]
+layout_mode = 2
+
+[node name="Control13" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1715114968]
+layout_mode = 2
+
+[node name="Control14" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1634848707]
+layout_mode = 2
+
+[node name="Control15" type="Control" parent="MarginContainer/HBoxContainer" unique_id=353424773]
+layout_mode = 2
+
+[node name="Control16" type="Control" parent="MarginContainer/HBoxContainer" unique_id=870746388]
+layout_mode = 2
+
+[node name="Control17" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1817947872]
+layout_mode = 2
+
+[node name="Control18" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1269259754]
+layout_mode = 2
+
+[node name="Control19" type="Control" parent="MarginContainer/HBoxContainer" unique_id=531361217]
+layout_mode = 2
+
+[node name="Control20" type="Control" parent="MarginContainer/HBoxContainer" unique_id=474002365]
+layout_mode = 2
+
+[node name="Control21" type="Control" parent="MarginContainer/HBoxContainer" unique_id=2044886030]
+layout_mode = 2
+
+[node name="Control22" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1146918537]
+layout_mode = 2
+
+[node name="Control23" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1108785959]
+layout_mode = 2
+
+[node name="Control24" type="Control" parent="MarginContainer/HBoxContainer" unique_id=284855958]
+layout_mode = 2
+
+[node name="Control25" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1964131344]
+layout_mode = 2
+
+[node name="Control26" type="Control" parent="MarginContainer/HBoxContainer" unique_id=397357877]
+layout_mode = 2
+
+[node name="Control27" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1918724795]
+layout_mode = 2
+
+[node name="Control28" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1649494443]
+layout_mode = 2
+
+[node name="Control29" type="Control" parent="MarginContainer/HBoxContainer" unique_id=172813460]
+layout_mode = 2
+
+[node name="Control30" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1893306950]
+layout_mode = 2
+
+[node name="Control31" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1818729308]
+layout_mode = 2
+
+[node name="Control32" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1274392907]
+layout_mode = 2
+
+[node name="Control33" type="Control" parent="MarginContainer/HBoxContainer" unique_id=2036854447]
+layout_mode = 2
+
+[node name="Control34" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1426592006]
+layout_mode = 2
+
+[node name="Control35" type="Control" parent="MarginContainer/HBoxContainer" unique_id=821624344]
+layout_mode = 2
+
+[node name="Control36" type="Control" parent="MarginContainer/HBoxContainer" unique_id=844899256]
+layout_mode = 2
+
+[node name="Control37" type="Control" parent="MarginContainer/HBoxContainer" unique_id=910343320]
+layout_mode = 2
+
+[node name="Control38" type="Control" parent="MarginContainer/HBoxContainer" unique_id=2138704667]
+layout_mode = 2
+
+[node name="Control39" type="Control" parent="MarginContainer/HBoxContainer" unique_id=425326682]
+layout_mode = 2
+
+[node name="Control40" type="Control" parent="MarginContainer/HBoxContainer" unique_id=694274210]
+layout_mode = 2
+
+[node name="Control41" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1029014263]
+layout_mode = 2
+
+[node name="Control42" type="Control" parent="MarginContainer/HBoxContainer" unique_id=779555240]
+layout_mode = 2
+
+[node name="Control43" type="Control" parent="MarginContainer/HBoxContainer" unique_id=662520746]
+layout_mode = 2
+
+[node name="Control44" type="Control" parent="MarginContainer/HBoxContainer" unique_id=181371792]
+layout_mode = 2
+
+[node name="Control45" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1775631348]
+layout_mode = 2
+
+[node name="Control46" type="Control" parent="MarginContainer/HBoxContainer" unique_id=736544585]
+layout_mode = 2
+
+[node name="Control47" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1750120308]
+layout_mode = 2
+
+[node name="Control48" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1595829614]
+layout_mode = 2
+
+[node name="Control49" type="Control" parent="MarginContainer/HBoxContainer" unique_id=353335165]
+layout_mode = 2
+
+[node name="Control50" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1184217787]
+layout_mode = 2
+
+[node name="Control51" type="Control" parent="MarginContainer/HBoxContainer" unique_id=428059670]
+layout_mode = 2
+
+[node name="Control52" type="Control" parent="MarginContainer/HBoxContainer" unique_id=2146175575]
+layout_mode = 2
+
+[node name="Control53" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1243848357]
+layout_mode = 2
+
+[node name="Control54" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1428878339]
+layout_mode = 2
+
+[node name="Control55" type="Control" parent="MarginContainer/HBoxContainer" unique_id=807907182]
+layout_mode = 2
+
+[node name="Control56" type="Control" parent="MarginContainer/HBoxContainer" unique_id=897127724]
+layout_mode = 2
+
+[node name="Control57" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1811832031]
+layout_mode = 2
+
+[node name="Control58" type="Control" parent="MarginContainer/HBoxContainer" unique_id=426632089]
+layout_mode = 2
+
+[node name="Control59" type="Control" parent="MarginContainer/HBoxContainer" unique_id=992234190]
+layout_mode = 2
+
+[node name="Control60" type="Control" parent="MarginContainer/HBoxContainer" unique_id=257608855]
+layout_mode = 2
+
+[node name="Control61" type="Control" parent="MarginContainer/HBoxContainer" unique_id=373097157]
+layout_mode = 2
+
+[node name="Control62" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1250845329]
+layout_mode = 2
+
+[node name="Control63" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1687021942]
+layout_mode = 2
+
+[node name="Control64" type="Control" parent="MarginContainer/HBoxContainer" unique_id=1128340399]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=994348653]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=313760184]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/MarginContainer" unique_id=1105003067]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/MarginContainer/HBoxContainer" unique_id=1108634872]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer2/MarginContainer/HBoxContainer/VBoxContainer" unique_id=431696167]
+layout_mode = 2
+text = "Developers:
+
+Aleeyah Collazo
+
+Jhared Wedderburn
+
+Abigail Velez
+
+Ryan Kelly"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer" unique_id=901598563]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="MarginContainer/HBoxContainer2" unique_id=467666314]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer2/VBoxContainer3" unique_id=501581126]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer2/VBoxContainer3/MarginContainer" unique_id=622290377]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer2/VBoxContainer3/MarginContainer/HBoxContainer" unique_id=2040345928]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer2/VBoxContainer3/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1469708980]
+layout_mode = 2
+text = "Roles:
+
+Level Design, 3D Art 
+
+Lead Programmer
+
+Music, Backup Art, Backup Programmer
+
+Sound Effects, Sound Direction"
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=302002047]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1865092330]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1147881965]
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=587766067]
+layout_mode = 2
+
+[node name="Control5" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1734744064]
+layout_mode = 2
+
+[node name="Control6" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=651683866]
+layout_mode = 2
+
+[node name="Control7" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=433109296]
+layout_mode = 2
+
+[node name="Control8" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=270469098]
+layout_mode = 2
+
+[node name="Control9" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1639063613]
+layout_mode = 2
+
+[node name="Control10" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=40198967]
+layout_mode = 2
+
+[node name="Control11" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1761912927]
+layout_mode = 2
+
+[node name="Control12" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1370788268]
+layout_mode = 2
+
+[node name="Control13" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=559207053]
+layout_mode = 2
+
+[node name="Control14" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=763201740]
+layout_mode = 2
+
+[node name="Control15" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=637782692]
+layout_mode = 2
+
+[node name="Control16" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1736346532]
+layout_mode = 2
+
+[node name="Control17" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=2016598739]
+layout_mode = 2
+
+[node name="Control18" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1799231196]
+layout_mode = 2
+
+[node name="Control19" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1069171779]
+layout_mode = 2
+
+[node name="Control20" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=388364269]
+layout_mode = 2
+
+[node name="Control21" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=17470886]
+layout_mode = 2
+
+[node name="Control22" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=146985190]
+layout_mode = 2
+
+[node name="Control23" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=278471863]
+layout_mode = 2
+
+[node name="Control24" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1271339516]
+layout_mode = 2
+
+[node name="Control25" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1722039743]
+layout_mode = 2
+
+[node name="Control26" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1992485725]
+layout_mode = 2
+
+[node name="Control27" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1218854249]
+layout_mode = 2
+
+[node name="Control28" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1440806832]
+layout_mode = 2
+
+[node name="Control29" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1613776693]
+layout_mode = 2
+
+[node name="Control30" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=778884146]
+layout_mode = 2
+
+[node name="Control31" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1379655236]
+layout_mode = 2
+
+[node name="Control32" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=119846539]
+layout_mode = 2
+
+[node name="Control33" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1165828828]
+layout_mode = 2
+
+[node name="Control34" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=4065191]
+layout_mode = 2
+
+[node name="Control35" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1271448100]
+layout_mode = 2
+
+[node name="Control36" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=1492496821]
+layout_mode = 2
+
+[node name="Control37" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=158835020]
+layout_mode = 2
+
+[node name="Control38" type="Control" parent="MarginContainer/HBoxContainer2" unique_id=444356156]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1521213070]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=9211588]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=281187629]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1583173348]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Control6" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1625579492]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1546272867]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Thank you for playing our game!"
+
+[node name="Control8" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1896897712]
+layout_mode = 2
+
+[node name="Control9" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=990763569]
+layout_mode = 2
+
+[node name="Control10" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=151635359]
+layout_mode = 2
+
+[node name="Control11" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=911878177]
+layout_mode = 2
+
+[node name="Control12" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1223829048]
+layout_mode = 2
+
+[node name="Control13" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1375220781]
+layout_mode = 2
+
+[node name="Control14" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=412697552]
+layout_mode = 2
+
+[node name="Control15" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=403244083]
+layout_mode = 2
+
+[node name="Control16" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=783413028]
+layout_mode = 2
+
+[node name="Control17" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=659687785]
+layout_mode = 2
+
+[node name="Control18" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1588377096]
+layout_mode = 2
+
+[node name="Control19" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1237675534]
+layout_mode = 2
+
+[node name="Control20" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=441463829]
+layout_mode = 2
+
+[node name="Control21" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1545567609]
+layout_mode = 2
+
+[node name="Control22" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1319918678]
+layout_mode = 2
+
+[node name="Control23" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1401478102]
+layout_mode = 2
+
+[node name="Control24" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1700738928]
+layout_mode = 2
+
+[node name="Control25" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=769423316]
+layout_mode = 2
+
+[node name="Control26" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1141838802]
+layout_mode = 2
+
+[node name="Control27" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=872074704]
+layout_mode = 2
+
+[node name="Control28" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1038434591]
+layout_mode = 2
+
+[node name="Control29" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=478445797]
+layout_mode = 2
+
+[node name="Control30" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=466336390]
+layout_mode = 2
+
+[node name="Control31" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=450022678]
+layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=36253934]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
