@@ -3,19 +3,12 @@
 [ext_resource type="Script" uid="uid://cd8sv2ne6gsby" path="res://Player/Player UI/game_over_screen.gd" id="1_vf8nb"]
 [ext_resource type="Texture2D" uid="uid://cv1mky55onj8e" path="res://Game UI/skull menu.png" id="2_domef"]
 [ext_resource type="FontFile" uid="uid://djisxeh81ietx" path="res://Game UI/Fonts/Metamorphous-Regular.ttf" id="3_xj0m4"]
+[ext_resource type="AudioStream" uid="uid://b3vi3e7sa6pv4" path="res://Sounds/PlayerDeath.wav" id="4_jq8yl"]
 
-[node name="GameOverScreen" type="Control" unique_id=335445674]
-z_index = 3
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="GameOverScreen" type="CanvasLayer" unique_id=295153926]
 script = ExtResource("1_vf8nb")
 
 [node name="Panel" type="Panel" parent="." unique_id=1988464901]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -304,6 +297,9 @@ layout_mode = 2
 size_flags_vertical = 8
 theme_override_fonts/font = ExtResource("3_xj0m4")
 text = "Quit"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1333835379]
+stream = ExtResource("4_jq8yl")
 
 [connection signal="pressed" from="Panel/BoxContainer/VBoxContainer2/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="Panel/BoxContainer/VBoxContainer2/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
