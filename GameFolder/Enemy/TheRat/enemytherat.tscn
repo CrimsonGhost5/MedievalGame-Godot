@@ -10,7 +10,6 @@
 [ext_resource type="AudioStream" uid="uid://clm7r4xumlynw" path="res://Sounds/RatScurry.wav" id="7_lqdgj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7wguf"]
-size = Vector3(0.517, 0.353, 1.92)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kffe0"]
 
@@ -21,7 +20,7 @@ script = ExtResource("1_eqdyp")
 transform = Transform3D(-2.1855695e-09, 0, -0.05, 0, 0.05, 0, 0.05, 0, -2.1855695e-09, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1845410530]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.166, 0.129)
+transform = Transform3D(0.55693746, 0, 0, 0, 0.4971968, 0, 0, 0, 0.8896975, 0, 0.08688462, 0.00517416)
 shape = SubResource("BoxShape3D_7wguf")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1512949948]

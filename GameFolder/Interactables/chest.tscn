@@ -20,8 +20,8 @@ roughness_texture = ExtResource("6_144dm")
 normal_enabled = true
 normal_texture = ExtResource("5_gjs4i")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ohxn3"]
-size = Vector3(87.53415, 29.015747, 55.855713)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ohxn3"]
+points = PackedVector3Array(41.409798, 66.32313, 9.533311, -39.37703, 41.97144, -26.211643, -41.56837, 41.684605, -25.496119, 41.60006, 41.6747, 25.180689, -42.011055, 54.67599, 24.11889, 41.584797, 41.67947, -25.506128, -39.323708, 66.09411, -13.486291, -41.61158, 41.6711, 25.18771, 38.759872, 57.175102, -23.2941, -38.67475, 65.90568, 14.178981, 39.26241, 57.207504, 23.259375, 41.905895, 65.152466, -13.916285, -41.4111, 57.262917, -22.808159, -41.4111, 67.618225, -0.8088948, 40.435432, 48.156845, 26.576824, 41.409798, 67.61782, -0.8088746, 39.905624, 48.242264, -26.555964, 38.682568, 65.90568, 14.178981, -39.897755, 48.242233, -26.55609, -40.427906, 48.156742, 26.57725, 39.331654, 66.09411, -13.486291, -39.254475, 57.207504, 23.259375, 42.012283, 54.67599, 24.119602, 38.715717, 67.16466, 6.697464, -41.90655, 65.15263, -13.916501, -39.640892, 41.886307, 26.056662, 40.419666, 53.37675, 25.252865, 42.017876, 48.11263, -25.770042, -42.02605, 48.11135, -25.775024, -38.75204, 57.175102, -23.2941, 38.565594, 67.11623, -7.0053687, -38.707897, 67.16466, 6.697464)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_syyj1"]
 albedo_texture = ExtResource("3_ohxn3")
@@ -32,8 +32,8 @@ normal_enabled = true
 normal_texture = ExtResource("5_gjs4i")
 heightmap_texture = ExtResource("8_eb5w2")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_b6v7h"]
-size = Vector3(86.58154, 830.84955, 53.901978)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b6v7h"]
+points = PackedVector3Array(37.668957, 41.948833, 28.211203, -41.845505, 0.16971682, -28.392763, -43.466927, 0.03976093, -27.206238, 43.496017, 0.025668921, 27.13708, 41.628452, 39.22026, -28.24572, -43.274414, 40.70091, 25.647596, -41.921696, 0.13161884, 28.357042, -41.42616, 41.80869, -25.432934, 43.46605, 0.040185682, -27.205688, 43.273514, 40.7005, 25.647062, -36.320328, 41.948833, 28.211203, 41.42569, 41.808456, -25.43265, -41.628895, 39.220448, -28.246016, 41.921707, 0.13160886, 28.357056, -43.497154, 0.025118345, 27.13779, 41.844246, 0.17034312, -28.391914, -43.248768, 40.68929, -25.71971, 43.24787, 40.688885, -25.719177, -41.695667, 39.249523, 28.203915, 40.03402, 40.445026, -28.07187, 41.695225, 39.249332, 28.203619, -41.447754, 41.81949, 25.358831, -39.70167, 41.609783, -26.511442, 41.4469, 41.819065, 25.358313, -40.02952, 40.442844, -28.068714, -43.24959, 39.33626, -27.070427, 43.248695, 39.335884, -27.069864, 43.274323, 39.346695, 26.998543, -43.275223, 39.347073, 26.999105, 39.694996, 41.60634, -26.506998)
 
 [sub_resource type="Animation" id="Animation_iycmc"]
 resource_name = "ChestClose"
@@ -132,8 +132,8 @@ mesh = ExtResource("7_ni62j")
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hinge/StaticBody3D" unique_id=1680471010]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -0.009138063, 0.12094039, -0.2780612)
-shape = SubResource("BoxShape3D_ohxn3")
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -0.012091696, -0.40722755, -0.27661955)
+shape = SubResource("ConvexPolygonShape3D_ohxn3")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1535999857]
 
@@ -144,8 +144,8 @@ mesh = ExtResource("9_3epl8")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=117447205]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.001008302, -0.45935655, -0.015110478)
-shape = SubResource("BoxShape3D_b6v7h")
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_b6v7h")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2031333191]
 libraries/ = SubResource("AnimationLibrary_787qk")
