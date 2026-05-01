@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bdonj7mmim3bx"]
 
 [ext_resource type="Material" uid="uid://8h78yckf0c66" path="res://3D_assets/textures/3D_materials/trimB.tres" id="1_5ftp8"]
+[ext_resource type="Script" uid="uid://dmelpuflhatf7" path="res://3D_assets/end_door_grp.gd" id="1_n1d8y"]
 [ext_resource type="ArrayMesh" uid="uid://cdfa5qbkwhxsd" path="res://3D_assets/endDoorFrame_godot.obj" id="2_n1d8y"]
 [ext_resource type="Material" uid="uid://brbd6sfj1a3w5" path="res://3D_assets/textures/3D_materials/endDoorMat.tres" id="3_d7xqe"]
 [ext_resource type="ArrayMesh" uid="uid://cnv2evatjkycg" path="res://3D_assets/endDoorAlone_godot.obj" id="4_oarbc"]
@@ -8,7 +9,72 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_jvf7d"]
 size = Vector3(400, 400, 56.22679)
 
-[node name="endDoorGRP" type="Node3D" unique_id=398845763]
+[sub_resource type="Animation" id="Animation_5ftp8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpotLight3D:spot_attenuation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_n1d8y"]
+resource_name = "end_door_open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5707964, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpotLight3D:spot_attenuation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, -5.6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d7xqe"]
+_data = {
+&"RESET": SubResource("Animation_5ftp8"),
+&"end_door_open": SubResource("Animation_n1d8y")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n1d8y"]
+size = Vector3(1, 1.3653564, 1)
+
+[node name="endDoorGRP" type="StaticBody3D" unique_id=461498732]
+script = ExtResource("1_n1d8y")
+prompt_message = "Open"
 
 [node name="endDoorFrame" type="MeshInstance3D" parent="." unique_id=562779085]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
@@ -22,8 +88,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 200, -17.74641)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="endDoorFrame/StaticBody3D" unique_id=1520388905]
 shape = SubResource("BoxShape3D_jvf7d")
 
-[node name="endDoor" type="MeshInstance3D" parent="." unique_id=2105485483]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+[node name="Node3D" type="Node3D" parent="." unique_id=364975138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7608356, 0, 0)
+
+[node name="endDoor" type="MeshInstance3D" parent="Node3D" unique_id=2105485483]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.7608356, 0, 0)
 material_override = ExtResource("3_d7xqe")
 mesh = ExtResource("4_oarbc")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=14813532]
+libraries/ = SubResource("AnimationLibrary_d7xqe")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=929410850]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.22082788, 1, -1.070713)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=318764639]
+transform = Transform3D(2, 0, 0, 0, 2.3454492, 0, 0, 0, 0.71208763, 0, 1.4741191, 0)
+shape = SubResource("BoxShape3D_n1d8y")
+
+[connection signal="interacted" from="." to="." method="_on_interacted"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
