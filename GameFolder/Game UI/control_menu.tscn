@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://bjb6rgnpf7ts" path="res://Game UI/control_menu.gd" id="1_bkl5u"]
 [ext_resource type="PackedScene" uid="uid://rs1flyrjgm0g" path="res://Game UI/settings_tab_container.tscn" id="1_ggsak"]
 [ext_resource type="Texture2D" uid="uid://c5n47gvdaxnrw" path="res://Game UI/skull borders.png" id="2_jff8h"]
+[ext_resource type="Texture2D" uid="uid://fjfymdw5jqdy" path="res://Game UI/skull button.png" id="4_j0s4h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vb3if"]
+texture = ExtResource("4_j0s4h")
 
 [node name="ControlsMenu" type="Control" unique_id=414875959]
 layout_mode = 3
@@ -57,4 +61,5 @@ custom_minimum_size = Vector2(120, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_vb3if")
 text = "Exit"

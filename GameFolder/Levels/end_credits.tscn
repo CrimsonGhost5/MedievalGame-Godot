@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://7fk6ssip73qd"]
 
 [ext_resource type="Script" uid="uid://dwkjqxqeitoe3" path="res://Levels/end_credits.gd" id="1_mx8bh"]
+[ext_resource type="Texture2D" uid="uid://fjfymdw5jqdy" path="res://Game UI/skull button.png" id="2_h6a7f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tiy1h"]
+texture = ExtResource("2_h6a7f")
 
 [node name="EndCredits" type="Control" unique_id=2096855772]
 layout_mode = 3
@@ -401,91 +405,20 @@ alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1583173348]
 layout_mode = 2
-theme_override_constants/separation = 20
-alignment = 1
-
-[node name="Control6" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1625579492]
-layout_mode = 2
+theme_override_constants/separation = 480
+alignment = 2
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1546272867]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Thank you for playing our game!"
 
-[node name="Control8" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1896897712]
-layout_mode = 2
-
-[node name="Control9" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=990763569]
-layout_mode = 2
-
-[node name="Control10" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=151635359]
-layout_mode = 2
-
-[node name="Control11" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=911878177]
-layout_mode = 2
-
-[node name="Control12" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1223829048]
-layout_mode = 2
-
-[node name="Control13" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1375220781]
-layout_mode = 2
-
-[node name="Control14" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=412697552]
-layout_mode = 2
-
-[node name="Control15" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=403244083]
-layout_mode = 2
-
-[node name="Control16" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=783413028]
-layout_mode = 2
-
-[node name="Control17" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=659687785]
-layout_mode = 2
-
-[node name="Control18" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1588377096]
-layout_mode = 2
-
-[node name="Control19" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1237675534]
-layout_mode = 2
-
-[node name="Control20" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=441463829]
-layout_mode = 2
-
-[node name="Control21" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1545567609]
-layout_mode = 2
-
-[node name="Control22" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1319918678]
-layout_mode = 2
-
-[node name="Control23" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1401478102]
-layout_mode = 2
-
-[node name="Control24" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1700738928]
-layout_mode = 2
-
-[node name="Control25" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=769423316]
-layout_mode = 2
-
-[node name="Control26" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1141838802]
-layout_mode = 2
-
-[node name="Control27" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=872074704]
-layout_mode = 2
-
-[node name="Control28" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1038434591]
-layout_mode = 2
-
-[node name="Control29" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=478445797]
-layout_mode = 2
-
-[node name="Control30" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=466336390]
-layout_mode = 2
-
-[node name="Control31" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=450022678]
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=272661011]
 layout_mode = 2
 
 [node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=36253934]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_tiy1h")
 text = "Exit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
