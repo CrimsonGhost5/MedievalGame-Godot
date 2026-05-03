@@ -2,9 +2,17 @@
 
 [ext_resource type="Script" uid="uid://dwkjqxqeitoe3" path="res://Levels/end_credits.gd" id="1_mx8bh"]
 [ext_resource type="Texture2D" uid="uid://fjfymdw5jqdy" path="res://Game UI/skull button.png" id="2_h6a7f"]
+[ext_resource type="Texture2D" uid="uid://xfsmkoyj0w8o" path="res://Game UI/skull button dark.png" id="3_a7w65"]
+[ext_resource type="Texture2D" uid="uid://b4xxldxkm31bp" path="res://Game UI/skull button light.png" id="4_uvq7k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tiy1h"]
 texture = ExtResource("2_h6a7f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n5fgh"]
+texture = ExtResource("3_a7w65")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wnnu0"]
+texture = ExtResource("4_uvq7k")
 
 [node name="EndCredits" type="Control" unique_id=2096855772]
 layout_mode = 3
@@ -419,6 +427,8 @@ layout_mode = 2
 [node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=36253934]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_tiy1h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_n5fgh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wnnu0")
 text = "Exit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

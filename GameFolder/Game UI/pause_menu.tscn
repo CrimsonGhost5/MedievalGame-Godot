@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://c5n47gvdaxnrw" path="res://Game UI/skull borders.png" id="3_abu3j"]
 [ext_resource type="FontFile" uid="uid://djisxeh81ietx" path="res://Game UI/Fonts/Metamorphous-Regular.ttf" id="4_cdsux"]
 [ext_resource type="Texture2D" uid="uid://fjfymdw5jqdy" path="res://Game UI/skull button.png" id="5_metyy"]
+[ext_resource type="Texture2D" uid="uid://xfsmkoyj0w8o" path="res://Game UI/skull button dark.png" id="6_238x3"]
+[ext_resource type="Texture2D" uid="uid://b4xxldxkm31bp" path="res://Game UI/skull button light.png" id="7_2tfn4"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_abu3j"]
 shader = ExtResource("2_p4jf0")
@@ -13,11 +15,29 @@ shader_parameter/gamma = 1.0
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n0h6w"]
 texture = ExtResource("5_metyy")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3w7fc"]
+texture = ExtResource("6_238x3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f2vac"]
+texture = ExtResource("7_2tfn4")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_238x3"]
 texture = ExtResource("5_metyy")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4m1p3"]
+texture = ExtResource("6_238x3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ntyth"]
+texture = ExtResource("7_2tfn4")
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2tfn4"]
 texture = ExtResource("5_metyy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xbtus"]
+texture = ExtResource("6_238x3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mnd7c"]
+texture = ExtResource("7_2tfn4")
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1020740941]
 process_mode = 3
@@ -67,12 +87,16 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_cdsux")
 theme_override_styles/normal = SubResource("StyleBoxTexture_n0h6w")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3w7fc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f2vac")
 text = "Resume"
 
 [node name="Restart" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1585744895]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_cdsux")
 theme_override_styles/normal = SubResource("StyleBoxTexture_238x3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4m1p3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ntyth")
 text = "Restart"
 
 [node name="Gamma" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1101250]
@@ -93,6 +117,8 @@ value = 1.0
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_cdsux")
 theme_override_styles/normal = SubResource("StyleBoxTexture_2tfn4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xbtus")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mnd7c")
 text = "Quit"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

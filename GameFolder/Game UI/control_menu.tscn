@@ -4,9 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://rs1flyrjgm0g" path="res://Game UI/settings_tab_container.tscn" id="1_ggsak"]
 [ext_resource type="Texture2D" uid="uid://c5n47gvdaxnrw" path="res://Game UI/skull borders.png" id="2_jff8h"]
 [ext_resource type="Texture2D" uid="uid://fjfymdw5jqdy" path="res://Game UI/skull button.png" id="4_j0s4h"]
+[ext_resource type="Texture2D" uid="uid://xfsmkoyj0w8o" path="res://Game UI/skull button dark.png" id="5_fd2wl"]
+[ext_resource type="Texture2D" uid="uid://b4xxldxkm31bp" path="res://Game UI/skull button light.png" id="6_eqfn7"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vb3if"]
 texture = ExtResource("4_j0s4h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0lgtb"]
+texture = ExtResource("5_fd2wl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s4sqd"]
+texture = ExtResource("6_eqfn7")
 
 [node name="ControlsMenu" type="Control" unique_id=414875959]
 layout_mode = 3
@@ -62,4 +70,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_styles/normal = SubResource("StyleBoxTexture_vb3if")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0lgtb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_s4sqd")
 text = "Exit"

@@ -5,9 +5,21 @@
 [ext_resource type="PackedScene" uid="uid://dr43w8a3reucl" path="res://Game UI/control_menu.tscn" id="2_vpdu5"]
 [ext_resource type="FontFile" uid="uid://djisxeh81ietx" path="res://Game UI/Fonts/Metamorphous-Regular.ttf" id="3_mdmha"]
 [ext_resource type="Texture2D" uid="uid://fjfymdw5jqdy" path="res://Game UI/skull button.png" id="4_tkcrb"]
+[ext_resource type="Texture2D" uid="uid://b4xxldxkm31bp" path="res://Game UI/skull button light.png" id="5_nehwg"]
+[ext_resource type="Texture2D" uid="uid://xfsmkoyj0w8o" path="res://Game UI/skull button dark.png" id="6_2vhjx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ss58"]
 texture = ExtResource("4_tkcrb")
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2vhjx"]
+texture = ExtResource("6_2vhjx")
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gb6n4"]
+texture = ExtResource("5_nehwg")
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
@@ -16,8 +28,28 @@ texture = ExtResource("4_tkcrb")
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ph06y"]
+texture = ExtResource("6_2vhjx")
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3vub7"]
+texture = ExtResource("5_nehwg")
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nehwg"]
 texture = ExtResource("4_tkcrb")
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eg5tl"]
+texture = ExtResource("6_2vhjx")
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v3ryd"]
+texture = ExtResource("5_nehwg")
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
@@ -74,18 +106,24 @@ custom_minimum_size = Vector2(111, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_mdmha")
 theme_override_styles/normal = SubResource("StyleBoxTexture_7ss58")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2vhjx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gb6n4")
 text = "Start"
 
 [node name="ControlsButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=646396453]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_mdmha")
 theme_override_styles/normal = SubResource("StyleBoxTexture_tkcrb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ph06y")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3vub7")
 text = "Controls"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=2016796995]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_mdmha")
 theme_override_styles/normal = SubResource("StyleBoxTexture_nehwg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_eg5tl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v3ryd")
 text = "Exit"
 
 [node name="Control" type="Control" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1724570952]
