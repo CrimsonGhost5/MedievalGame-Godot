@@ -165,6 +165,14 @@ func _physics_process(delta: float) -> void:
 	
 	if GameState.state["cam control"] == false:
 		moving = true
+		$UI/FoodAmount.visible = true
+		$UI/StaminaBar.visible = true
+		$UI/Healthbar.visible = true
+		$UI/HungerBar.visible = true
+		$UI/CrossHair.visible = true
+		$UI/DoorKey.visible = true
+		$UI/FoodAmount/CanvasLayer/Control/TextureRect.visible = true
+		$UI/FoodAmount/CanvasLayer/Control/FoodText.visible = true
 	else:
 		moving = false
 		$UI/FoodAmount.visible = false
