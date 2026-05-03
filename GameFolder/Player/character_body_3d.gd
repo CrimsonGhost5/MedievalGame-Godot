@@ -162,6 +162,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		$UI/DoorKey/CanvasLayer/Control/Label.visible = true
 		$UI/DoorKey/CanvasLayer/Control/TextureRect.visible = true
+	
+	if GameState.state["cam control"] == false:
+		moving = true
+		print("Can move")
+	else:
+		moving = false
+		print("Can't move")
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and moving == true:

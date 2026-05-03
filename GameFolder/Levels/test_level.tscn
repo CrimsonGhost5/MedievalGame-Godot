@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://lccdc20iocxy"]
 
-[ext_resource type="Script" uid="uid://bhptguvg8gfs4" path="res://GameState/game_state.gd" id="1_tc6tp"]
+[ext_resource type="Script" uid="uid://4m0i5tfk2my7" path="res://Levels/test_level.gd" id="1_662sx"]
 [ext_resource type="PackedScene" uid="uid://x1v3wsuuya02" path="res://Player/player.tscn" id="2_k8b6b"]
 [ext_resource type="PackedScene" uid="uid://brka3ai73amxy" path="res://Interactables/food_item.tscn" id="5_x458k"]
 [ext_resource type="PackedScene" uid="uid://vxswb5r75j0w" path="res://Interactables/exit_level.tscn" id="6_lrol0"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://fjrmqlxaeldw" path="res://Interactables/Key.tscn" id="15_lrol0"]
 [ext_resource type="PackedScene" uid="uid://cu878sk7lv6fg" path="res://Interactables/locked_chest.tscn" id="16_ouwm7"]
 [ext_resource type="PackedScene" uid="uid://b13wxhoh3cmfw" path="res://InteractionFolder/lockeddoor.tscn" id="17_662sx"]
+[ext_resource type="PackedScene" uid="uid://61ej453bowys" path="res://OtherMechanics/free_camera.tscn" id="17_i45ex"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gojnm"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -40,10 +41,10 @@ size = Vector3(30, 1, 30)
 
 [sub_resource type="BoxMesh" id="BoxMesh_gojnm"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ouwm7"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_662sx"]
 viewport_path = NodePath("SubViewport2")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_662sx"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_cn5b1"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Resource" id="Resource_x458k"]
@@ -58,13 +59,10 @@ metadata/_custom_type_script = "uid://dge6cnp055o8x"
 [sub_resource type="BoxMesh" id="BoxMesh_662sx"]
 
 [node name="TestLevel" type="Node3D" unique_id=971226196]
-script = ExtResource("1_tc6tp")
+script = ExtResource("1_662sx")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1888907214]
 environment = SubResource("Environment_f7g2b")
-
-[node name="Player" parent="." unique_id=461144125 instance=ExtResource("2_k8b6b")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.5181994, 3.7033777, -8.524422)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1186938531]
 transform = Transform3D(0.9964487, 0.05670501, 0.062245786, -0.082928, 0.78900725, 0.6087614, -0.014592558, -0.6117614, 0.7909077, 0, 5.30838, 3.9074354)
@@ -126,10 +124,10 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -11.
 text = "Hello"
 
 [node name="Sprite3D2" parent="Sign" index="5" unique_id=62140585]
-texture = SubResource("ViewportTexture_ouwm7")
+texture = SubResource("ViewportTexture_662sx")
 
 [node name="Sprite3D" parent="Sign" index="7" unique_id=772846068]
-texture = SubResource("ViewportTexture_662sx")
+texture = SubResource("ViewportTexture_cn5b1")
 
 [node name="Door" parent="." unique_id=1191840203 instance=ExtResource("8_662sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.104342, 1.3883362, -11.620697)
@@ -212,4 +210,10 @@ itemID = "running shoes"
 [node name="LockedDoor" parent="." unique_id=929252769 instance=ExtResource("17_662sx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.64258, 1.4834716, 0)
 
+[node name="FreeCamera" parent="." unique_id=1084099381 instance=ExtResource("17_i45ex")]
+
+[node name="Player" parent="." unique_id=683224540 instance=ExtResource("2_k8b6b")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 2.5307465, -8.079245)
+
 [editable path="Sign"]
+[editable path="Player"]

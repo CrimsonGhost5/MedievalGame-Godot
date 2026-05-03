@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://61ej453bowys"]
+
+[ext_resource type="Script" uid="uid://c3j0jdrbyftrn" path="res://OtherMechanics/free_camera.gd" id="1_rixnk"]
+
+[node name="FreeCamera" type="Camera3D" unique_id=1084099381]
+script = ExtResource("1_rixnk")
